@@ -1,0 +1,1536 @@
+bash: alias: data: не найден
+[311u06@311U06 ~]$ 
+
+
+Глава 1
+[311u06@311U06 ~]$ date
+Чт янв 30 10:08:36 +07 2025
+[311u06@311U06 ~]$ cal
+     Январь 2025    
+Пн Вт Ср Чт Пт Сб Вс
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31      
+[O[311u06@311U06 ~]$ df
+\Файловая система         1K-блоков Использовано   Доступно Использовано% Cмонтировано в
+devtmpfs                      4096            0       4096            0% /dev
+tmpfs                      7858256        60456    7797800            1% /dev/shm
+tmpfs                      3143304         4028    3139276            1% /run
+/dev/nvme0n1p5            48281448     26067180   19729224           57% /
+/dev/nvme0n1p2              995224       352732     573760           39% /boot
+/dev/nvme0n1p6           188018008     75209128  103234672           43% /home
+/dev/nvme0n1p1              610120         8028     602092            2% /boot/efi
+/dev/sda1                239254916     31469268  195559396           14% /VSD
+tmpfs                      1571648          144    1571504            1% /run/user/1804801177
+//OPEX1/WinStation.All   976542716    828002740  148539976           85% /media/share/X
+//OPEX1/Owners/311/U06 11699159040   2082658996 9616500044           18% /media/share/Z
+//OPEX1/SoftWare          62455808     29309788   33146020           47% /media/share/Y
+[311u06@311U06 ~]$ free
+               total        used        free      shared  buff/cache   available
+Mem:        15716516     4335004      213188       87932    11597840    11381512
+Swap:        7931900        2304     7929596 
+exit
+bash: alias: data: не найден
+[311u06@311U06 ~]$ pwd
+[311u06@311U06 ~]$ is
+bash: is: команда не найдена
+[311u06@311U06 ~]$ cd /usr/bin
+[311u06@311U06 bin]$ pwd
+/usr/bin
+ls | less 
+[
+7z
+7za
+7zr
+7zz
+a52dec
+ac
+[311u06@311U06 bin]$ ls /usr
+bin    i686-w64-mingw32  lib    libexec  sbin   src  x86_64-w64-mingw32
+games  include           lib64  local    share  tmp
+311u06@311U06 bin]$  ls ~ /usr
+/home/311u06@nkti.local:
+ sync.sh           Видео       Загрузки      Музыка         'Рабочий стол'
+'VirtualBox VMs'   Документы   Изображения   Общедоступные   Шаблоны
+
+/usr:
+bin    i686-w64-mingw32  lib    libexec  sbin   src  x86_64-w64-mingw32
+games  include           lib64  local    share  tmp
+итого 557520
+-rwxr-xr-x. 1 root root       52920 янв 25  2024 [
+lrwxrwxrwx. 1 root root          12 июл  5  2024 7z -> /usr/bin/7zz
+lrwxrwxrwx. 1 root root          11 июл  5  2024 7za -> /usr/bin/7z
+lrwxrwxrwx. 1 root root          11 июл  5  2024 7zr -> /usr/bin/7z
+-rwxr-xr-x. 1 root root     2571776 июл  5  2024 7zz
+-rwxr-xr-x. 1 root root       33456 авг 11  2020 a52dec
+-rwxr-xr-x. 1 root root       29456 окт 29  2020 ac
+-rwxr-xr-x. 2 root root       36020 июл 24  2024 aclocal
+-rwxr-xr-x. 2 root root       36020 июл 24  2024 aclocal-1.16
+-rwxr-xr-x. 1 root root       23544 июн  3  2022 aconnect
+-rwxr-xr-x. 1 root root       36200 авг 26 20:40 acountry
+-rwxr-xr-x. 1 root root       15600 авг 20 14:54 acyclic
+-rwxr-xr-x. 1 root root       32560 окт  7 13:50 addr2line
+-rwxr-xr-x. 1 root root       28016 авг 26 20:40 adig
+-rwxr-xr-x. 1 root root       19784 авг 26 20:40 ahost
+-rwxr-xr-x. 1 root root      172656 янв 25  2022 airscan-discover
+-rwxr-xr-x. 1 root root       24416 окт 21  2020 alac
+-rwxr-xr-x. 1 root root          33 мая 24  2024 alias
+-rwxr-xr-x. 1 root root       82768 июн  3  2022 alsaloop
+-rwxr-xr-x. 1 root root       79784 июн  3  2022 alsamixer
+-rwxr-xr-x. 1 root root       32024 июн  3  2022 alsaucm
+-rwxr-xr-x. 1 root root         123 июн  1  2022 alsaunmute
+ls -lt --reverse
+итого 557520
+-rwxr-xr-x. 1 root root        3584 сен  8  2000 detect_ppa
+-rwxr-xr-x. 1 root root        6843 ноя  7  2000 test_ppa
+-rwxr-xr-x. 1 root root         269 ноя 17  2000 sgmlwhich
+-rwxr-xr-x. 1 root root        3858 июн 28  2001 cscope-indexer
+-rwxr-xr-x. 1 root root        2953 окт 11  2008 zipgrep
+-rwxr-xr-x. 1 root root         363 фев 27  2012 unicode_stop
+-rw-r--r--. 1 root root         576 фев 29  2012 redhat_lsb_init
+-rwxr-xr-x. 1 root root         435 фев  3  2016 antlr
+-rwxr-xr-x. 1 root root       29536 мар 10  2017 fpaste
+-rwxr-xr-x. 1 root root        1749 июл 23  2017 xml2-config
+-rwxr-xr-x. 1 root root        1874 авг 25  2017 scl_source
+-rwxr-xr-x. 1 root root         262 авг 25  2017 scl_enabled
+-rwxr-xr-x. 2 root root      115968 июн 29  2018 unpigz
+-rwxr-xr-x. 2 root root      115968 июн 29  2018 pigz
+-rwxr-xr-x. 1 root root       15640 июл 17  2018 serdi
+-rwxr-xr-x. 1 root root       23952 июл 17  2018 sord_validate
+-rwxr-xr-x. 1 root root       11408 июл 17  2018 sordi
+-rwxr-xr-x. 1 root root       11288 июл 17  2018 lv2ls
+-rwxr-xr-x. 1 root root       19928 июл 17  2018 lv2info
+-rwxr-xr-x. 1 root root       15600 июл 17  2018 lv2bench
+-rwxr-xr-x. 1 root root        7128 июл 17  2018 lilv-bench
+-rwxr-xr-x. 1 root root       28784 окт  1  2018 cabextract
+:
+
+[311u06@311U06 bin]$ ls --all |less
+
+..
+[
+7z
+7za
+7zr
+7zz
+a52dec
+ac
+aclocal
+aclocal-1.16
+aconnect
+acountry
+acyclic
+addr2line
+adig
+ahost
+[311u06@311U06 bin]$ ls --almost-all | less
+[
+7z
+7za
+7zr
+7zz
+a52dec
+ac
+aclocal
+aclocal-1.16
+aconnect
+acountry
+acyclic
+addr2line
+adig
+ahost
+airscan-discover
+alac
+[311u06@311U06 bin]$ ls --directory | less
+.
+[311u06@311U06 bin]$ ls --classify | less
+[*
+7z@
+7za@
+7zr@
+7zz*
+a52dec*
+ac*
+aclocal*
+aclocal-1.16*
+aconnect*
+acountry*
+acyclic*
+addr2line*
+adig*
+ahost*
+airscan-discover*
+alac*
+[311u06@311U06 bin]$ ls --human-readable | less
+[
+7z
+7za
+7zr
+7zz
+a52dec
+ac
+aclocal
+aclocal-1.16
+aconnect
+acountry
+acyclic
+addr2line
+adig
+ahost
+[311u06@311U06 bin]$ ls --reverse | less
+zvbi-ntsc-cc
+zvbi-chains
+zvbi-atsc-cc
+zstdmt
+zstdless
+zstdgrep
+zstdcat
+zstd
+zsoelim
+zoo
+znew
+zmore
+zless
+zjsdecode
+zipsplit
+zipnote
+zipinfo
+311u06@311U06 bin]$ ls Examples
+ls: невозможно получить доступ к 'Examples': No such file or directory
+[311u06@311U06 bin]$ ls -rw-r-r--
+ls: неверная ширина строки: «-r-r--»
+[311u06@311U06 bin]$ ls 1
+ls: невозможно получить доступ к '1': No such file or directory
+[311u06@311U06 bin]$ ls root
+ls: невозможно получить доступ к 'root': No such file or directory
+[311u06@311U06 bin]$ cd /root
+bash: cd: /root: Permission denied
+
+[311u06@311U06 bin]$ ls 32059
+ls: невозможно получить доступ к '32059': No such file or directory
+[311u06@311U06 bin]$ ls 2017-04-03 11:05
+ls: невозможно получить доступ к '2017-04-03': No such file or directory
+ls: невозможно получить доступ к '11:05': No such file or directory
+[311u06@311U06 bin]$ ls oo-cd-cover.odf
+ls: невозможно получить доступ к 'oo-cd-cover.odf': No such file or directory
+[311u06@311U06 bin]$ file picture.jpg
+picture.jpg: cannot open `picture.jpg' (No such file or directory)
+[311u06@311U06 bin]$ less /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Kernel Overflow User:/var/lib/nobody:/sbin/nologin
+[311u06@311U06 bin]$ ls /
+bin   dev  home  lib64       media  mnt  opt   root  sbin  sys  usr  VSD
+boot  etc  lib   lost+found  misc   net  proc  run   srv   tmp  var  wine
+[311u06@311U06 bin]$ ls /bin | less
+[
+7z
+7za
+7zr
+7zz
+a52dec
+ac
+aclocal
+aclocal-1.16
+aconnect
+acountry
+acyclic
+addr2line
+adig
+ahost
+airscan-discover
+alac
+alias
+alsaloop
+alsamixer
+alsaucm
+[311u06@311U06 bin]$ ls /boot
+config-5.15.131-1.el7.3.x86_64
+config-5.15.167-1.el7.3.x86_64
+config-5.15.87-1.el7.3.x86_64
+efi
+grub
+grub2
+initramfs-0-rescue-ad497546dee2498aa86fb42aea2cc485.img
+initramfs-5.15.131-1.el7.3.x86_64.img
+initramfs-5.15.167-1.el7.3.x86_64.img
+initramfs-5.15.87-1.el7.3.x86_64.img
+loader
+lost+found
+symvers-5.15.131-1.el7.3.x86_64.gz
+symvers-5.15.167-1.el7.3.x86_64.gz
+symvers-5.15.87-1.el7.3.x86_64.gz
+System.map-5.15.131-1.el7.3.x86_64
+System.map-5.15.167-1.el7.3.x86_64
+System.map-5.15.87-1.el7.3.x86_64
+vmlinuz-0-rescue-ad497546dee2498aa86fb42aea2cc485
+vmlinuz-5.15.131-1.el7.3.x86_64
+vmlinuz-5.15.167-1.el7.3.x86_64
+vmlinuz-5.15.87-1.el7.3.x86_64
+[311u06@311U06 bin]$ cd
+[311u06@311U06 ~]$ ls /etc 
+adjtime                        magic
+aliases                        mailcap
+aliases.db                     mail.rc
+alsa                           makedumpfile.conf.sample
+alternatives                   man_db.conf
+anaconda                       mate-settings-daemon
+anacrontab                     mc
+ant.conf                       mime.types
+ant.d                          mke2fs.conf
+asound.conf                    modprobe.d
+at.deny                        modulefiles
+audit                          modules-load.d
+authselect                     motd
+autofs.conf                    motd.d
+autofs_ldap_auth.conf          mtab
+auto.master                    mtools.conf
+auto.master.d                  multipath
+auto.misc                      my.cnf
+auto.net                       my.cnf.d
+auto.samba                     nanorc
+auto.smb                       netconfig
+avahi                          NetworkManager
+bash_completion.d              networks
+bashrc                         nfs.conf
+beesu.conf                     nfsmount.conf
+bindresvport.blacklist         nftables
+binfmt.d                       nsswitch.conf
+bluetooth                      nsswitch.conf.bak
+brlapi.key                     ntp
+brltty                         ntp.conf
+brltty.conf                    odbc.ini
+centos-release                 odbcinst.ini
+certmonger                     oddjob
+chkconfig.d                    oddjobd.conf
+chromium                       oddjobd.conf.d
+chrony.conf                    openal
+chrony.conf.23-12-24_16-15-04  openldap
+chrony.keys                    opt
+cifs-utils                     os-release
+cron.d                         ostree
+cron.daily                     pam.d
+cron.deny                      papersize
+cron.hourly                    passwd
+cron.monthly                   passwd-
+crontab                        pbm2ppa.conf
+cron.weekly                    pcp
+crypto-policies                pcp.conf
+crypttab                       pinforc
+csh.cshrc                      pipewire
+csh.login                      pkcs11
+cups                           pkgconfig
+cupshelpers                    pki
+dbus-1                         plymouth
+dconf                          pm
+default                        pnm2ppa.conf
+depmod.d                       polkit-1
+dhcp                           popt.d
+DIR_COLORS                     postfix
+DIR_COLORS.256color            ppp
+DIR_COLORS.lightbgcolor        prelink.conf.d
+dnf                            printcap
+dnfdragora                     profile
+dracut.conf                    profile.d
+dracut.conf.d                  protocols
+eclipse.ini                    pulse
+egl                            qemu-ga
+enscript.cfg                   rc0.d
+environment                    rc1.d
+environment-modules            rc2.d
+ethertypes                     rc3.d
+exports                        rc4.d
+exports.d                      rc5.d
+favicon.png                    rc6.d
+fcoe                           rc.d
+filesystems                    rearj.cfg
+firefox                        redhat-lsb
+fonts                          redhat-release
+foomatic                       redos-release
+fpc.cfg                        request-key.conf
+fppkg                          request-key.d
+fppkg.cfg                      resolv.conf
+fprintd.conf                   rhashrc
+freeipmi                       rpc
+fstab                          rpm
+fuse.conf                      rpmlint
+gamin                          rsyncd.conf
+gconf                          rsyslog.conf
+gcrypt                         rsyslog.d
+gdbinit                        rwtab.d
+gdbinit.d                      samba
+gdm                            sane.d
+geoclue                        sasl2
+gimp                           scl
+glvnd                          security
+gnupg                          selinux
+gpm-root.conf                  sensors3.conf
+gpm-syn.conf                   sensors.d
+gpm-twiddler.conf              services
+GREP_COLORS                    sestatus.conf
+groff                          setroubleshoot
+group                          setuptool.d
+group-                         sgml
+grub2.cfg                      shadow
+grub2-efi.cfg                  shadow-
+grub.d                         shells
+gshadow                        skel
+gshadow-                       smartmontools
+gss                            sos.conf
+gssproxy                       sound
+host.conf                      speech-dispatcher
+hostname                       ssh
+hosts                          ssl
+hosts.23-12-24_16-15-04        sssd
+hotplug                        strongswan
+hp                             subgid
+idmapd.conf                    subgid-
+ImageMagick-6                  subuid
+init.d                         subuid-
+initial-setup                  subversion
+inittab                        sudo.conf
+inputrc                        sudoers
+ipa                            sudoers.d
+iproute2                       sudo-ldap.conf
+ipsec.conf                     sysconfig
+ipsec.d                        sysctl.conf
+ipsec.secrets                  sysctl.d
+iscsi                          systemd
+issue                          system-release
+issue.net                      system-release-cpe
+java                           target
+jvm                            tcsd.conf
+jvm-common                     terminfo
+kde                            thunderbird
+kde4rc                         timeshift
+kderc                          tmpfiles.d
+kdump                          tpm2-tss
+kdump.conf                     trusted-key.key
+kernel                         ts.conf
+kioskmode.ini                  tuned
+krb5.conf                      udev
+krb5.conf.23-12-24_16:15:01    udisks2
+krb5.conf.d                    unbound
+krb5.keytab                    updatedb.conf
+lazarus                        UPower
+ld.so.cache                    usb_modeswitch.conf
+ld.so.conf                     vconsole.conf
+ld.so.conf.d                   vdpau_wrapper.cfg
+libaudit.conf                  veyon
+libblockdev                    vimrc
+libibverbs.d                   virc
+libnl                          vmware-tools
+libpaper.d                     vulkan
+libreport                      wgetrc
+libssh                         wpa_supplicant
+libuser.conf                   wvdial.conf
+locale.conf                    X11
+localtime                      xattr.conf
+login.defs                     xdg
+logrotate.conf                 xinetd.d
+logrotate.d                    xl2tpd
+lsb-release.d                  xml
+lsm                            xrdb
+lvm                            yum
+machine-id                     yum.repos.d
+machine-info
+[311u06@311U06 ~]$ ls /home
+311u06@nkti.local  lost+found  user
+[311u06@311U06 ~]$ ls /lib
+alsa                                      libodbccr.so.2
+audit                                     libodbccr.so.2.0.0
+bfd-plugins                               libodbcdrvcfg1S.so.2
+binfmt.d                                  libodbcdrvcfg1S.so.2.0.0
+blueberry                                 libodbcdrvcfg2S.so.2
+cpp                                       libodbcdrvcfg2S.so.2.0.0
+cups                                      libodbcinst.so
+debug                                     libodbcinst.so.2
+dracut                                    libodbcinst.so.2.0.0
+dri                                       libodbcminiS.so.2
+eclipse                                   libodbcminiS.so.2.0.0
+engines-1.1                               libodbcmyS.so
+environment.d                             libodbcmyS.so.2
+fipscheck                                 libodbcmyS.so.2.0.0
+firewalld                                 libodbcnnS.so.2
+firmware                                  libodbcnnS.so.2.0.0
+fontconfig                                libodbcpsqlS.so
+gallium-pipe                              libodbcpsqlS.so.2
+games                                     libodbcpsqlS.so.2.0.0
+gcc                                       libodbc.so
+gconv                                     libodbc.so.2
+gdk-pixbuf-2.0                            libodbc.so.2.0.0
+gio                                       libodbctxtS.so.2
+girepository-1.0                          libodbctxtS.so.2.0.0
+grub                                      libogg.so.0
+gstreamer-1.0                             libogg.so.0.8.4
+gtk-2.0                                   libopenal.so.1
+i386-linux-gnu                            libopenal.so.1.19.1
+java                                      libOpenCL.so.1
+jvm                                       libOpenCL.so.1.0.0
+jvm-common                                libopenjp2.so.2.4.0
+jvm-exports                               libopenjp2.so.7
+jvm-private                               liboplodbcS.so.2
+kbd                                       liboplodbcS.so.2.0.0
+kconf_update_bin                          libopus.so.0
+kde3                                      libopus.so.0.6.1
+kde4                                      liboraodbcS.so.2
+kdump                                     liboraodbcS.so.2.0.0
+kernel                                    liborc-0.4.so.0
+krb5                                      liborc-0.4.so.0.39.0
+ld-2.28.so                                liborc-test-0.4.so.0
+ld-linux.so.2                             liborc-test-0.4.so.0.39.0
+libanl-2.28.so                            libOSMesa.so.8
+libanl.so.1                               libOSMesa.so.8.0.0
+libasound.so.2                            libout123.so
+libasound.so.2.0.0                        libout123.so.0
+libasyncns.so.0                           libout123.so.0.5.1
+libasyncns.so.0.3.1                       libp11-kit.so.0
+libatk-1.0.so.0                           libp11-kit.so.0.3.0
+libatk-1.0.so.0.23609.1                   libp11.so.3
+libatopology.so.2                         libp11.so.3.4.3
+libatopology.so.2.0.0                     libpanel.so.6
+libavahi-client.so.3                      libpanel.so.6.5
+libavahi-client.so.3.2.9                  libpanelw.so.6
+libavahi-common.so.3                      libpanelw.so.6.5
+libavahi-common.so.3.5.4                  libpango-1.0.so.0
+libavahi-libevent.so.1                    libpango-1.0.so.0.5000.14
+libavahi-libevent.so.1.0.0                libpangocairo-1.0.so.0
+libavc1394.so.0                           libpangocairo-1.0.so.0.5000.14
+libavc1394.so.0.3.0                       libpangoft2-1.0.so.0
+libblkid.so.1                             libpangoft2-1.0.so.0.5000.14
+libblkid.so.1.1.0                         libpangoxft-1.0.so.0
+libBrokenLocale-2.28.so                   libpangoxft-1.0.so.0.5000.14
+libBrokenLocale.so.1                      libpcap.so.1
+libbrotlicommon.so.1                      libpcap.so.1.10.1
+libbrotlicommon.so.1.0.7                  libpciaccess.so.0
+libbrotlidec.so.1                         libpciaccess.so.0.11.1
+libbrotlidec.so.1.0.7                     libpcprofile.so
+libbrotlienc.so.1                         libpcre2-8.so.0
+libbrotlienc.so.1.0.7                     libpcre2-8.so.0.13.0
+libbz2.so.1                               libpcre2-posix.so.3
+libbz2.so.1.0.8                           libpcre2-posix.so.3.0.5
+libc-2.28.so                              libpcreposix.so.0
+libcairo-gobject.so.2                     libpcreposix.so.0.0.7
+libcairo-gobject.so.2.11704.0             libpcre.so.1
+libcairo-script-interpreter.so.2          libpcre.so.1.2.12
+libcairo-script-interpreter.so.2.11704.0  libpixman-1.so.0
+libcairo.so.2                             libpixman-1.so.0.40.0
+libcairo.so.2.11704.0                     libplc4.so
+libcap.so.2                               libplds4.so
+libcap.so.2.26                            libpng16.so.16
+libcdda_interface.so.0                    libpng16.so.16.37.0
+libcdda_interface.so.0.10.2               libpoppler-glib.so.8
+libcdda_paranoia.so.0                     libpoppler-glib.so.8.21.0
+libcdda_paranoia.so.0.10.2                libpoppler.so.101
+libcom_err.so.2                           libpoppler.so.112
+libcom_err.so.2.1                         libpoppler.so.112.0.0
+libcrypto.so.1.1                          libpopt.so.0
+libcrypto.so.1.1.1w                       libpopt.so.0.0.0
+libcrypt.so.2                             libproxy
+libcrypt.so.2.0.0                         libproxy.so.1
+libc.so.6                                 libproxy.so.1.0.0
+libcupsimage.so.2                         libpsl.so.5
+libcups.so.2                              libpsl.so.5.3.3
+libcurl.so.4                              libpthread-2.28.so
+libcurl.so.4.8.0                          libpthread.so.0
+libdatrie.so.1                            libpulse-simple.so.0
+libdatrie.so.1.3.2                        libpulse-simple.so.0.1.1
+libdb-5.3.so                              libpulse.so.0
+libdb-5.so                                libpulse.so.0.24.0
+libdbus-1.so.3                            libraqm.so.0
+libdbus-1.so.3.19.17                      libraqm.so.0.700.0
+libdl-2.28.so                             libraw1394.so.11
+libdl.so.2                                libraw1394.so.11.1.0
+libdrm_amdgpu.so.1                        libreadline.so.7
+libdrm_amdgpu.so.1.0.0                    libreadline.so.7.0
+libdrm_intel.so.1                         libreadline.so.8
+libdrm_intel.so.1.0.0                     libreadline.so.8.0
+libdrm_nouveau.so.2                       libRemarks.so
+libdrm_nouveau.so.2.0.0                   libRemarks.so.12
+libdrm_radeon.so.1                        libresolv-2.28.so
+libdrm_radeon.so.1.0.1                    libresolv.so.2
+libdrm.so.2                               librom1394.so.0
+libdrm.so.2.4.0                           librom1394.so.0.3.0
+libdv.so.4                                librt-2.28.so
+libdv.so.4.0.3                            librt.so.1
+libedit.so.0                              libsane.so.1
+libedit.so.0.0.63                         libsane.so.1.2.1
+libefa.so.1                               libsapdbS.so.2
+libefa.so.1.2.46.0                        libsapdbS.so.2.0.0
+libEGL_mesa.so.0                          libsasl2.so.3
+libEGL_mesa.so.0.0.0                      libsasl2.so.3.0.0
+libEGL.so.1                               libSDL-1.2.so.0
+libEGL.so.1.1.0                           libSDL-1.2.so.0.11.4
+libelf-0.185.so                           libSDL2-2.0.so.0
+libelf.so.1                               libSDL2-2.0.so.0.12.0
+libesoobS.so.2                            libSegFault.so
+libesoobS.so.2.0.0                        libselinux.so.1
+libevent-2.0.so.5                         libsepol.so.1
+libevent-2.0.so.5.1.9                     libsharpyuv.so.0
+libevent-2.1.so.6                         libsharpyuv.so.0.0.1
+libevent-2.1.so.6.0.2                     libshout.so.3
+libevent_core-2.0.so.5                    libshout.so.3.2.0
+libevent_core-2.0.so.5.1.9                libslapi-2.4.so.2
+libevent_core-2.1.so.6                    libslapi-2.4.so.2.11.3
+libevent_core-2.1.so.6.0.2                libsmime3.so
+libevent_extra-2.0.so.5                   libsndfile.so.1
+libevent_extra-2.0.so.5.1.9               libsndfile.so.1.0.28
+libevent_extra-2.1.so.6                   libsoftokn3.chk
+libevent_extra-2.1.so.6.0.2               libsoftokn3.so
+libevent_openssl-2.1.so.6                 libsoup-2.4.so.1
+libevent_openssl-2.1.so.6.0.2             libsoup-2.4.so.1.10.0
+libevent_pthreads-2.0.so.5                libsoup-gnome-2.4.so.1
+libevent_pthreads-2.0.so.5.1.9            libsoup-gnome-2.4.so.1.10.0
+libevent_pthreads-2.1.so.6                libspeex.so.1
+libevent_pthreads-2.1.so.6.0.2            libspeex.so.1.5.1
+libexif.so.12                             libsqlite3.so.0
+libexif.so.12.3.4                         libsqlite3.so.0.8.6
+libexpat.so.1                             libssh.so.4
+libexpat.so.1.10.0                        libssh.so.4.8.9
+libffi.so.6                               libssh_threads.so.4
+libffi.so.6.0.2                           libssh_threads.so.4.8.9
+libFLAC++.so.6                            libssl3.so
+libFLAC++.so.6.3.0                        libssl.so.1.1
+libFLAC.so.8                              libssl.so.1.1.1w
+libFLAC.so.8.3.0                          libstdc++.so.6
+libfontconfig.so.1                        libstdc++.so.6.0.29
+libfontconfig.so.1.12.0                   libsyn123.so
+libform.so.6                              libsyn123.so.0
+libform.so.6.5                            libsyn123.so.0.2.3
+libformw.so.6                             libsystemd.so.0
+libformw.so.6.5                           libsystemd.so.0.32.0
+libfreebl3.chk                            libtag_c.so.0
+libfreebl3.so                             libtag_c.so.0.0.0
+libfreeblpriv3.chk                        libtag.so.1
+libfreeblpriv3.so                         libtag.so.1.17.0
+libfreetype.so.6                          libtasn1.so.6
+libfreetype.so.6.19.0                     libtasn1.so.6.6.0
+libfribidi.so.0                           libtdsS.so
+libfribidi.so.0.4.0                       libtdsS.so.2
+libgailutil.so.18                         libtdsS.so.2.0.0
+libgailutil.so.18.0.1                     libtemplate.so.2
+libgbm.so.1                               libtemplate.so.2.0.0
+libgbm.so.1.0.0                           libthai.so.0
+libgcc_s-11-20230605.so.1                 libthai.so.0.3.1
+libgcc_s.so.1                             libtheoradec.so.1
+libgcrypt.so.20                           libtheoradec.so.1.1.4
+libgcrypt.so.20.2.6                       libtheoraenc.so.1
+libgdk_pixbuf-2.0.so.0                    libtheoraenc.so.1.1.2
+libgdk_pixbuf-2.0.so.0.4000.0             libtheora.so.0
+libgdk-x11-2.0.so.0                       libtheora.so.0.3.10
+libgdk-x11-2.0.so.0.2400.32               libthread_db-1.0.so
+libgd.so.3                                libthread_db.so.1
+libgd.so.3.0.9                            libtic.so.6
+libgio-2.0.so.0                           libtic.so.6.5
+libgio-2.0.so.0.6503.0                    libtiff.so.5
+libglapi.so.0                             libtiff.so.5.8.0
+libglapi.so.0.0.0                         libtiff.so.6
+libGLdispatch.so.0                        libtiff.so.6.0.1
+libGLdispatch.so.0.0.0                    libtiffxx.so.5
+libGLESv1_CM.so.1                         libtiffxx.so.5.8.0
+libGLESv1_CM.so.1.2.0                     libtiffxx.so.6
+libGLESv2.so.2                            libtiffxx.so.6.0.1
+libGLESv2.so.2.1.0                        libtinfo.so.6
+libglib-2.0.so.0                          libtinfo.so.6.5
+libglib-2.0.so.0.6503.0                   libtwolame.so.0
+libGL.so.1                                libtwolame.so.0.0.0
+libGL.so.1.7.0                            libudev.so.1
+libGLX_mesa.so.0                          libudev.so.1.7.2
+libGLX_mesa.so.0.0.0                      libunistring.so.2
+libGLX.so.0                               libunistring.so.2.1.0
+libGLX.so.0.0.0                           libunwind-coredump.so.0
+libGLX_system.so.0                        libunwind-coredump.so.0.0.0
+libgmodule-2.0.so.0                       libunwind.so.8
+libgmodule-2.0.so.0.6503.0                libunwind.so.8.0.1
+libgmp.so.10                              libunwind-x86.so.8
+libgmp.so.10.4.1                          libunwind-x86.so.8.0.1
+libgnutls.so.30                           libusb-1.0.so.0
+libgnutls.so.30.28.2                      libusb-1.0.so.0.3.0
+libgobject-2.0.so.0                       libutil-2.28.so
+libgobject-2.0.so.0.6503.0                libutil.so.1
+libgomp.so.1                              libuuid.so.1
+libgomp.so.1.0.0                          libuuid.so.1.3.0
+libgpg-error.so.0                         libv4l
+libgpg-error.so.0.28.0                    libv4l1.so.0
+libgphoto2                                libv4l1.so.0.0.0
+libgphoto2_port                           libv4l2rds.so.0
+libgphoto2_port.so.12                     libv4l2rds.so.0.0.0
+libgphoto2_port.so.12.0.0                 libv4l2.so.0
+libgphoto2.so.6                           libv4l2.so.0.0.0
+libgphoto2.so.6.1.0                       libv4lconvert.so.0
+libgraphite2.so.3                         libv4lconvert.so.0.0.0
+libgraphite2.so.3.2.1                     libva-drm.so.2
+libgsm.so.1                               libva-drm.so.2.1500.0
+libgsm.so.1.0.19                          libva-glx.so.2
+libgssapi_krb5.so.2                       libva-glx.so.2.1500.0
+libgssapi_krb5.so.2.2                     libva.so.2
+libgssrpc.so.4                            libva.so.2.1500.0
+libgssrpc.so.4.2                          libva-wayland.so.2
+libgstallocators-1.0.so.0                 libva-wayland.so.2.1500.0
+libgstallocators-1.0.so.0.1603.0          libva-x11.so.2
+libgstapp-1.0.so.0                        libva-x11.so.2.1500.0
+libgstapp-1.0.so.0.1603.0                 libverto.so.1
+libgstaudio-1.0.so.0                      libverto.so.1.0.0
+libgstaudio-1.0.so.0.1603.0               libvisual-0.4.so.0
+libgstbase-1.0.so.0                       libvisual-0.4.so.0.0.0
+libgstbase-1.0.so.0.1603.0                libVkLayer_MESA_device_select.so
+libgstcheck-1.0.so.0                      libvorbisenc.so.2
+libgstcheck-1.0.so.0.1603.0               libvorbisenc.so.2.0.12
+libgstcontroller-1.0.so.0                 libvorbisfile.so.3
+libgstcontroller-1.0.so.0.1603.0          libvorbisfile.so.3.3.8
+libgstfft-1.0.so.0                        libvorbis.so.0
+libgstfft-1.0.so.0.1603.0                 libvorbis.so.0.4.9
+libgstgl-1.0.so.0                         libvpx.so.3
+libgstgl-1.0.so.0.1603.0                  libvpx.so.3.0
+libgstnet-1.0.so.0                        libvpx.so.3.0.0
+libgstnet-1.0.so.0.1603.0                 libvpx.so.6
+libgstpbutils-1.0.so.0                    libvpx.so.6.4
+libgstpbutils-1.0.so.0.1603.0             libvpx.so.6.4.0
+libgstreamer-1.0.so.0                     libvulkan_intel.so
+libgstreamer-1.0.so.0.1603.0              libvulkan_lvp.so
+libgstriff-1.0.so.0                       libvulkan_radeon.so
+libgstriff-1.0.so.0.1603.0                libvulkan.so.1
+libgstrtp-1.0.so.0                        libvulkan.so.1.3.216
+libgstrtp-1.0.so.0.1603.0                 libwavpack.so.1
+libgstrtsp-1.0.so.0                       libwavpack.so.1.2.0
+libgstrtsp-1.0.so.0.1603.0                libwayland-client.so.0
+libgstsdp-1.0.so.0                        libwayland-client.so.0.20.0
+libgstsdp-1.0.so.0.1603.0                 libwayland-cursor.so.0
+libgsttag-1.0.so.0                        libwayland-cursor.so.0.20.0
+libgsttag-1.0.so.0.1603.0                 libwayland-egl.so.1
+libgstvideo-1.0.so.0                      libwayland-egl.so.1.20.0
+libgstvideo-1.0.so.0.1603.0               libwayland-server.so.0
+libgthread-2.0.so.0                       libwayland-server.so.0.20.0
+libgthread-2.0.so.0.6503.0                libwebpdecoder.so.3
+libgtk-x11-2.0.so.0                       libwebpdecoder.so.3.1.8
+libgtk-x11-2.0.so.0.2400.32               libwebpdemux.so.2
+libharfbuzz-cairo.so.0                    libwebpdemux.so.2.0.14
+libharfbuzz-cairo.so.0.60730.0            libwebpmux.so.3
+libharfbuzz-gobject.so.0                  libwebpmux.so.3.0.13
+libharfbuzz-gobject.so.0.60730.0          libwebp.so.7
+libharfbuzz.so.0                          libwebp.so.7.1.8
+libharfbuzz.so.0.60730.0                  libX11.so.6
+libharfbuzz-subset.so.0                   libX11.so.6.3.0
+libharfbuzz-subset.so.0.60730.0           libX11-xcb.so.1
+libhistory.so.7                           libX11-xcb.so.1.0.0
+libhistory.so.7.0                         libXau.so.6
+libhistory.so.8                           libXau.so.6.0.0
+libhistory.so.8.0                         libxcb-composite.so.0
+libhogweed.so.4                           libxcb-composite.so.0.0.0
+libhogweed.so.4.5                         libxcb-damage.so.0
+libhogweed.so.5                           libxcb-damage.so.0.0.0
+libhogweed.so.5.0                         libxcb-dpms.so.0
+libibverbs                                libxcb-dpms.so.0.0.0
+libibverbs.so.1                           libxcb-dri2.so.0
+libibverbs.so.1.14.46.0                   libxcb-dri2.so.0.0.0
+libidn2.so.0                              libxcb-dri3.so.0
+libidn2.so.0.3.6                          libxcb-dri3.so.0.1.0
+libiec61883.so.0                          libxcb-glx.so.0
+libiec61883.so.0.1.1                      libxcb-glx.so.0.0.0
+libieee1284.so.3                          libxcb-present.so.0
+libieee1284.so.3.2.2                      libxcb-present.so.0.0.0
+libimagequant.so.0                        libxcb-randr.so.0
+libjasper.so.4                            libxcb-randr.so.0.1.0
+libjasper.so.4.0.0                        libxcb-record.so.0
+libjbig85.so.2.1                          libxcb-record.so.0.0.0
+libjbig.so.2.1                            libxcb-render.so.0
+libjpeg.so.62                             libxcb-render.so.0.0.0
+libjpeg.so.62.3.0                         libxcb-res.so.0
+libk5crypto.so.3                          libxcb-res.so.0.0.0
+libk5crypto.so.3.1                        libxcb-screensaver.so.0
+libkdb5.so.10                             libxcb-screensaver.so.0.0.0
+libkdb5.so.10.0                           libxcb-shape.so.0
+libkeyutils.so.1                          libxcb-shape.so.0.0.0
+libkeyutils.so.1.8                        libxcb-shm.so.0
+libkrad.so.0                              libxcb-shm.so.0.0.0
+libkrad.so.0.0                            libxcb.so.1
+libkrb5.so.3                              libxcb.so.1.1.0
+libkrb5.so.3.3                            libxcb-sync.so.1
+libkrb5support.so.0                       libxcb-sync.so.1.0.0
+libkrb5support.so.0.1                     libxcb-xf86dri.so.0
+liblber-2.4.so.2                          libxcb-xf86dri.so.0.0.0
+liblber-2.4.so.2.11.3                     libxcb-xfixes.so.0
+liblcms2.so.2                             libxcb-xfixes.so.0.0.0
+liblcms2.so.2.0.15                        libxcb-xinerama.so.0
+libldap-2.4.so.2                          libxcb-xinerama.so.0.0.0
+libldap-2.4.so.2.11.3                     libxcb-xinput.so.0
+libldap_r-2.4.so.2                        libxcb-xinput.so.0.1.0
+libldap_r-2.4.so.2.11.3                   libxcb-xkb.so.1
+libLLVM-12.0.1.so                         libxcb-xkb.so.1.0.0
+libLLVM-12.so                             libxcb-xselinux.so.0
+liblockdev.so.1                           libxcb-xselinux.so.0.0.0
+liblockdev.so.1.0.0                       libxcb-xtest.so.0
+libltdl.so.7                              libxcb-xtest.so.0.0.0
+libltdl.so.7.3.1                          libxcb-xvmc.so.0
+libLTO.so                                 libxcb-xvmc.so.0.0.0
+libLTO.so.12                              libxcb-xv.so.0
+liblz4.so.1                               libxcb-xv.so.0.0.0
+liblz4.so.1.9.4                           libXcomposite.so.1
+liblzma.so.5                              libXcomposite.so.1.0.0
+liblzma.so.5.2.2                          libXcursor.so.1
+libm-2.28.so                              libXcursor.so.1.0.2
+libmana.so.1                              libXdamage.so.1
+libmana.so.1.0.46.0                       libXdamage.so.1.1.0
+libmemusage.so                            libXdmcp.so.6
+libmenu.so.6                              libXdmcp.so.6.0.0
+libmenu.so.6.5                            libXext.so.6
+libmenuw.so.6                             libXext.so.6.4.0
+libmenuw.so.6.5                           libXfixes.so.3
+libmimerS.so.2                            libXfixes.so.3.1.0
+libmimerS.so.2.0.0                        libXft.so.2
+libmlx4.so.1                              libXft.so.2.3.3
+libmlx4.so.1.0.46.0                       libXinerama.so.1
+libmlx5.so.1                              libXinerama.so.1.0.0
+libmlx5.so.1.24.46.0                      libXi.so.6
+libmodman.so.1                            libXi.so.6.1.0
+libmodman.so.1.0.0                        libxml2.so.2
+libmount.so.1                             libxml2.so.2.9.8
+libmount.so.1.1.0                         libXpm.so.4
+libmp3lame.so.0                           libXpm.so.4.11.0
+libmp3lame.so.0.0.0                       libXrandr.so.2
+libmpg123.so.0                            libXrandr.so.2.2.0
+libmpg123.so.0.48.3                       libXrender.so.1
+libm.so.6                                 libXrender.so.1.3.0
+libncurses.so.6                           libxshmfence.so.1
+libncurses.so.6.5                         libxshmfence.so.1.0.0
+libncursesw.so.6                          libXv.so.1
+libncursesw.so.6.5                        libXv.so.1.0.0
+libnetsnmp.so.40                          libXxf86vm.so.1
+libnetsnmp.so.40.2.1                      libXxf86vm.so.1.0.0
+libnettle.so.6                            libz.so.1
+libnettle.so.6.5                          libz.so.1.2.11
+libnettle.so.7                            libzstd.so.1
+libnettle.so.7.0                          libzstd.so.1.5.5
+libnghttp2.so.14                          LLVMgold.so
+libnghttp2.so.14.24.1                     locale
+libnl-3.so.200                            lsb
+libnl-3.so.200.26.0                       mdadm
+libnl-genl-3.so.200                       modprobe.d
+libnl-genl-3.so.200.26.0                  modules
+libnl-idiag-3.so.200                      modules-load.d
+libnl-idiag-3.so.200.26.0                 motd
+libnl-nf-3.so.200                         motd.d
+libnl-nf-3.so.200.26.0                    mozilla
+libnl-route-3.so.200                      NetworkManager
+libnl-route-3.so.200.26.0                 nss
+libnl-xfrm-3.so.200                       ostree
+libnl-xfrm-3.so.200.26.0                  p11-kit-proxy.so
+libnn.so.2                                pam.d
+libnn.so.2.0.0                            polkit-1
+libnsl-2.28.so                            pulseaudio
+libnsl.so.1                               python2.7
+libnspr4.so                               python3.8
+libnss3.so                                qt5
+libnss_compat-2.28.so                     realmd
+libnss_compat.so.2                        rpm
+libnssdbm3.chk                            sane
+libnssdbm3.so                             sasl2
+libnss_dns-2.28.so                        security
+libnss_dns.so.2                           sendmail
+libnss_files-2.28.so                      sendmail.postfix
+libnss_files.so.2                         sse2
+libnss_mdns4_minimal.so.2                 sysctl.d
+libnss_mdns4.so.2                         sysimage
+libnss_mdns6_minimal.so.2                 systemd
+libnss_mdns6.so.2                         sysusers.d
+libnss_mdns_minimal.so.2                  tmpfiles.d
+libnss_mdns.so.2                          tuned
+libnss_myhostname.so.2                    udev
+libnss_resolve.so.2                       vdpau
+libnss_systemd.so.2                       wine
+libnssutil3.so                            x86_64-linux-gnu
+[311u06@311U06 ~]$ ls /lost+found
+ls: невозможно открыть каталог '/lost+found': Permission denied
+[311u06@311U06 ~]$ ls /media
+share
+[311u06@311U06 ~]$ ls /opt
+sublime_text  yandex
+[311u06@311U06 ~]$ ls /proc
+1     1129  15    175   2065  2339  247   29    3520  38    4308  458   4857  526   546   6063  6224  65   79   940  989         dynamic_debug  latency_stats  softirqs
+10    1130  151   176   2066  235   2493  290   3527  39    44    459   49    527   5465  6065  6227  658  8    941  993         execdomains    loadavg        stat
+1001  1131  152   178   2091  2363  25    2913  3528  393   444   46    4964  528   547   6080  6233  66   80   943  997         fb             locks          swaps
+1019  1133  153   1780  21    2367  2501  3     3530  399   445   460   5     529   549   6087  6246  662  81   947  acpi        filesystems    mdstat         sys
+1020  12    155   18    2100  2371  2504  30    3532  4     446   461   50    53    55    6090  6247  663  82   948  asound      fs             meminfo        sysrq-trigger
+1024  13    156   187   2105  2374  2506  301   3538  40    447   462   51    530   56    61    6254  673  83   949  bootconfig  interrupts     misc           sysvipc
+1031  1396  157   19    2107  2375  2508  3026  3539  4063  448   4638  5140  5319  5694  6111  6264  68   890  951  buddyinfo   iomem          modules        thread-self
+1047  1398  158   2     2197  2377  2544  304   3541  41    449   4684  515   532   58    6128  6265  680  891  952  bus         ioports        mounts         timer_list
+1048  14    159   20    2200  2392  2571  307   3565  4204  45    469   517   533   5822  6130  6267  69   892  953  cgroups     irq            mtrr           tty
+1049  1412  16    2029  2205  2394  2591  3085  3570  4214  450   4690  518   534   5846  6150  6288  693  893  954  cmdline     kallsyms       net            uptime
+105   1417  160   2038  2273  24    26    31    3595  4225  451   470   519   535   5899  6155  63    70   899  959  consoles    kcore          pagetypeinfo   version
+1061  1421  162   2041  23    2413  2624  3102  36    43    452   472   520   536   59    6156  6302  71   900  975  cpuinfo     keys           partitions     vmallocinfo
+1065  1423  163   2052  2302  2414  2645  3103  3612  4301  453   473   521   537   5900  6185  6311  73   909  976  crypto      key-users      pressure       vmstat
+11    1424  166   2054  2308  2417  2757  312   365   4302  454   4791  522   538   5995  6190  6312  74   910  977  devices     kmsg           schedstat      zoneinfo
+1112  1438  1680  2056  2309  2444  2772  33    3662  4303  455   48    523   5389  6     6210  6313  75   912  980  diskstats   kpagecgroup    scsi
+1118  1462  171   2060  2316  2449  28    34    3722  4304  456   4807  524   539   60    6222  6336  76   938  981  dma         kpagecount     self
+1122  1464  174   2062  2329  2464  2879  35    3734  4305  457   4837  525   54    6003  6223  64    78   939  983  driver      kpageflags     slabinfo
+[311u06@311U06 ~]$ ls /root
+ls: невозможно открыть каталог '/root': Permission denied
+[311u06@311U06 ~]$ ls /sbin
+accessdb               dump-utmp                              install-info                 lvs                                         posttls-finger             start-statd
+accton                 e2freefrag                             installkernel                lvscan                                      poweroff                   strfile
+adcli                  e2fsck                                 ip                           makedumpfile                                pppd                       strongswan
+addgnupghome           e2image                                ip6tables                    matchpathcon                                pppdump                    sulogin
+addpart                e2label                                ip6tables-apply              mate-display-properties-install-systemwide  pppoe-discovery            swanctl
+adduser                e2mmpstatus                            ip6tables-nft                mate-power-backlight-helper                 pppstats                   swaplabel
+agetty                 e2undo                                 ip6tables-nft-restore        mate-system-log                             ppp-watch                  swapoff
+alsactl                e4crypt                                ip6tables-nft-save           mdadm                                       pptp                       swapon
+alsa-info.sh           e4defrag                               ip6tables-restore            mdmon                                       pptpsetup                  switch_root
+alternatives           eapol_test                             ip6tables-restore-translate  mii-diag                                    pvchange                   sysctl
+anaconda               ebtables                               ip6tables-save               mii-tool                                    pvck                       t1libconfig
+anacron                ebtables-nft                           ip6tables-translate          mkdict                                      pvcreate                   tc
+applygnupgdefaults     ebtables-nft-restore                   ipa-certupdate               mkdosfs                                     pvdisplay                  tcpd
+arp                    ebtables-nft-save                      ipa-client-automount         mkdumprd                                    pvmove                     tcpdmatch
+arpd                   ebtables-restore                       ipa-client-install           mke2fs                                      pvremove                   tcpdump
+arping                 ebtables-save                          ipa-getkeytab                mkfs                                        pvresize                   tcpslice
+arptables              ebtables-translate                     ipa-join                     mkfs.btrfs                                  pvs                        tcsd
+arptables-nft          edquota                                ipa-rmkeytab                 mkfs.cramfs                                 pvscan                     telinit
+arptables-nft-restore  efibootmgr                             ipmaddr                      mkfs.ext2                                   pwck                       thin_check
+arptables-nft-save     era_check                              ipmi-chassis                 mkfs.ext3                                   pwconv                     thin_delta
+arptables-restore      era_dump                               ipmi-chassis-config          mkfs.ext4                                   pwhistory_helper           thin_dump
+arptables-save         era_invalidate                         ipmi-config                  mkfs.fat                                    pwmconfig                  thin_ls
+atd                    era_restore                            ipmi-console                 mkfs.minix                                  pwunconv                   thin_metadata_size
+atopacctd              ether-wake                             ipmiconsole                  mkfs.msdos                                  quotacheck                 thin_repair
+atopgpud               ethtool                                ipmi-dcmi                    mkfs.ntfs                                   quotaoff                   thin_restore
+atrun                  eventlogadm                            ipmi-detect                  mkfs.vfat                                   quotaon                    thin_rmap
+auditctl               exportfs                               ipmidetect                   mkfs.xfs                                    quotastats                 thin_trim
+auditd                 faillock                               ipmi-fru                     mkhomedir_helper                            raid-check                 tickadj
+augenrules             fancontrol                             ipmi-locate                  mk_isdnhwdb                                 rdisc                      tipc
+aureport               fatlabel                               ipmimonitoring               mklost+found                                rdma                       tracepath
+ausearch               fcnsq                                  ipmi-oem                     mkntfs                                      readprofile                tracepath6
+authconfig             fcoeadm                                ipmi-pef-config              mksquashfs                                  realm                      try-from
+automount              fcoemon                                ipmi-pet                     mkswap                                      reboot                     tsig-keygen
+autrace                fcping                                 ipmi-ping                    ModemManager                                redhat_lsb_trigger.x86_64  tune2fs
+avahi-daemon           fcrls                                  ipmiping                     modinfo                                     repquota                   tuned
+avcstat                fdformat                               ipmi-power                   modprobe                                    request-key                tuned-adm
+badblocks              fdisk                                  ipmipower                    mount.cifs                                  resize2fs                  udevadm
+beesu                  filefrag                               ipmi-raw                     mount.fuse                                  resizepart                 umount.nfs
+biosdecode             findfs                                 ipmi-sel                     mount.fuse3                                 restorecon                 umount.nfs4
+biosdevname            fipvlan                                ipmi-sensors                 mount.glusterfs                             restorecon_xattr           umount.udisks2
+blkdeactivate          fixfiles                               ipmi-sensors-config          mount.lowntfs-3g                            rfkill                     unbound-anchor
+blkdiscard             fix-info-dir                           iprconfig                    mount.nfs                                   rmcp-ping                  unix_chkpwd
+blkid                  fixparts                               iprdbg                       mount.nfs4                                  rmcpping                   unix_update
+blkmapd                foomatic-addpjloptions                 iprdump                      mount.ntfs                                  rmmod                      unsquashfs
+blkzone                foomatic-cleanupdrivers                iprinit                      mount.ntfs-3g                               rngd                       unstr
+blockdev               foomatic-extract-text                  iprsos                       mount.ntfs-fuse                             route                      update-alternatives
+bmc-config             foomatic-fix-xml                       iprupdate                    mount.smb3                                  rpcbind                    update-pciids
+bmc-device             foomatic-getpjloptions                 ipsec                        mountstats                                  rpcdebug                   update-smart-drivedb
+bmc-info               foomatic-kitload                       iptables                     mount.vboxsf                                rpc.gssd                   usb_modeswitch
+brctl                  foomatic-nonumericalids                iptables-apply               mpathconf                                   rpc.idmapd                 usb_modeswitch_dispatcher
+bridge                 foomatic-preferred-driver              iptables-nft                 mpathpersist                                rpcinfo                    usbmuxd
+btrfs                  foomatic-printermap-to-gutenprint-xml  iptables-nft-restore         mtr                                         rpc.mountd                 useradd
+btrfsck                foomatic-replaceoldprinterids          iptables-nft-save            mtr-packet                                  rpc.nfsd                   userdel
+btrfs-convert          fsadm                                  iptables-restore             multipath                                   rpc.statd                  userhelper
+btrfs-find-root        fsck                                   iptables-restore-translate   multipathd                                  rsyslogd                   usermod
+btrfs-image            fsck.btrfs                             iptables-save                named-checkzone                             rtacct                     VBoxService
+btrfs-map-logical      fsck.cramfs                            iptables-translate           named-compilezone                           rtcwake                    vdpa
+btrfs-select-super     fsck.ext2                              iptunnel                     nameif                                      rtkitctl                   vdptool
+btrfstune              fsck.ext3                              irqbalance                   netscsid                                    rtmon                      vgcfgbackup
+build-locale-archive   fsck.ext4                              isadump                      NetworkManager                              rtstat                     vgcfgrestore
+cache_check            fsck.fat                               isaset                       new-kernel-pkg                              runlevel                   vgchange
+cache_dump             fsck.minix                             iscsiadm                     newusers                                    runuser                    vgck
+cache_metadata_size    fsck.msdos                             iscsid                       nfbpf_compile                               sa                         vgconvert
+cache_repair           fsck.ntfs                              iscsi-iname                  nfnl_osf                                    safe_finger                vgcreate
+cache_restore          fsck.vfat                              iscsistart                   nfsconf                                     samba                      vgdisplay
+cache_writeback        fsck.xfs                               iscsiuio                     nfsconvert                                  samba_dnsupdate            vgexport
+capsh                  fsfreeze                               iw                           nfsdcld                                     samba_downgrade_db         vgextend
+certmonger             fstrim                                 kadmind                      nfsdclddb                                   samba-gpupdate             vgimport
+cfdisk                 fuser                                  kadmin.local                 nfsdclnts                                   samba_kcc                  vgimportclone
+cgdcbxd                fxload                                 kdb5_util                    nfsdcltrack                                 samba_spnupdate            vgimportdevices
+cgdisk                 g13-syshelp                            kexec                        nfsidmap                                    samba_upgradedns           vgmerge
+charon-cmd             gdisk                                  key.dns_resolver             nfsiostat                                   sasldblistusers2           vgmknodes
+charon-systemd         gdm                                    kpartx                       nfsref                                      saslpasswd2                vgreduce
+chat                   genhomedircon                          kpatch                       nfsstat                                     sedispatch                 vgremove
+chcpu                  genhostid                              kprop                        nft                                         sefcontext_compile         vgrename
+check_hd               genl                                   kpropd                       nmbd                                        selabel_digest             vgs
+chgpasswd              getcap                                 kproplog                     nologin                                     selabel_lookup             vgscan
+chkconfig              getenforce                             krb5kdc                      nstat                                       selabel_lookup_best_match  vgsplit
+chpasswd               getpcaps                               lchage                       ntfsclone                                   selabel_partial_match      via_regs_dump
+chronyd                getsebool                              ldattach                     ntfscp                                      selinux_check_access       vigr
+chroot                 getsysinfo                             ldconfig                     ntfslabel                                   selinuxconlist             vipw
+cifs.idmap             glibc_post_upgrade.i686                ledctl                       ntfsresize                                  selinuxdefcon              virt-what
+cifs.upcall            glibc_post_upgrade.x86_64              ledmon                       ntfsundelete                                selinuxenabled             visudo
+clock                  glusterfs                              lgroupadd                    ntpd                                        selinuxexeccon             vmcore-dmesg
+consoletype            glusterfsd                             lgroupdel                    ntpdate                                     semanage                   vpddecode
+convert_hd             gpartedbin                             lgroupmod                    ntpdc                                       semodule                   weak-modules
+convertquota           gpm                                    lid                          ntp-keygen                                  sendmail                   winbindd
+cracklib-check         groupadd                               lldpad                       ntpq                                        sendmail.postfix           wipefs
+cracklib-format        groupdel                               lldptool                     ntptime                                     sensors-detect             wpa_cli
+cracklib-packer        groupmems                              lnewusers                    ntsysv                                      service                    wpa_passphrase
+cracklib-unpacker      groupmod                               lnstat                       oddjobd                                     sestatus                   wpa_supplicant
+create-cracklib-dict   grpck                                  load_policy                  ownership                                   setcap                     xfs_admin
+crond                  grpconv                                lockdev                      packer                                      setenforce                 xfs_bmap
+cryptsetup             grpunconv                              logrotate                    pam_console_apply                           setfiles                   xfs_copy
+ctrlaltdel             grub2-bios-setup                       logsave                      pam_namespace_helper                        setpci                     xfs_db
+ctstat                 grub2-get-kernel-settings              lokkit                       pam_timestamp_check                         setquota                   xfsdump
+cupsaccept             grub2-install                          losetup                      paperconfig                                 setregdomain               xfs_estimate
+cups-browsed           grub2-macbless                         lpadmin                      parted                                      setroubleshootd            xfs_freeze
+cupsctl                grub2-mkconfig                         lpasswd                      partprobe                                   setsebool                  xfs_fsr
+cupsd                  grub2-probe                            lpc                          partx                                       setup                      xfs_growfs
+cupsdisable            grub2-reboot                           lpc.cups                     pdata_tools                                 sfdisk                     xfs_info
+cupsenable             grub2-set-bootflag                     lpinfo                       pef-config                                  sgdisk                     xfsinvutil
+cupsfilter             grub2-set-default                      lpmove                       pidof                                       sgpio                      xfs_io
+cups-genppd.5.3        grub2-set-password                     lsmod                        ping                                        showmount                  xfs_logprint
+cups-genppdupdate      grub2-setpassword                      lspci                        ping6                                       shutdown                   xfs_mdrestore
+cupsreject             grub2-switch-to-blscfg                 luseradd                     pivot_root                                  skdump                     xfs_metadump
+dcb                    grubby                                 luserdel                     plipconfig                                  sktest                     xfs_mkfile
+dcbtool                gssproxy                               lusermod                     plymouthd                                   slattach                   xfs_ncheck
+ddns-confgen           halt                                   lvchange                     plymouth-set-default-theme                  smartctl                   xfs_quota
+debugfs                handle-sshpw                           lvconvert                    pm-hibernate                                smartd                     xfs_repair
+delpart                hddtemp                                lvcreate                     pm-powersave                                smbd                       xfsrestore
+depmod                 hdparm                                 lvdisplay                    pm-suspend                                  sm-notify                  xfs_rtcp
+devlink                hwclock                                lvextend                     pm-suspend-hybrid                           smtp-sink                  xfs_spaceman
+dm_dso_reg_tool        hwinfo                                 lvm                          pm-utils-bugreport-info.sh                  smtp-source                xl2tpd
+dmeventd               hypervfcopyd                           lvmconfig                    postalias                                   sosreport                  xl2tpd-control
+dmevent_tool           hypervkvpd                             lvmdevices                   postcat                                     spice-vdagentd             xqmstats
+dmfilemapd             hypervvssd                             lvmdiskscan                  postconf                                    ss                         xtables-monitor
+dmidecode              iconvconfig                            lvmdump                      postdrop                                    sserver                    xtables-nft-multi
+dmraid                 ifconfig                               lvm_import_vdo               postfix                                     sshd                       zdump
+dmraid.static          ifdown                                 lvmpolld                     postkick                                    sss_cache                  zic
+dmsetup                ifenslave                              lvmsadc                      postlock                                    sssctl                     zramctl
+dmstats                ifstat                                 lvmsar                       postlog                                     sssd                       zvbid
+dosfsck                ifup                                   lvreduce                     postmap                                     sss_debuglevel
+dosfslabel             iio-sensor-proxy                       lvremove                     postmulti                                   sss_obfuscate
+dump-acct              init                                   lvrename                     postqueue                                   sss_override
+dumpe2fs               insmod                                 lvresize                     postsuper                                   sss_seed
+[311u06@311U06 ~]$ ls /tmp
+google.sig.2DmMNa                                                               tmp22u1kio5
+google.sig.AtMHBV                                                               tmp4jauvsx4
+google.sig.ee6AzA                                                               tmp4ng8f9v_.png
+google.sig.ObmNy6                                                               tmp4u1yic05.png
+google.sig.tMTsdA                                                               tmp4xuvoct3.png
+google.sig.w2NBDw                                                               tmp58ezopsp
+krb5cc_1804801177                                                               tmp6q5uepro.png
+pulse-PKdhtXMmr18n                                                              tmpa52myona
+ssh-XXXXXX9way9y                                                                tmp_cl265c3.png
+ssh-XXXXXXKZASi0                                                                tmphjl_azel.png
+systemd-private-6e046d358f844c638b72d7ded9988f1c-chronyd.service-MXqhqj         tmphly08yd9
+systemd-private-6e046d358f844c638b72d7ded9988f1c-colord.service-iq1WYu          tmpmq7aholk.png
+systemd-private-6e046d358f844c638b72d7ded9988f1c-dbus-broker.service-bLTdKX     tmpr5fgss6g
+systemd-private-6e046d358f844c638b72d7ded9988f1c-ModemManager.service-yKOCN6    tmptvg9xvvl
+systemd-private-6e046d358f844c638b72d7ded9988f1c-postfix.service-3E6kSS         tmpvbffm0g4.png
+systemd-private-6e046d358f844c638b72d7ded9988f1c-rtkit-daemon.service-tT1MjF    tmpztvup27l.png
+systemd-private-6e046d358f844c638b72d7ded9988f1c-systemd-logind.service-ICRwfu  VeyonFeatureWorker-8e997d84-ebb9-430f-8f72-d45d9821963d.log
+systemd-private-6e046d358f844c638b72d7ded9988f1c-upower.service-zhrPo1          VeyonServer.log
+tmp03pkwd_e                                                                     VeyonServiceDataManager
+tmp0lih26t_                                                                     VeyonService.log
+tmp0mftxfdu.png                                                                 yandex_browser_updater.log
+tmp1vr514i0
+[311u06@311U06 ~]$ ls /usr
+bin  games  i686-w64-mingw32  include  lib  lib64  libexec  local  sbin  share  src  tmp  x86_64-w64-mingw32
+[311u06@311U06 ~]$ ls /usr/bin
+c                                   kbd_mode                       pacmd                                  systemd-cgtop                            yacc
+ fc-cache                             kbdrate                        pactl                                  systemd-cryptenroll                      yad
+ fc-cache-32                          kbuildsycoca5                  pa-info                                systemd-delta                            yad-icon-browser
+ fc-cache-64                          kbxutil                        pamon                                  systemd-detect-virt                      yad-settings
+ fc-cat                               kcookiejar5                    pam-panel-icon                         systemd-dissect                          yad-tools
+ fc-conflist                          kdeinit5                       panelctl                               systemd-escape                           yandex-browser
+ fc-list                              kdeinit5_shutdown              pango-list                             systemd-firstboot                        yandex-browser-stable
+ fc-match                             kdeinit5_wrapper               pango-segmentation                     systemd-hwdb                             yelp
+ fc-pattern                           kdestroy                       pango-view                             systemd-id128                            yes
+ fc-query                             kdumpctl                       paperconf                              systemd-inhibit                          ypdomainname
+ fc-scan                              kernel-install                 paplay                                 systemd-machine-id-setup                 yum
+ fc-validate                          keyctl                         paps                                   systemd-mount                            zbarcam
+ fd2pascal                            keytool                        parec                                  systemd-notify                           zbarimg
+ fdp                                  kglobalaccel5                  parecord                               systemd-path                             zcat
+ ffcfstress                           kiconfinder5                   parsetrigrams                          systemd-repart                           zcmp
+ ffmpeg                               kill                           pas2fpm                                systemd-run                              zdiff
+ ffmvforce                            killall                        pas2jni                                systemd-socket-activate                  zegrep
+ ffplay                               kinit                          pas2js                                 systemd-stdio-bridge                     zenheiset
+ ffprobe                              klist                          pas2ut                                 systemd-sysext                           zenity
+ ffset                                kmod                           pas2ut.rsj                             systemd-sysusers                         zfgrep
+ fftest                               kodak2ti3                      passwd                                 systemd-tmpfiles                         zforce
+ fg                                   kpasswd                        paste                                  systemd-tty-ask-password-agent           zgrep
+ fgconsole                            kquitapp5                      pastebin                               systemd-umount                           zip
+ fgrep                                kreadconfig5                   pasuspender                            sz                                       zipcloak
+ file                                 kshell5                        patch                                  tabs                                     zipdetails
+ file2brl                             ksu                            patchwork                              tac                                      zipgrep
+ fill_test                            kswitch                        pathchk                                tail                                     zipinfo
+ filterdiff                           ktelnetservice5                pax                                    tapestat                                 zipnote
+ fincore                              ktrash5                        pax11publish                           tar                                      zipsplit
+ find                                 ktutil                         pbm2ppa                                targen                                   zjsdecode
+ find-debuginfo                       kvno                           pbmtpg                                 targetcli                                zless
+ find-debuginfo.sh                    kwalletd5                      pchrt                                  targetclid                               zmore
+ find-jar                             kwallet-query                  pcre2-config                           targetctl                                znew
+ findmnt                              kwrapper5                      pcre-config                            taskset                                  zoo
+ firefox                              kwriteconfig5                  pcsc-spy                               tbl                                      zsoelim
+ fixcvsdiff                           lame                           pdbedit                                tclsh                                    zstd
+ fixqt4headers.pl                     last                           pdf2dsc                                tclsh8.6                                 zstdcat
+ fiz                                  lastb                          pdf2ps                                 tcptraceroute                            zstdgrep
+ flameshot                            lastcomm                       pdfattach                              tcsh                                     zstdless
+ flex                                 lastlog                        pdfdetach                              tdbbackup                                zstdmt
+ flex++                               lavadecode                     pdffonts                               tdbdump                                  zvbi-atsc-cc
+ flipdiff                             lazarus-ide                    pdfimages                              tdbrestore                               zvbi-chains
+ flock                                lazbuild                       pdfinfo                                tdbtool                                  zvbi-ntsc-cc
+ fmt                                  lazres                         pdfseparate                            teamd
+[311u06@311U06 ~]$ ls /usr/lib
+alsa                                      libformw.so.6.5                   liblockdev.so.1.0.0             libpng16.so.16.37.0               libvorbis.so.0.4.9
+audit                                     libfreebl3.chk                    libltdl.so.7                    libpoppler-glib.so.8              libvpx.so.3
+bfd-plugins                               libfreebl3.so                     libltdl.so.7.3.1                libpoppler-glib.so.8.21.0         libvpx.so.3.0
+binfmt.d                                  libfreeblpriv3.chk                libLTO.so                       libpoppler.so.101                 libvpx.so.3.0.0
+blueberry                                 libfreeblpriv3.so                 libLTO.so.12                    libpoppler.so.112                 libvpx.so.6
+cpp                                       libfreetype.so.6                  liblz4.so.1                     libpoppler.so.112.0.0             libvpx.so.6.4
+cups                                      libfreetype.so.6.19.0             liblz4.so.1.9.4                 libpopt.so.0                      libvpx.so.6.4.0
+debug                                     libfribidi.so.0                   liblzma.so.5                    libpopt.so.0.0.0                  libvulkan_intel.so
+dracut                                    libfribidi.so.0.4.0               liblzma.so.5.2.2                libproxy                          libvulkan_lvp.so
+dri                                       libgailutil.so.18                 libm-2.28.so                    libproxy.so.1                     libvulkan_radeon.so
+eclipse                                   libgailutil.so.18.0.1             libmana.so.1                    libproxy.so.1.0.0                 libvulkan.so.1
+engines-1.1                               libgbm.so.1                       libmana.so.1.0.46.0             libpsl.so.5                       libvulkan.so.1.3.216
+environment.d                             libgbm.so.1.0.0                   libmemusage.so                  libpsl.so.5.3.3                   libwavpack.so.1
+fipscheck                                 libgcc_s-11-20230605.so.1         libmenu.so.6                    libpthread-2.28.so                libwavpack.so.1.2.0
+firewalld                                 libgcc_s.so.1                     libmenu.so.6.5                  libpthread.so.0                   libwayland-client.so.0
+firmware                                  libgcrypt.so.20                   libmenuw.so.6                   libpulse-simple.so.0              libwayland-client.so.0.20.0
+fontconfig                                libgcrypt.so.20.2.6               libmenuw.so.6.5                 libpulse-simple.so.0.1.1          libwayland-cursor.so.0
+gallium-pipe                              libgdk_pixbuf-2.0.so.0            libmimerS.so.2                  libpulse.so.0                     libwayland-cursor.so.0.20.0
+games                                     libgdk_pixbuf-2.0.so.0.4000.0     libmimerS.so.2.0.0              libpulse.so.0.24.0                libwayland-egl.so.1
+gcc                                       libgdk-x11-2.0.so.0               libmlx4.so.1                    libraqm.so.0                      libwayland-egl.so.1.20.0
+gconv                                     libgdk-x11-2.0.so.0.2400.32       libmlx4.so.1.0.46.0             libraqm.so.0.700.0                libwayland-server.so.0
+gdk-pixbuf-2.0                            libgd.so.3                        libmlx5.so.1                    libraw1394.so.11                  libwayland-server.so.0.20.0
+gio                                       libgd.so.3.0.9                    libmlx5.so.1.24.46.0            libraw1394.so.11.1.0              libwebpdecoder.so.3
+girepository-1.0                          libgio-2.0.so.0                   libmodman.so.1                  libreadline.so.7                  libwebpdecoder.so.3.1.8
+grub                                      libgio-2.0.so.0.6503.0            libmodman.so.1.0.0              libreadline.so.7.0                libwebpdemux.so.2
+gstreamer-1.0                             libglapi.so.0                     libmount.so.1                   libreadline.so.8                  libwebpdemux.so.2.0.14
+gtk-2.0                                   libglapi.so.0.0.0                 libmount.so.1.1.0               libreadline.so.8.0                libwebpmux.so.3
+i386-linux-gnu                            libGLdispatch.so.0                libmp3lame.so.0                 libRemarks.so                     libwebpmux.so.3.0.13
+java                                      libGLdispatch.so.0.0.0            libmp3lame.so.0.0.0             libRemarks.so.12                  libwebp.so.7
+jvm                                       libGLESv1_CM.so.1                 libmpg123.so.0                  libresolv-2.28.so                 libwebp.so.7.1.8
+jvm-common                                libGLESv1_CM.so.1.2.0             libmpg123.so.0.48.3             libresolv.so.2                    libX11.so.6
+jvm-exports                               libGLESv2.so.2                    libm.so.6                       librom1394.so.0                   libX11.so.6.3.0
+jvm-private                               libGLESv2.so.2.1.0                libncurses.so.6                 librom1394.so.0.3.0               libX11-xcb.so.1
+kbd                                       libglib-2.0.so.0                  libncurses.so.6.5               librt-2.28.so                     libX11-xcb.so.1.0.0
+kconf_update_bin                          libglib-2.0.so.0.6503.0           libncursesw.so.6                librt.so.1                        libXau.so.6
+kde3                                      libGL.so.1                        libncursesw.so.6.5              libsane.so.1                      libXau.so.6.0.0
+kde4                                      libGL.so.1.7.0                    libnetsnmp.so.40                libsane.so.1.2.1                  libxcb-composite.so.0
+kdump                                     libGLX_mesa.so.0                  libnetsnmp.so.40.2.1            libsapdbS.so.2                    libxcb-composite.so.0.0.0
+kernel                                    libGLX_mesa.so.0.0.0              libnettle.so.6                  libsapdbS.so.2.0.0                libxcb-damage.so.0
+krb5                                      libGLX.so.0                       libnettle.so.6.5                libsasl2.so.3                     libxcb-damage.so.0.0.0
+ld-2.28.so                                libGLX.so.0.0.0                   libnettle.so.7                  libsasl2.so.3.0.0                 libxcb-dpms.so.0
+ld-linux.so.2                             libGLX_system.so.0                libnettle.so.7.0                libSDL-1.2.so.0                   libxcb-dpms.so.0.0.0
+libanl-2.28.so                            libgmodule-2.0.so.0               libnghttp2.so.14                libSDL-1.2.so.0.11.4              libxcb-dri2.so.0
+libanl.so.1                               libgmodule-2.0.so.0.6503.0        libnghttp2.so.14.24.1           libSDL2-2.0.so.0                  libxcb-dri2.so.0.0.0
+libasound.so.2                            libgmp.so.10                      libnl-3.so.200                  libSDL2-2.0.so.0.12.0             libxcb-dri3.so.0
+libasound.so.2.0.0                        libgmp.so.10.4.1                  libnl-3.so.200.26.0             libSegFault.so                    libxcb-dri3.so.0.1.0
+libasyncns.so.0                           libgnutls.so.30                   libnl-genl-3.so.200             libselinux.so.1                   libxcb-glx.so.0
+libasyncns.so.0.3.1                       libgnutls.so.30.28.2              libnl-genl-3.so.200.26.0        libsepol.so.1                     libxcb-glx.so.0.0.0
+libatk-1.0.so.0                           libgobject-2.0.so.0               libnl-idiag-3.so.200            libsharpyuv.so.0                  libxcb-present.so.0
+libatk-1.0.so.0.23609.1                   libgobject-2.0.so.0.6503.0        libnl-idiag-3.so.200.26.0       libsharpyuv.so.0.0.1              libxcb-present.so.0.0.0
+libatopology.so.2                         libgomp.so.1                      libnl-nf-3.so.200               libshout.so.3                     libxcb-randr.so.0
+libatopology.so.2.0.0                     libgomp.so.1.0.0                  libnl-nf-3.so.200.26.0          libshout.so.3.2.0                 libxcb-randr.so.0.1.0
+libavahi-client.so.3                      libgpg-error.so.0                 libnl-route-3.so.200            libslapi-2.4.so.2                 libxcb-record.so.0
+libavahi-client.so.3.2.9                  libgpg-error.so.0.28.0            libnl-route-3.so.200.26.0       libslapi-2.4.so.2.11.3            libxcb-record.so.0.0.0
+libavahi-common.so.3                      libgphoto2                        libnl-xfrm-3.so.200             libsmime3.so                      libxcb-render.so.0
+libavahi-common.so.3.5.4                  libgphoto2_port                   libnl-xfrm-3.so.200.26.0        libsndfile.so.1                   libxcb-render.so.0.0.0
+libavahi-libevent.so.1                    libgphoto2_port.so.12             libnn.so.2                      libsndfile.so.1.0.28              libxcb-res.so.0
+libavahi-libevent.so.1.0.0                libgphoto2_port.so.12.0.0         libnn.so.2.0.0                  libsoftokn3.chk                   libxcb-res.so.0.0.0
+libavc1394.so.0                           libgphoto2.so.6                   libnsl-2.28.so                  libsoftokn3.so                    libxcb-screensaver.so.0
+libavc1394.so.0.3.0                       libgphoto2.so.6.1.0               libnsl.so.1                     libsoup-2.4.so.1                  libxcb-screensaver.so.0.0.0
+libblkid.so.1                             libgraphite2.so.3                 libnspr4.so                     libsoup-2.4.so.1.10.0             libxcb-shape.so.0
+libblkid.so.1.1.0                         libgraphite2.so.3.2.1             libnss3.so                      libsoup-gnome-2.4.so.1            libxcb-shape.so.0.0.0
+libBrokenLocale-2.28.so                   libgsm.so.1                       libnss_compat-2.28.so           libsoup-gnome-2.4.so.1.10.0       libxcb-shm.so.0
+libBrokenLocale.so.1                      libgsm.so.1.0.19                  libnss_compat.so.2              libspeex.so.1                     libxcb-shm.so.0.0.0
+libbrotlicommon.so.1                      libgssapi_krb5.so.2               libnssdbm3.chk                  libspeex.so.1.5.1                 libxcb.so.1
+libbrotlicommon.so.1.0.7                  libgssapi_krb5.so.2.2             libnssdbm3.so                   libsqlite3.so.0                   libxcb.so.1.1.0
+libbrotlidec.so.1                         libgssrpc.so.4                    libnss_dns-2.28.so              libsqlite3.so.0.8.6               libxcb-sync.so.1
+libbrotlidec.so.1.0.7                     libgssrpc.so.4.2                  libnss_dns.so.2                 libssh.so.4                       libxcb-sync.so.1.0.0
+libbrotlienc.so.1                         libgstallocators-1.0.so.0         libnss_files-2.28.so            libssh.so.4.8.9                   libxcb-xf86dri.so.0
+libbrotlienc.so.1.0.7                     libgstallocators-1.0.so.0.1603.0  libnss_files.so.2               libssh_threads.so.4               libxcb-xf86dri.so.0.0.0
+libbz2.so.1                               libgstapp-1.0.so.0                libnss_mdns4_minimal.so.2       libssh_threads.so.4.8.9           libxcb-xfixes.so.0
+libbz2.so.1.0.8                           libgstapp-1.0.so.0.1603.0         libnss_mdns4.so.2               libssl3.so                        libxcb-xfixes.so.0.0.0
+libc-2.28.so                              libgstaudio-1.0.so.0              libnss_mdns6_minimal.so.2       libssl.so.1.1                     libxcb-xinerama.so.0
+libcairo-gobject.so.2                     libgstaudio-1.0.so.0.1603.0       libnss_mdns6.so.2               libssl.so.1.1.1w                  libxcb-xinerama.so.0.0.0
+libcairo-gobject.so.2.11704.0             libgstbase-1.0.so.0               libnss_mdns_minimal.so.2        libstdc++.so.6                    libxcb-xinput.so.0
+libcairo-script-interpreter.so.2          libgstbase-1.0.so.0.1603.0        libnss_mdns.so.2                libstdc++.so.6.0.29               libxcb-xinput.so.0.1.0
+libcairo-script-interpreter.so.2.11704.0  libgstcheck-1.0.so.0              libnss_myhostname.so.2          libsyn123.so                      libxcb-xkb.so.1
+libcairo.so.2                             libgstcheck-1.0.so.0.1603.0       libnss_resolve.so.2             libsyn123.so.0                    libxcb-xkb.so.1.0.0
+libcairo.so.2.11704.0                     libgstcontroller-1.0.so.0         libnss_systemd.so.2             libsyn123.so.0.2.3                libxcb-xselinux.so.0
+libcap.so.2                               libgstcontroller-1.0.so.0.1603.0  libnssutil3.so                  libsystemd.so.0                   libxcb-xselinux.so.0.0.0
+libcap.so.2.26                            libgstfft-1.0.so.0                libodbccr.so.2                  libsystemd.so.0.32.0              libxcb-xtest.so.0
+libcdda_interface.so.0                    libgstfft-1.0.so.0.1603.0         libodbccr.so.2.0.0              libtag_c.so.0                     libxcb-xtest.so.0.0.0
+libcdda_interface.so.0.10.2               libgstgl-1.0.so.0                 libodbcdrvcfg1S.so.2            libtag_c.so.0.0.0                 libxcb-xvmc.so.0
+libcdda_paranoia.so.0                     libgstgl-1.0.so.0.1603.0          libodbcdrvcfg1S.so.2.0.0        libtag.so.1                       libxcb-xvmc.so.0.0.0
+libcdda_paranoia.so.0.10.2                libgstnet-1.0.so.0                libodbcdrvcfg2S.so.2            libtag.so.1.17.0                  libxcb-xv.so.0
+libcom_err.so.2                           libgstnet-1.0.so.0.1603.0         libodbcdrvcfg2S.so.2.0.0        libtasn1.so.6                     libxcb-xv.so.0.0.0
+libcom_err.so.2.1                         libgstpbutils-1.0.so.0            libodbcinst.so                  libtasn1.so.6.6.0                 libXcomposite.so.1
+libcrypto.so.1.1                          libgstpbutils-1.0.so.0.1603.0     libodbcinst.so.2                libtdsS.so                        libXcomposite.so.1.0.0
+libcrypto.so.1.1.1w                       libgstreamer-1.0.so.0             libodbcinst.so.2.0.0            libtdsS.so.2                      libXcursor.so.1
+libcrypt.so.2                             libgstreamer-1.0.so.0.1603.0      libodbcminiS.so.2               libtdsS.so.2.0.0                  libXcursor.so.1.0.2
+libcrypt.so.2.0.0                         libgstriff-1.0.so.0               libodbcminiS.so.2.0.0           libtemplate.so.2                  libXdamage.so.1
+libc.so.6                                 libgstriff-1.0.so.0.1603.0        libodbcmyS.so                   libtemplate.so.2.0.0              libXdamage.so.1.1.0
+libcupsimage.so.2                         libgstrtp-1.0.so.0                libodbcmyS.so.2                 libthai.so.0                      libXdmcp.so.6
+libcups.so.2                              libgstrtp-1.0.so.0.1603.0         libodbcmyS.so.2.0.0             libthai.so.0.3.1                  libXdmcp.so.6.0.0
+libcurl.so.4                              libgstrtsp-1.0.so.0               libodbcnnS.so.2                 libtheoradec.so.1                 libXext.so.6
+libcurl.so.4.8.0                          libgstrtsp-1.0.so.0.1603.0        libodbcnnS.so.2.0.0             libtheoradec.so.1.1.4             libXext.so.6.4.0
+libdatrie.so.1                            libgstsdp-1.0.so.0                libodbcpsqlS.so                 libtheoraenc.so.1                 libXfixes.so.3
+libdatrie.so.1.3.2                        libgstsdp-1.0.so.0.1603.0         libodbcpsqlS.so.2               libtheoraenc.so.1.1.2             libXfixes.so.3.1.0
+libdb-5.3.so                              libgsttag-1.0.so.0                libodbcpsqlS.so.2.0.0           libtheora.so.0                    libXft.so.2
+libdb-5.so                                libgsttag-1.0.so.0.1603.0         libodbc.so                      libtheora.so.0.3.10               libXft.so.2.3.3
+libdbus-1.so.3                            libgstvideo-1.0.so.0              libodbc.so.2                    libthread_db-1.0.so               libXinerama.so.1
+libdbus-1.so.3.19.17                      libgstvideo-1.0.so.0.1603.0       libodbc.so.2.0.0                libthread_db.so.1                 libXinerama.so.1.0.0
+libdl-2.28.so                             libgthread-2.0.so.0               libodbctxtS.so.2                libtic.so.6                       libXi.so.6
+libdl.so.2                                libgthread-2.0.so.0.6503.0        libodbctxtS.so.2.0.0            libtic.so.6.5                     libXi.so.6.1.0
+libdrm_amdgpu.so.1                        libgtk-x11-2.0.so.0               libogg.so.0                     libtiff.so.5                      libxml2.so.2
+libdrm_amdgpu.so.1.0.0                    libgtk-x11-2.0.so.0.2400.32       libogg.so.0.8.4                 libtiff.so.5.8.0                  libxml2.so.2.9.8
+libdrm_intel.so.1                         libharfbuzz-cairo.so.0            libopenal.so.1                  libtiff.so.6                      libXpm.so.4
+libdrm_intel.so.1.0.0                     libharfbuzz-cairo.so.0.60730.0    libopenal.so.1.19.1             libtiff.so.6.0.1                  libXpm.so.4.11.0
+libdrm_nouveau.so.2                       libharfbuzz-gobject.so.0          libOpenCL.so.1                  libtiffxx.so.5                    libXrandr.so.2
+libdrm_nouveau.so.2.0.0                   libharfbuzz-gobject.so.0.60730.0  libOpenCL.so.1.0.0              libtiffxx.so.5.8.0                libXrandr.so.2.2.0
+libdrm_radeon.so.1                        libharfbuzz.so.0                  libopenjp2.so.2.4.0             libtiffxx.so.6                    libXrender.so.1
+libdrm_radeon.so.1.0.1                    libharfbuzz.so.0.60730.0          libopenjp2.so.7                 libtiffxx.so.6.0.1                libXrender.so.1.3.0
+libdrm.so.2                               libharfbuzz-subset.so.0           liboplodbcS.so.2                libtinfo.so.6                     libxshmfence.so.1
+libdrm.so.2.4.0                           libharfbuzz-subset.so.0.60730.0   liboplodbcS.so.2.0.0            libtinfo.so.6.5                   libxshmfence.so.1.0.0
+libdv.so.4                                libhistory.so.7                   libopus.so.0                    libtwolame.so.0                   libXv.so.1
+libdv.so.4.0.3                            libhistory.so.7.0                 libopus.so.0.6.1                libtwolame.so.0.0.0               libXv.so.1.0.0
+libedit.so.0                              libhistory.so.8                   liboraodbcS.so.2                libudev.so.1                      libXxf86vm.so.1
+libedit.so.0.0.63                         libhistory.so.8.0                 liboraodbcS.so.2.0.0            libudev.so.1.7.2                  libXxf86vm.so.1.0.0
+libefa.so.1                               libhogweed.so.4                   liborc-0.4.so.0                 libunistring.so.2                 libz.so.1
+libefa.so.1.2.46.0                        libhogweed.so.4.5                 liborc-0.4.so.0.39.0            libunistring.so.2.1.0             libz.so.1.2.11
+libEGL_mesa.so.0                          libhogweed.so.5                   liborc-test-0.4.so.0            libunwind-coredump.so.0           libzstd.so.1
+libEGL_mesa.so.0.0.0                      libhogweed.so.5.0                 liborc-test-0.4.so.0.39.0       libunwind-coredump.so.0.0.0       libzstd.so.1.5.5
+libEGL.so.1                               libibverbs                        libOSMesa.so.8                  libunwind.so.8                    LLVMgold.so
+libEGL.so.1.1.0                           libibverbs.so.1                   libOSMesa.so.8.0.0              libunwind.so.8.0.1                locale
+libelf-0.185.so                           libibverbs.so.1.14.46.0           libout123.so                    libunwind-x86.so.8                lsb
+libelf.so.1                               libidn2.so.0                      libout123.so.0                  libunwind-x86.so.8.0.1            mdadm
+libesoobS.so.2                            libidn2.so.0.3.6                  libout123.so.0.5.1              libusb-1.0.so.0                   modprobe.d
+libesoobS.so.2.0.0                        libiec61883.so.0                  libp11-kit.so.0                 libusb-1.0.so.0.3.0               modules
+libevent-2.0.so.5                         libiec61883.so.0.1.1              libp11-kit.so.0.3.0             libutil-2.28.so                   modules-load.d
+libevent-2.0.so.5.1.9                     libieee1284.so.3                  libp11.so.3                     libutil.so.1                      motd
+libevent-2.1.so.6                         libieee1284.so.3.2.2              libp11.so.3.4.3                 libuuid.so.1                      motd.d
+libevent-2.1.so.6.0.2                     libimagequant.so.0                libpanel.so.6                   libuuid.so.1.3.0                  mozilla
+libevent_core-2.0.so.5                    libjasper.so.4                    libpanel.so.6.5                 libv4l                            NetworkManager
+libevent_core-2.0.so.5.1.9                libjasper.so.4.0.0                libpanelw.so.6                  libv4l1.so.0                      nss
+libevent_core-2.1.so.6                    libjbig85.so.2.1                  libpanelw.so.6.5                libv4l1.so.0.0.0                  ostree
+libevent_core-2.1.so.6.0.2                libjbig.so.2.1                    libpango-1.0.so.0               libv4l2rds.so.0                   p11-kit-proxy.so
+libevent_extra-2.0.so.5                   libjpeg.so.62                     libpango-1.0.so.0.5000.14       libv4l2rds.so.0.0.0               pam.d
+libevent_extra-2.0.so.5.1.9               libjpeg.so.62.3.0                 libpangocairo-1.0.so.0          libv4l2.so.0                      polkit-1
+libevent_extra-2.1.so.6                   libk5crypto.so.3                  libpangocairo-1.0.so.0.5000.14  libv4l2.so.0.0.0                  pulseaudio
+libevent_extra-2.1.so.6.0.2               libk5crypto.so.3.1                libpangoft2-1.0.so.0            libv4lconvert.so.0                python2.7
+libevent_openssl-2.1.so.6                 libkdb5.so.10                     libpangoft2-1.0.so.0.5000.14    libv4lconvert.so.0.0.0            python3.8
+libevent_openssl-2.1.so.6.0.2             libkdb5.so.10.0                   libpangoxft-1.0.so.0            libva-drm.so.2                    qt5
+libevent_pthreads-2.0.so.5                libkeyutils.so.1                  libpangoxft-1.0.so.0.5000.14    libva-drm.so.2.1500.0             realmd
+libevent_pthreads-2.0.so.5.1.9            libkeyutils.so.1.8                libpcap.so.1                    libva-glx.so.2                    rpm
+libevent_pthreads-2.1.so.6                libkrad.so.0                      libpcap.so.1.10.1               libva-glx.so.2.1500.0             sane
+libevent_pthreads-2.1.so.6.0.2            libkrad.so.0.0                    libpciaccess.so.0               libva.so.2                        sasl2
+libexif.so.12                             libkrb5.so.3                      libpciaccess.so.0.11.1          libva.so.2.1500.0                 security
+libexif.so.12.3.4                         libkrb5.so.3.3                    libpcprofile.so                 libva-wayland.so.2                sendmail
+libexpat.so.1                             libkrb5support.so.0               libpcre2-8.so.0                 libva-wayland.so.2.1500.0         sendmail.postfix
+libexpat.so.1.10.0                        libkrb5support.so.0.1             libpcre2-8.so.0.13.0            libva-x11.so.2                    sse2
+libffi.so.6                               liblber-2.4.so.2                  libpcre2-posix.so.3             libva-x11.so.2.1500.0             sysctl.d
+libffi.so.6.0.2                           liblber-2.4.so.2.11.3             libpcre2-posix.so.3.0.5         libverto.so.1                     sysimage
+libFLAC++.so.6                            liblcms2.so.2                     libpcreposix.so.0               libverto.so.1.0.0                 systemd
+libFLAC++.so.6.3.0                        liblcms2.so.2.0.15                libpcreposix.so.0.0.7           libvisual-0.4.so.0                sysusers.d
+libFLAC.so.8                              libldap-2.4.so.2                  libpcre.so.1                    libvisual-0.4.so.0.0.0            tmpfiles.d
+libFLAC.so.8.3.0                          libldap-2.4.so.2.11.3             libpcre.so.1.2.12               libVkLayer_MESA_device_select.so  tuned
+libfontconfig.so.1                        libldap_r-2.4.so.2                libpixman-1.so.0                libvorbisenc.so.2                 udev
+libfontconfig.so.1.12.0                   libldap_r-2.4.so.2.11.3           libpixman-1.so.0.40.0           libvorbisenc.so.2.0.12            vdpau
+libform.so.6                              libLLVM-12.0.1.so                 libplc4.so                      libvorbisfile.so.3                wine
+libform.so.6.5                            libLLVM-12.so                     libplds4.so                     libvorbisfile.so.3.3.8            x86_64-linux-gnu
+libformw.so.6                             liblockdev.so.1                   libpng16.so.16                  libvorbis.so.0
+[311u06@311U06 ~]$ ls /usr/local
+bin  etc  games  include  lib  lib64  libexec  sbin  share  src
+[311u06@311U06 ~]$ ls /usr/sbin
+accessdb               dump-utmp                              install-info                 lvs                                         posttls-finger             start-statd
+accton                 e2freefrag                             installkernel                lvscan                                      poweroff                   strfile
+adcli                  e2fsck                                 ip                           makedumpfile                                pppd                       strongswan
+addgnupghome           e2image                                ip6tables                    matchpathcon                                pppdump                    sulogin
+addpart                e2label                                ip6tables-apply              mate-display-properties-install-systemwide  pppoe-discovery            swanctl
+adduser                e2mmpstatus                            ip6tables-nft                mate-power-backlight-helper                 pppstats                   swaplabel
+agetty                 e2undo                                 ip6tables-nft-restore        mate-system-log                             ppp-watch                  swapoff
+alsactl                e4crypt                                ip6tables-nft-save           mdadm                                       pptp                       swapon
+alsa-info.sh           e4defrag                               ip6tables-restore            mdmon                                       pptpsetup                  switch_root
+alternatives           eapol_test                             ip6tables-restore-translate  mii-diag                                    pvchange                   sysctl
+anaconda               ebtables                               ip6tables-save               mii-tool                                    pvck                       t1libconfig
+anacron                ebtables-nft                           ip6tables-translate          mkdict                                      pvcreate                   tc
+applygnupgdefaults     ebtables-nft-restore                   ipa-certupdate               mkdosfs                                     pvdisplay                  tcpd
+arp                    ebtables-nft-save                      ipa-client-automount         mkdumprd                                    pvmove                     tcpdmatch
+arpd                   ebtables-restore                       ipa-client-install           mke2fs                                      pvremove                   tcpdump
+arping                 ebtables-save                          ipa-getkeytab                mkfs                                        pvresize                   tcpslice
+arptables              ebtables-translate                     ipa-join                     mkfs.btrfs                                  pvs                        tcsd
+arptables-nft          edquota                                ipa-rmkeytab                 mkfs.cramfs                                 pvscan                     telinit
+arptables-nft-restore  efibootmgr                             ipmaddr                      mkfs.ext2                                   pwck                       thin_check
+arptables-nft-save     era_check                              ipmi-chassis                 mkfs.ext3                                   pwconv                     thin_delta
+arptables-restore      era_dump                               ipmi-chassis-config          mkfs.ext4                                   pwhistory_helper           thin_dump
+arptables-save         era_invalidate                         ipmi-config                  mkfs.fat                                    pwmconfig                  thin_ls
+atd                    era_restore                            ipmi-console                 mkfs.minix                                  pwunconv                   thin_metadata_size
+atopacctd              ether-wake                             ipmiconsole                  mkfs.msdos                                  quotacheck                 thin_repair
+atopgpud               ethtool                                ipmi-dcmi                    mkfs.ntfs                                   quotaoff                   thin_restore
+atrun                  eventlogadm                            ipmi-detect                  mkfs.vfat                                   quotaon                    thin_rmap
+auditctl               exportfs                               ipmidetect                   mkfs.xfs                                    quotastats                 thin_trim
+auditd                 faillock                               ipmi-fru                     mkhomedir_helper                            raid-check                 tickadj
+augenrules             fancontrol                             ipmi-locate                  mk_isdnhwdb                                 rdisc                      tipc
+aureport               fatlabel                               ipmimonitoring               mklost+found                                rdma                       tracepath
+ausearch               fcnsq                                  ipmi-oem                     mkntfs                                      readprofile                tracepath6
+authconfig             fcoeadm                                ipmi-pef-config              mksquashfs                                  realm                      try-from
+automount              fcoemon                                ipmi-pet                     mkswap                                      reboot                     tsig-keygen
+autrace                fcping                                 ipmi-ping                    ModemManager                                redhat_lsb_trigger.x86_64  tune2fs
+avahi-daemon           fcrls                                  ipmiping                     modinfo                                     repquota                   tuned
+avcstat                fdformat                               ipmi-power                   modprobe                                    request-key                tuned-adm
+badblocks              fdisk                                  ipmipower                    mount.cifs                                  resize2fs                  udevadm
+beesu                  filefrag                               ipmi-raw                     mount.fuse                                  resizepart                 umount.nfs
+biosdecode             findfs                                 ipmi-sel                     mount.fuse3                                 restorecon                 umount.nfs4
+biosdevname            fipvlan                                ipmi-sensors                 mount.glusterfs                             restorecon_xattr           umount.udisks2
+blkdeactivate          fixfiles                               ipmi-sensors-config          mount.lowntfs-3g                            rfkill                     unbound-anchor
+blkdiscard             fix-info-dir                           iprconfig                    mount.nfs                                   rmcp-ping                  unix_chkpwd
+blkid                  fixparts                               iprdbg                       mount.nfs4                                  rmcpping                   unix_update
+blkmapd                foomatic-addpjloptions                 iprdump                      mount.ntfs                                  rmmod                      unsquashfs
+blkzone                foomatic-cleanupdrivers                iprinit                      mount.ntfs-3g                               rngd                       unstr
+blockdev               foomatic-extract-text                  iprsos                       mount.ntfs-fuse                             route                      update-alternatives
+bmc-config             foomatic-fix-xml                       iprupdate                    mount.smb3                                  rpcbind                    update-pciids
+bmc-device             foomatic-getpjloptions                 ipsec                        mountstats                                  rpcdebug                   update-smart-drivedb
+bmc-info               foomatic-kitload                       iptables                     mount.vboxsf                                rpc.gssd                   usb_modeswitch
+brctl                  foomatic-nonumericalids                iptables-apply               mpathconf                                   rpc.idmapd                 usb_modeswitch_dispatcher
+bridge                 foomatic-preferred-driver              iptables-nft                 mpathpersist                                rpcinfo                    usbmuxd
+btrfs                  foomatic-printermap-to-gutenprint-xml  iptables-nft-restore         mtr                                         rpc.mountd                 useradd
+btrfsck                foomatic-replaceoldprinterids          iptables-nft-save            mtr-packet                                  rpc.nfsd                   userdel
+btrfs-convert          fsadm                                  iptables-restore             multipath                                   rpc.statd                  userhelper
+btrfs-find-root        fsck                                   iptables-restore-translate   multipathd                                  rsyslogd                   usermod
+btrfs-image            fsck.btrfs                             iptables-save                named-checkzone                             rtacct                     VBoxService
+btrfs-map-logical      fsck.cramfs                            iptables-translate           named-compilezone                           rtcwake                    vdpa
+btrfs-select-super     fsck.ext2                              iptunnel                     nameif                                      rtkitctl                   vdptool
+btrfstune              fsck.ext3                              irqbalance                   netscsid                                    rtmon                      vgcfgbackup
+build-locale-archive   fsck.ext4                              isadump                      NetworkManager                              rtstat                     vgcfgrestore
+cache_check            fsck.fat                               isaset                       new-kernel-pkg                              runlevel                   vgchange
+cache_dump             fsck.minix                             iscsiadm                     newusers                                    runuser                    vgck
+cache_metadata_size    fsck.msdos                             iscsid                       nfbpf_compile                               sa                         vgconvert
+cache_repair           fsck.ntfs                              iscsi-iname                  nfnl_osf                                    safe_finger                vgcreate
+cache_restore          fsck.vfat                              iscsistart                   nfsconf                                     samba                      vgdisplay
+cache_writeback        fsck.xfs                               iscsiuio                     nfsconvert                                  samba_dnsupdate            vgexport
+capsh                  fsfreeze                               iw                           nfsdcld                                     samba_downgrade_db         vgextend
+certmonger             fstrim                                 kadmind                      nfsdclddb                                   samba-gpupdate             vgimport
+cfdisk                 fuser                                  kadmin.local                 nfsdclnts                                   samba_kcc                  vgimportclone
+cgdcbxd                fxload                                 kdb5_util                    nfsdcltrack                                 samba_spnupdate            vgimportdevices
+cgdisk                 g13-syshelp                            kexec                        nfsidmap                                    samba_upgradedns           vgmerge
+charon-cmd             gdisk                                  key.dns_resolver             nfsiostat                                   sasldblistusers2           vgmknodes
+charon-systemd         gdm                                    kpartx                       nfsref                                      saslpasswd2                vgreduce
+chat                   genhomedircon                          kpatch                       nfsstat                                     sedispatch                 vgremove
+chcpu                  genhostid                              kprop                        nft                                         sefcontext_compile         vgrename
+check_hd               genl                                   kpropd                       nmbd                                        selabel_digest             vgs
+chgpasswd              getcap                                 kproplog                     nologin                                     selabel_lookup             vgscan
+chkconfig              getenforce                             krb5kdc                      nstat                                       selabel_lookup_best_match  vgsplit
+chpasswd               getpcaps                               lchage                       ntfsclone                                   selabel_partial_match      via_regs_dump
+chronyd                getsebool                              ldattach                     ntfscp                                      selinux_check_access       vigr
+chroot                 getsysinfo                             ldconfig                     ntfslabel                                   selinuxconlist             vipw
+cifs.idmap             glibc_post_upgrade.i686                ledctl                       ntfsresize                                  selinuxdefcon              virt-what
+cifs.upcall            glibc_post_upgrade.x86_64              ledmon                       ntfsundelete                                selinuxenabled             visudo
+clock                  glusterfs                              lgroupadd                    ntpd                                        selinuxexeccon             vmcore-dmesg
+consoletype            glusterfsd                             lgroupdel                    ntpdate                                     semanage                   vpddecode
+convert_hd             gpartedbin                             lgroupmod                    ntpdc                                       semodule                   weak-modules
+convertquota           gpm                                    lid                          ntp-keygen                                  sendmail                   winbindd
+cracklib-check         groupadd                               lldpad                       ntpq                                        sendmail.postfix           wipefs
+cracklib-format        groupdel                               lldptool                     ntptime                                     sensors-detect             wpa_cli
+cracklib-packer        groupmems                              lnewusers                    ntsysv                                      service                    wpa_passphrase
+cracklib-unpacker      groupmod                               lnstat                       oddjobd                                     sestatus                   wpa_supplicant
+create-cracklib-dict   grpck                                  load_policy                  ownership                                   setcap                     xfs_admin
+crond                  grpconv                                lockdev                      packer                                      setenforce                 xfs_bmap
+cryptsetup             grpunconv                              logrotate                    pam_console_apply                           setfiles                   xfs_copy
+ctrlaltdel             grub2-bios-setup                       logsave                      pam_namespace_helper                        setpci                     xfs_db
+ctstat                 grub2-get-kernel-settings              lokkit                       pam_timestamp_check                         setquota                   xfsdump
+cupsaccept             grub2-install                          losetup                      paperconfig                                 setregdomain               xfs_estimate
+cups-browsed           grub2-macbless                         lpadmin                      parted                                      setroubleshootd            xfs_freeze
+cupsctl                grub2-mkconfig                         lpasswd                      partprobe                                   setsebool                  xfs_fsr
+cupsd                  grub2-probe                            lpc                          partx                                       setup                      xfs_growfs
+cupsdisable            grub2-reboot                           lpc.cups                     pdata_tools                                 sfdisk                     xfs_info
+cupsenable             grub2-set-bootflag                     lpinfo                       pef-config                                  sgdisk                     xfsinvutil
+cupsfilter             grub2-set-default                      lpmove                       pidof                                       sgpio                      xfs_io
+cups-genppd.5.3        grub2-set-password                     lsmod                        ping                                        showmount                  xfs_logprint
+cups-genppdupdate      grub2-setpassword                      lspci                        ping6                                       shutdown                   xfs_mdrestore
+cupsreject             grub2-switch-to-blscfg                 luseradd                     pivot_root                                  skdump                     xfs_metadump
+dcb                    grubby                                 luserdel                     plipconfig                                  sktest                     xfs_mkfile
+dcbtool                gssproxy                               lusermod                     plymouthd                                   slattach                   xfs_ncheck
+ddns-confgen           halt                                   lvchange                     plymouth-set-default-theme                  smartctl                   xfs_quota
+debugfs                handle-sshpw                           lvconvert                    pm-hibernate                                smartd                     xfs_repair
+delpart                hddtemp                                lvcreate                     pm-powersave                                smbd                       xfsrestore
+depmod                 hdparm                                 lvdisplay                    pm-suspend                                  sm-notify                  xfs_rtcp
+devlink                hwclock                                lvextend                     pm-suspend-hybrid                           smtp-sink                  xfs_spaceman
+dm_dso_reg_tool        hwinfo                                 lvm                          pm-utils-bugreport-info.sh                  smtp-source                xl2tpd
+dmeventd               hypervfcopyd                           lvmconfig                    postalias                                   sosreport                  xl2tpd-control
+dmevent_tool           hypervkvpd                             lvmdevices                   postcat                                     spice-vdagentd             xqmstats
+dmfilemapd             hypervvssd                             lvmdiskscan                  postconf                                    ss                         xtables-monitor
+dmidecode              iconvconfig                            lvmdump                      postdrop                                    sserver                    xtables-nft-multi
+dmraid                 ifconfig                               lvm_import_vdo               postfix                                     sshd                       zdump
+dmraid.static          ifdown                                 lvmpolld                     postkick                                    sss_cache                  zic
+dmsetup                ifenslave                              lvmsadc                      postlock                                    sssctl                     zramctl
+dmstats                ifstat                                 lvmsar                       postlog                                     sssd                       zvbid
+dosfsck                ifup                                   lvreduce                     postmap                                     sss_debuglevel
+dosfslabel             iio-sensor-proxy                       lvremove                     postmulti                                   sss_obfuscate
+dump-acct              init                                   lvrename                     postqueue                                   sss_override
+dumpe2fs               insmod                                 lvresize                     postsuper                                   sss_seed
+[311u06@311U06 ~]$ ls /usr/share
+aclocal              dnfdaemon              glusterfs                    ipmitool         licenses                        openal                strongswan
+aclocal-1.16         dnfdragora             glvnd                        iso-codes        locale                          openssl-gost-engine   sushi
+adobe                doc                    gnome                        iso-flag-png     lsb                             open-vm-tools         swig
+alsa                 dosbox                 gnome-background-properties  ivy-xmls         lua                             orca                  system-config-firewall
+alsa-card-profile    doublecmd              gnome-bluetooth              java             luajit-2.1                      osinfo                system-config-printer
+anaconda             drirc.d                gnome-control-center         javadoc          m17n                            os-prober             system-config-selinux
+ant                  eb                     gnome-session                javascript       magic                           ostree                system-config-users
+antiword             eclipse                gnome-settings-daemon        java-utils       makedumpfile                    p11-kit               systemd
+appdata              egl                    gnome-shell                  javazi           man                             pam.d                 systemtap
+applications         emacs                  gnome-video-effects          javazi-1.8       marco                           perl5                 t1lib
+applnk               emoticons              gnome-vpn-properties         join-to-domain   mate                            pixmaps               tabset
+apps                 empty                  gnupg                        jvm              mate-about                      pkgconfig             tcl8
+atom                 empty.sshd             goldendict                   jvm-common       mate-applets                    pki                   tcl8.6
+atop                 enchant                GraphicsMagick-1.3.29        kconf_update     mate-background-properties      pluma                 templates
+atril                enchant-2              graphviz                     kde4             mate-control-center             plymouth              terminfo
+audacity             engrampa               groff                        kde-settings     mate-layout-chooser             polkit-1              texlive
+audit                enscript               grub                         kdump            mate-media                      poppler               themes
+augeas               eom                    gstreamer-0.10               keyutils         mate-menus                      ppd                   thumbnailers
+authselect           espeak-ng-data         gstreamer-1.0                kf5              mate-panel                      projectM              timeshift
+autoconf             evolution-data-server  gtk-2.0                      kio_desktop      mate-power-manager              publicsuffix          tk8.6
+autocorr             factory                gtk-3.0                      knotifications5  mate-screensaver                pulseaudio            tracker
+automake-1.16        ffmpeg                 gtk-doc                      knsrcfiles       mate-session-manager            python-meh            tracker3
+autostart            file                   gtk-engines                  kpackage         mate-settings-daemon            python-wheels         tracker-miners
+avahi                firstboot              gtksourceview-3.0            kservices5       mate-time-admin                 qemu                  tuned
+awk                  fish                   gtksourceview-4              kservicetypes5   maven-metadata                  qlogging-categories5  usb_modeswitch
+backgrounds          flameshot              guile                        kxmlgui5         maven-poms                      qt5                   usermode
+bash-completion      fontconfig             gutenprint                   ladspa           mc                              redhat-release        veyon
+bison                fonts                  gvfs                         libchewing       mdadm                           redland               vim
+blivet-gui           foo2hiperc             hardinfo                     libdrm           media-player-info               redos                 vlc
+brasero              foo2hp                 help                         libexttextcat    metacity                        redos-release         vulkan
+caja                 foo2lava               hplip                        libgnomekbd      metainfo                        remmina               wallpapers
+caja-actions         foo2oak                hwdata                       libgpg-error     mime                            samba                 wayland-sessions
+caja-extensions      foo2qpdl               hwinfo                       libgphoto2       mime-info                       sane                  web-assets
+caja-python          foo2slx                hyphen                       libgweather      mimelnk                         seahorse              wine
+caribou              foo2xqx                i18n                         libhangul        mingw                           selinux               X11
+cdrdao               foo2zjs                ibus                         libindicator     misc                            services              xdg-desktop-portal
+cmake                foomatic               ibus-chewing                 libinput         mlt                             servicetypes          xemacs
+color                fpcsrc                 ibus-hangul                  libkkc           mobile-broadband-provider-info  setroubleshoot        xfsprogs
+colord               games                  ibus-kkc                     liblangtag       ModemManager                    setuptool             xml
+config               gawk                   ibus-libpinyin               liblouis         modulefiles                     sgml                  xmvn
+config.kcfg          gcc-11                 ibus-m17n                    liblouisutdml    Modules                         share_directory       xsessions
+config.site          GConf                  ibus-rawcode                 libmateweather   mousetweaks                     shotcut               xtables
+connectfolder        gdb                    ibus-sayura                  libnumbertext    movit                           skk                   yelp
+cracklib             gdm                    ibus-table                   librarian        mozilla                         smartmontools         yelp-xsl
+crypto-policies      gegl-0.4               icedtea-web                  libreoffice      mozo                            snmp                  zenity
+cscope               gettext                icons                        libreport        mypaint-data                    solid                 zoneinfo
+cups                 gettext-0.21           icu                          libthai          myspell                         sounds                zsh
+dbus-1               ghostscript            idl                          libtimezonemap   mythes                          source-highlight
+dconf                gimp                   ImageMagick-6                libtool          nano                            spandsp
+defaults             gir-1.0                info                         libwacom         obs                             speech-dispatcher
+desktop-directories  git-core               intltool                     libwmf           omf                             sssd
+dict                 glib-2.0               ipa                          libyui           onboard                         stardict
+[311u06@311U06 ~]$ ls /usr/share/
+aclocal              dnfdaemon              glusterfs                    ipmitool         licenses                        openal                strongswan
+aclocal-1.16         dnfdragora             glvnd                        iso-codes        locale                          openssl-gost-engine   sushi
+adobe                doc                    gnome                        iso-flag-png     lsb                             open-vm-tools         swig
+alsa                 dosbox                 gnome-background-properties  ivy-xmls         lua                             orca                  system-config-firewall
+alsa-card-profile    doublecmd              gnome-bluetooth              java             luajit-2.1                      osinfo                system-config-printer
+anaconda             drirc.d                gnome-control-center         javadoc          m17n                            os-prober             system-config-selinux
+ant                  eb                     gnome-session                javascript       magic                           ostree                system-config-users
+antiword             eclipse                gnome-settings-daemon        java-utils       makedumpfile                    p11-kit               systemd
+appdata              egl                    gnome-shell                  javazi           man                             pam.d                 systemtap
+applications         emacs                  gnome-video-effects          javazi-1.8       marco                           perl5                 t1lib
+applnk               emoticons              gnome-vpn-properties         join-to-domain   mate                            pixmaps               tabset
+apps                 empty                  gnupg                        jvm              mate-about                      pkgconfig             tcl8
+atom                 empty.sshd             goldendict                   jvm-common       mate-applets                    pki                   tcl8.6
+atop                 enchant                GraphicsMagick-1.3.29        kconf_update     mate-background-properties      pluma                 templates
+atril                enchant-2              graphviz                     kde4             mate-control-center             plymouth              terminfo
+audacity             engrampa               groff                        kde-settings     mate-layout-chooser             polkit-1              texlive
+audit                enscript               grub                         kdump            mate-media                      poppler               themes
+augeas               eom                    gstreamer-0.10               keyutils         mate-menus                      ppd                   thumbnailers
+authselect           espeak-ng-data         gstreamer-1.0                kf5              mate-panel                      projectM              timeshift
+autoconf             evolution-data-server  gtk-2.0                      kio_desktop      mate-power-manager              publicsuffix          tk8.6
+autocorr             factory                gtk-3.0                      knotifications5  mate-screensaver                pulseaudio            tracker
+automake-1.16        ffmpeg                 gtk-doc                      knsrcfiles       mate-session-manager            python-meh            tracker3
+autostart            file                   gtk-engines                  kpackage         mate-settings-daemon            python-wheels         tracker-miners
+avahi                firstboot              gtksourceview-3.0            kservices5       mate-time-admin                 qemu                  tuned
+awk                  fish                   gtksourceview-4              kservicetypes5   maven-metadata                  qlogging-categories5  usb_modeswitch
+backgrounds          flameshot              guile                        kxmlgui5         maven-poms                      qt5                   usermode
+bash-completion      fontconfig             gutenprint                   ladspa           mc                              redhat-release        veyon
+bison                fonts                  gvfs                         libchewing       mdadm                           redland               vim
+blivet-gui           foo2hiperc             hardinfo                     libdrm           media-player-info               redos                 vlc
+brasero              foo2hp                 help                         libexttextcat    metacity                        redos-release         vulkan
+caja                 foo2lava               hplip                        libgnomekbd      metainfo                        remmina               wallpapers
+caja-actions         foo2oak                hwdata                       libgpg-error     mime                            samba                 wayland-sessions
+caja-extensions      foo2qpdl               hwinfo                       libgphoto2       mime-info                       sane                  web-assets
+caja-python          foo2slx                hyphen                       libgweather      mimelnk                         seahorse              wine
+caribou              foo2xqx                i18n                         libhangul        mingw                           selinux               X11
+cdrdao               foo2zjs                ibus                         libindicator     misc                            services              xdg-desktop-portal
+cmake                foomatic               ibus-chewing                 libinput         mlt                             servicetypes          xemacs
+color                fpcsrc                 ibus-hangul                  libkkc           mobile-broadband-provider-info  setroubleshoot        xfsprogs
+colord               games                  ibus-kkc                     liblangtag       ModemManager                    setuptool             xml
+config               gawk                   ibus-libpinyin               liblouis         modulefiles                     sgml                  xmvn
+config.kcfg          gcc-11                 ibus-m17n                    liblouisutdml    Modules                         share_directory       xsessions
+config.site          GConf                  ibus-rawcode                 libmateweather   mousetweaks                     shotcut               xtables
+connectfolder        gdb                    ibus-sayura                  libnumbertext    movit                           skk                   yelp
+cracklib             gdm                    ibus-table                   librarian        mozilla                         smartmontools         yelp-xsl
+crypto-policies      gegl-0.4               icedtea-web                  libreoffice      mozo                            snmp                  zenity
+cscope               gettext                icons                        libreport        mypaint-data                    solid                 zoneinfo
+cups                 gettext-0.21           icu                          libthai          myspell                         sounds                zsh
+dbus-1               ghostscript            idl                          libtimezonemap   mythes                          source-highlight
+dconf                gimp                   ImageMagick-6                libtool          nano                            spandsp
+defaults             gir-1.0                info                         libwacom         obs                             speech-dispatcher
+desktop-directories  git-core               intltool                     libwmf           omf                             sssd
+dict                 glib-2.0               ipa                          libyui           onboard                         stardict
+[311u06@311U06 ~]$ ls /var
+account  adm  cache  crash  db  empty  ftp  games  gopher  kerberos  lib  local  lock  log  mail  nis  opt  preserve  run  spool  target  tmp  yp
+[311u06@311U06 ~]$ ls /var/log
+anaconda           boot.log-20250124  cron-20241223             dnf.log              hawkey.log-20250115  maillog-20250115   ntpstats  secure-20241223    spooler-20250122
+atop               boot.log-20250128  cron-20250115             dnf.log.1            hawkey.log-20250122  maillog-20250122   ppp       secure-20250115    spooler-20250129
+audit              boot.log-20250129  cron-20250122             dnf.rpm.log          hawkey.log-20250129  maillog-20250129   private   secure-20250122    sssd
+blivet-gui         boot.log-20250130  cron-20250129             gdm                  join-to-domain.log   messages           qemu-ga   secure-20250129    tallylog
+boot.log           btmp               cups                      glusterfs            journal              messages-20241223  README    speech-dispatcher  tuned
+boot.log-20250116  btmp-20250115      dnf.librepo.log           grubby               lastlog              messages-20250115  sa        spooler            wtmp
+boot.log-20250122  chrony             dnf.librepo.log-20230823  hawkey.log           maillog              messages-20250122  samba     spooler-20241223   Xorg.9.log
+boot.log-20250123  cron               dnf.librepo.log-20240203  hawkey.log-20241223  maillog-20241223     messages-20250129  secure    spooler-20250115
+[311u06@311U06 ~]$ mkdir dirl
+[311u06@311U06 ~]$ ls
+ dirl   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ mkdir dir2
+[311u06@311U06 ~]$ mkdir dir1
+[311u06@311U06 ~]$ ls
+ dir1   dir2   dirl   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ mkdir dir2
+mkdir: невозможно создать каталог «dir2»: File exists
+[311u06@311U06 ~]$ mv dir 2 dir 1
+mv: указанная цель '1' не является каталогом
+[311u06@311U06 ~]$ ls
+ dir1   dir2   dirl   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ mkdir dir1
+mkdir: невозможно создать каталог «dir1»: File exists
+[311u06@311U06 ~]$ ls
+ dir1   dir2   dirl   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ mkdir dir2
+mkdir: невозможно создать каталог «dir2»: File exists
+[311u06@311U06 ~]$ mv dir2 dir1
+[311u06@311U06 ~]$ ls
+ dir1   dirl   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ cd dir1
+[311u06@311U06 dir1]$ ls
+dir2
+[311u06@311U06 dir1]$ cd dir2 
+[311u06@311U06 dir2]$ ls
+[311u06@311U06 dir2]$ cd
+[311u06@311U06 dir1]$ cd dir1
+bash: cd: dir1: No such file or directory
+[311u06@311U06 dir1]$ ls
+dir2  granta
+[311u06@311U06 dir1]$ cd
+[311u06@311U06 ~]$ mkdir playground
+[311u06@311U06 ~]$ ls
+ denki   dir1   dirl   playground   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 dir1]$ cd
+[311u06@311U06 ~]$ mkdir playground
+[311u06@311U06 ~]$ ls
+ denki   dir1   dirl   playground   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ ls
+ denki   dir1   dirl   playground   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ cd
+[311u06@311U06 ~]$ mkdir playground
+mkdir: невозможно создать каталог «playground»: File exists
+[311u06@311U06 ~]$ ls
+ denki   dir1   dirl   playground   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ cp /etc/passwd .
+[311u06@311U06 ~]$ ls
+ denki   dir1   dirl   passwd   playground   sync.sh  'VirtualBox VMs'   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+[311u06@311U06 ~]$ cp /etc/passwd .
+
