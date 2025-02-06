@@ -1,0 +1,131 @@
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat f1.txt@PAMPERS0987 ➜ /workspaces/-0201 (main) $ touch f1.txt
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ ls f1.txt
+f1.txt
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ ls
+Test  f1.txt  lab2.txt
+  File: f1.txt
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 704h/1796d      Inode: 1310792     Links: 1
+Access: (0123/---x-w--wx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 04:48:08.561774427 +0000
+Modify: 2025-02-06 04:48:08.561774427 +0000
+Change: 2025-02-06 05:07:49.033820667 +0000
+ Birth: -
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat f1.txtsg
+stat: cannot stat 'f1.txtsg': No such file or directory
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ 
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ 
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stst 
+bash: stst: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ 
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat test/*
+stat: cannot stat 'test/*': No such file or directory
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat Test/*
+  File: Test/1
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 704h/1796d      Inode: 1310811     Links: 1
+Access: (0666/-rw-rw-rw-)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 04:57:13.773795784 +0000
+Modify: 2025-02-06 04:57:13.773795784 +0000
+Change: 2025-02-06 04:57:13.773795784 +0000
+ Birth: -
+  File: Test/2
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 704h/1796d      Inode: 1310812     Links: 1
+Access: (0666/-rw-rw-rw-)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 04:57:21.885796101 +0000
+Modify: 2025-02-06 04:57:21.885796101 +0000
+Change: 2025-02-06 04:57:21.885796101 +0000
+ Birth: -
+  File: Test/3
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 704h/1796d      Inode: 1310813     Links: 1
+Access: (0666/-rw-rw-rw-)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 04:57:28.357796355 +0000
+Modify: 2025-02-06 04:57:28.357796355 +0000
+Change: 2025-02-06 04:57:28.357796355 +0000
+ Birth: -
+  File: Test/fun
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 704h/1796d      Inode: 1310814     Links: 3
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 05:09:35.269824829 +0000
+Modify: 2025-02-06 05:09:33.969824778 +0000
+Change: 2025-02-06 05:09:33.969824778 +0000
+ Birth: -
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo chmod 778 Test/*
+chmod: invalid mode: ‘778’
+Try 'chmod --help' for more information.
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo chmod o-x Test/*
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat Test 
+  File: Test
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 704h/1796d      Inode: 1310810     Links: 3
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 05:11:46.713829977 +0000
+Modify: 2025-02-06 05:09:19.125824196 +0000
+Change: 2025-02-06 05:11:45.413829927 +0000
+ Birth: -
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo chmod o+x Test/*
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat  Test 
+  File: Test
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 704h/1796d      Inode: 1310810     Links: 3
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 05:11:46.713829977 +0000
+Modify: 2025-02-06 05:09:19.125824196 +0000
+Change: 2025-02-06 05:11:45.413829927 +0000
+ Birth: -
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ ls Test 
+1  2  3  fun
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ vim /etc/shadow
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo /etk/shadow
+sudo: /etk/shadow: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo /etc/shadow
+sudo: /etc/shadow: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo /etc/shadow
+sudo: /etc/shadow: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ do /etc/shadow
+bash: syntax error near unexpected token `do'
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sodo /etc/shadow
+bash: sodo: command not found
+@PAMPERS0987 ➜ /worksp"@PAMPERS0987 ➜ /workspaces/-0201 (main) $ touch f1.txt
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ ls f1.txt
+f1.txt
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ ls
+Test  f1.txt  lab2.txt aces/-0201 (main) $ sudo userdel u2
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo groupadd group1
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo groupadd group2
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo useradd u1
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo passwd u1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat test 
+stat: cannot stat 'test': No such file or directory
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ stat Test 
+  File: Test
+  Size: 4096            Blocks: 8          IO Block: 4096   directory
+Device: 704h/1796d      Inode: 1310810     Links: 3
+Access: (0777/drwxrwxrwx)  Uid: ( 1000/codespace)   Gid: ( 1000/codespace)
+Access: 2025-02-06 05:11:46.713829977 +0000
+Modify: 2025-02-06 05:09:19.125824196 +0000
+Change: 2025-02-06 05:11:45.413829927 +0000
+ Birth: -
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ vim /etc/passwd
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo usermod -L u1 
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ vim /etc/passwd 
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo usermod -U u1
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo grasswd group1
+sudo: grasswd: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo graswd group1
+sudo: graswd: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo grasswd group1
+sudo: grasswd: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo grasswd group1
+sudo: grasswd: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ sudo gpasswd group1
+Changing the password for group group1
+New Password: 
+Re-enter new password: 
+@PAMPERS0987 ➜ /workspaces/-0201 (ma
