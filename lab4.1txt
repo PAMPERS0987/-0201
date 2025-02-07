@@ -1,0 +1,55 @@
+//позволяет просматривать списки контроля доступа
+u23@u23-VirtualBox:~$ getfacl kir
+# file: kir
+# owner: u23
+# group: u23
+user::rw-
+group::rw-
+other::r--
+
+setfacl - позволяет устанавливать и редактировать списки контроля доступа
+
+
+
+ GNU nano 6.2                       /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+//позволяет просматривать списки контроля доступа
+u23@u23-VirtualBox:~$ getfacl kir
+# file: kir
+# owner: u23
+# group: u23
+user::rw-
+group::rw-
+other::r--
+
+setfacl - позволяет устанавливать и редактировать списки контроля доступа
+
+
+
+ GNU nano 6.2                       /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+GNU nano 6.2                      /etc/gshadow
+root:*::
+daemon:*::
+bin:*::
+sys:*::
+adm:*::syslog,u23
+tty:*::
+disk:*::
+lp:*::
+mail:*::
+news:*::
