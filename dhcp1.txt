@@ -1,0 +1,250 @@
+Router(dhcp-config)#network 192.168.4.254
+Router(dhcp-config)#network 192.168.4.254  255.255.255.0
+Router(dhcp-config)#def
+% Incomplete command.
+Router(dhcp-config)#def
+Router(dhcp-config)#def-router 192.168.4.254
+                       ^
+% Invalid input detected at '^' marker.
+	
+Router(dhcp-config)#def-router 192.168.4.254
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(dhcp-config)#exit
+Router(config)#ip add
+Router(config)#ip dhcp pool UCHSOVET
+Router(dhcp-config)#netw 
+Router(dhcp-config)#network 192.168.5.0 255.255.255.0
+Router(dhcp-config)#defau
+Router(dhcp-config)#default-router 192.168.5.254
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(dhcp-config)#exit
+Router(config)#ip dh
+% Incomplete command.
+Router(config)#ip dh
+Router(config)#ip dhcp pool BIBL
+Router(dhcp-config)#NETW
+Router(dhcp-config)#
+Router(dhcp-config)#network 192.168.6.0 255.255.255.0
+Router(dhcp-config)#
+Router(dhcp-config)#end
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface GigabitEthernet0/0
+Router(config-if)#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router(config-if)#exit
+Router(config)#interface GigabitEthernet0/1
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface GigabitEthernet0/0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.2, changed state to up
+
+Router(config-if)#exit
+Router(config)#interface GigabitEthernet0/1
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+d
+% Ambiguous command: "d"
+Router(config-if)#exit
+Router(config)#ip dhcp pool BIBL
+Router(dhcp-config)#network 192.168.6.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.6.254
+Router(dhcp-config)#dns
+% Incomplete command.
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(dhcp-config)#
+
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ip add dhcp  pool UCHSOVET
+                   ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#ip add dhcp  pool UCHSOVET
+Router(config)#netw
+Router(config)#network 192.168.5.0 255.255.255.0
+                ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#network 192.168.5.0 255.255.255.0
+Router(config)#defau
+Router(config)#default-router 192.168.5.254
+                      ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#default-router 192.168.5.254
+Router(config)#dnsi
+Router(config)#dns server 8.8.8.8
+                ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#dns server 8.8.8.8
+Router(config)#dns server 8.8.8.8
+                ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#dns server 8.8.8.8
+Router(config)#dns server 8.8.8.8
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#Router>en
+Translating "Router>en"...domain server (255.255.255.255)
+% Unknown command or computer name, or unable to find computer address
+
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ip dhcp pool director 
+Router(dhcp-config)#netw
+% Incomplete command.
+Router(dhcp-config)#netw
+Router(dhcp-config)#exit 
+Router(config)#int gi0/0
+Router(config-if)#int gi0/0.3
+Router(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.3, changed state to up
+		
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.3, changed state to up
+
+Router(config-subif)#enc
+Router(config-subif)#encapsulation 
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#ip add
+Router(config-subif)#ip add
+% Incomplete command.
+Router(config-subif)#ip add
+Router(config-subif)#ip  dhcp pool UCHSOVET
+Router(dhcp-config)#NETW
+% Incomplete command.
+Router(dhcp-config)#NETW
+Router(dhcp-config)#NETWork 192.168.3.0 255.255.255.0
+Router(dhcp-config)#defau
+% Incomplete command.
+Router(dhcp-config)#defau
+Router(dhcp-config)#default-router 192.168.3.254
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(dhcp-config)#exit
+Router(config)#int gi0/0.3
+Router(config-subif)#enc
+Router(config-subif)#encapsulation dot
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#exit
+Router(config)#int gi0/0.3
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#ip add 192.168.3.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#int gi0/0.4
+Router(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.4, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.4, changed state to up
+exit
+Router(config)#int gi0/0.4
+Router(config-subif)#encapsulation dot1Q 4
+Router(config-subif)#ip add 192.168.4.254 255.255.255.0
+Router(config-subif)#exit
+Router(config)#int gi0/0.5
+Router(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.5, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.5, changed state to up
+exit
+Router(config)#int gi0/0.5
+Router(config-subif)#encapsulation dot1Q 5
+Router(config-subif)#ip add 192.168.5.254 255.255.255.0
+Router(config-subif)#exi
+server
+>:
+Router#conf t
+
+Enter configuration commands, one per line. End with CNTL/Z.I
+
+Router(config)#int int gi0/1.2
+
+Router(config-subif)#enca
+
+Router(config-subif)#encapsulation
+
+Router(config-subif)#encapsulation dot10 2
+
+Router(config-subif)#ip ad 192.168.2.254 255.255.255.0
+
+Router(config-subif)#int gi0/1.3
+
+Router(config-subif)#encapsulation dot1Q 3
+
+Router(config-subif)#ip ad 192.168.3.254 255.255.255.0
+
+Router(config-subif)#int gi0/1.4
+
+Router(config-subif)#encapsulation dot10 4
+
+Router(config-subif)#ip ad 192.168.4.254 255.255.255.0
+
+Router(config-subif)#int gi0/1.5
+
+Router(config-subif)#encapsulation dot10 5
+
+Router(config-subif)#ip ad 192.168.5.254 255.255.255.0
+
+Router(config-subif)#int gi0/1.2
+
+Router(config-subif)#ip ad
+
+plete command. % Incomplete
+
+Router(config-subif)#ip he
+
+Router(config-subif)#ip he
+
+Router(config-subif)#ip help
+
+Router(config-subif)#ip helper-address 192.168.5.1
+
+Router(config-subif)#int gi0/1.3
+
+Router(config-subif)#ip helper-address 192.168.5.1
+
+Router(config-subif)#int gi0/1.4
+
+Router(config-subif)#ip helper-address 192.168.5.1
+
+Router(config-subif)#int gi0/1.5
+
+Router(config-subif)#ip Router(config-subif)#ip helper-address 192.168.5.1
+Switch:
+
+Switch(config)#vlan 2
+
+Switch(config-vlan)# name VLAN2
+
+Switch(config-vlan)#vlan 3
+
+Switch(config-vlan)# name VLAN3
+
+Switch(config-vlan)#vlan 4
+
+Switch(config-vlan)# name VLAN4
+
+Switch(config-vlan)#vlan 5
+
+Switch(config-vlan)# name VLANG
+
+Switch(config)#interface GigabitEthernet
+				
