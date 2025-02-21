@@ -1,0 +1,132 @@
+
+Router(config-subif)#enc
+Router(config-subif)#encapsulation 
+% Incomplete command.
+Router(config-subif)#
+Router(config-subif)#enc
+Router(config-subif)#encapsulation dort1
+Router(config-subif)#encapsulation dort1q 2
+                                     ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation dort1q2
+                                     ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation dort1Q2
+                                     ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation dort1Q 2
+                                     ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation dort1Q 2
+Router(config-subif)#ip ad 192.168.27.62 255.255.255.192
+
+% Configuring IP routing on a LAN subinterface is only allowed if that
+subinterface is already configured as part of an IEEE 802.10, IEEE 802.1Q,
+or ISL vLAN.
+
+Router(config-subif)#enc
+% Incomplete command.
+Router(config-subif)#enc
+Router(config-subif)#encapsulation  DORT
+Router(config-subif)#encapsulation  DORT1Q 2
+                                      ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation  DOT1Q 2
+Router(config-subif)#IP AD 192.168.27.62 255.255.255.192
+Router(config-subif)#int gi0/1.3
+Router(config-subif)#int gi0/1.3
+Router(config-subif)#int gi0/1.2
+Router(config-subif)#IP AD 192.168.27.62 255.255.255.192
+Router(config-subif)#exit
+Router(config)#ip dhcp pool VLAN1
+Router(dhcp-config)#net
+Router(dhcp-config)#network 192.168.27.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.27.192
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(dhcp-config)#exit 
+Router(config)#int gi0/1.3
+Router(config-subif)#enc
+Router(config-subif)#encapsulation dort1Q 3
+                                     ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#encapsulation dot1Q 3
+Router(config-subif)#ip ad 192.168.27.94
+% Incomplete command.
+Router(config-subif)#ip ad 192.168.27.94  255.255.255.224
+Router(config-subif)#ip ad 192.168.27.113  255.255.255.192
+Router(config-subif)#defol
+Router(config-subif)#defolt
+Router(config-subif)#defolt-router 192.168.27.113
+                       ^
+% Invalid input detected at '^' marker.
+	
+Router(config-subif)#defolt
+Router(config-subif)#exit 
+Router(config)#ip dhcp pool VLAN 2
+                                 ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#ip dhcp pool VLAN2
+Router(dhcp-config)#NET
+Router(dhcp-config)#NETwork 192.168.27.0 255.255.255.0
+Router(dhcp-config)#DEFOLT
+Router(dhcp-config)#DEFOLT-ROUTER 132.168.27.113
+                       ^
+% Invalid input detected at '^' marker.
+	
+Router(dhcp-config)#DEFOLT-ROUTER 132.168.27.113
+Router(dhcp-config)#DEFOLT-ROUTER 132.168.27.113
+                       ^
+% Invalid input detected at '^' marker.
+	
+Router(dhcp-config)#DEFOLT-ROUTER 132.168.27.113
+Router(dhcp-config)#EXIT
+Router(config)#enc
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#enc
+Router(config)#enc
+Router(config)#enc
+Router(config)#enc
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#enc
+Router(config)#
+Router(config)#encapsulation dot1Q 4
+                 ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#encapsulation dot1Q4
+Router(config)#ip ad 192.168.27.94 255.255.255.224
+                   ^
+% Invalid input detected at '^' marker.
+	
+Router(config)#ip ad 192.168.27.94 255.255.255.224
+Router(config)#int gi0/1.4
+Router(config-subif)#enc
+Router(config-subif)#encapsulation  dot1
+Router(config-subif)#encapsulation  dot1Q 
+Router(config-subif)#encapsulation  dot1Q 4
+Router(config-subif)#ip ad 192.168.27.94 255.255.255.224
+% 192.168.27.64 overlaps with GigabitEthernet0/1.3
+Router(config-subif)#ip ad 192.168.27.123 255.255.255.240
+% 192.168.27.112 overlaps with GigabitEthernet0/1.3
+Router(config-subif)#ip ad 192.168.27.123 255.255.255.240
+Router(config-subif)#exit
+Router(config)#ip dhcp pool VLAN3 
+Router(dhcp-config)#NETW
+Router(dhcp-config)#NETWork 192.168.27.0 255.255.255.0
+Router(dhcp-config)#DEFAULT
+Router(dhcp-config)#DEFAULT-router  192.168.27.123
+Router(dhcp-config)#DNS
+Router(dhcp-config)#DNS-server 8.8.8.8
+
