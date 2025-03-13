@@ -1,0 +1,413 @@
+Работа с образами Docker
+1. Поиск образа
+docker search ubuntu
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker search ubuntu
+NAME                             DESCRIPTION                                     STARS     OFFICIAL
+ubuntu                           Ubuntu is a Debian-based Linux operating sys…   17496     [OK]
+ubuntu/squid                     Squid is a caching proxy for the Web. Long-t…   107       
+ubuntu/nginx                     Nginx, a high-performance reverse proxy & we…   127       
+ubuntu/cortex                    Cortex provides storage for Prometheus. Long…   4         
+ubuntu/kafka                     Apache Kafka, a distributed event streaming …   53        
+ubuntu/prometheus                Prometheus is a systems and service monitori…   70        
+ubuntu/apache2                   Apache, a secure & extensible open-source HT…   90        
+ubuntu/bind9                     BIND 9 is a very flexible, full-featured DNS…   102       
+ubuntu/zookeeper                 ZooKeeper maintains configuration informatio…   13        
+ubuntu/mysql                     MySQL open source fast, stable, multi-thread…   67        
+ubuntu/redis                     Redis, an open source key-value store. Long-…   23        
+ubuntu/postgres                  PostgreSQL is an open source object-relation…   41        
+ubuntu/jre                       Distroless Java runtime based on Ubuntu. Lon…   19        
+ubuntu/dotnet-aspnet             Chiselled Ubuntu runtime image for ASP.NET a…   25        
+ubuntu/cassandra                 Cassandra, an open source NoSQL distributed …   2         
+ubuntu/memcached                 Memcached, in-memory keyvalue store for smal…   5         
+ubuntu/grafana                   Grafana, a feature rich metrics dashboard & …   12        
+ubuntu/python                    A chiselled Ubuntu rock with the Python runt…   20        
+ubuntu/dotnet-runtime            Chiselled Ubuntu runtime image for .NET apps…   20        
+ubuntu/prometheus-alertmanager   Alertmanager handles client alerts from Prom…   9         
+ubuntu/dotnet-deps               Chiselled Ubuntu for self-contained .NET & A…   16        
+ubuntu/mlflow                    MLFlow: for managing the machine learning li…   5         
+ubuntu/telegraf                  Telegraf collects, processes, aggregates & w…   4         
+ubuntu/loki                      Grafana Loki, a log aggregation system like …   2         
+ubuntu/chiselled-jre             [MOVED TO ubuntu/jre] Chiselled JRE:
+ distrol…   3 
+2. Скачивание образа
+docker pull
+    @PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+d9802f032d67: Pull complete 
+Digest: sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b
+Status: Downloaded newer image for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+3. Просмотр информации об образах в системе
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+4. Удаление образа из системы
+4. Удаление образа из системы
+docker rmi <id образа>
+принудительное удаление:
+docker rmi -f <id образа>
+
+PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker rmi -f 6013ae1a63c2
+Untagged: ubuntu:20.04
+Untagged: ubuntu@sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b
+Deleted: sha256:6013ae1a63c2ee58a8949f03c6366a3ef6a2f386a7db27d86de2de965e9f450b
+Deleted: sha256:fffe76c64ef2dee2d80a8bb3ad13d65d596d04a45510b1956a976a69215dae92
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker pull photon
+Using default tag: latest
+latest: Pulling from library/photon
+56ac8eaf7aef: Pull complete 
+Digest: sha256:5ab064d78a06b8d828d07d0937aee27944cd61dc51830f5836d117e9cfdb7238
+Status: Downloaded newer image for photon:latest
+docker.io/library/photon:latest
+
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker pull adminer
+Using default tag: latest
+latest: Pulling from library/adminer
+f18232174bc9: Pulling fs layer 
+e2042ef04ad5: Pull complete 
+85d7cd47c118: Pull complete 
+2e9c25e1ad37: Pull complete 
+87b517bf08d7: Pull complete 
+9d84bce3fd32: Pull complete 
+6d87dc865831: Pull complete 
+db547d87d893: Pull complete 
+13dead29bff0: Pull complete 
+96ca490c76cb: Pull complete 
+f6f3da5eea25: Pull complete 
+4f4fb700ef54: Pull complete 
+9352cfe383da: Pull complete 
+9e39aa3f0acf: Pull complete 
+c25bec8dbf14: Pull complete 
+29151e00625e: Pull complete 
+Digest: sha256:f01629adf5f21450d467e209f4daa921c443c002479aa49a68525fe2679c45e4
+Status: Downloaded newer image for adminer:latest
+docker.io/library/adminer:latest
+
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker pull mediawiki
+Using default tag: latest
+latest: Pulling from library/mediawiki
+7cf63256a31a: Pulling fs layer 
+41bfba87aa2a: Pulling fs layer 
+f7e553522295: Pulling fs layer 
+904933496485: Pulling fs layer 
+ccca7c183c0b: Pulling fs layer 
+46506c43b76b: Pulling fs layer 
+7906c5c5b56e: Pull complete 
+5f93253b2de6: Pull complete 
+0230624a769b: Pull complete 
+6beeb76481f6: Pull complete 
+012fd53ee67a: Pull complete 
+a3339e6f62b1: Pull complete 
+b1eb0357bfab: Pull complete 
+4f4fb700ef54: Pull complete 
+675bda9db3e3: Pull complete 
+c0a6d25b98b0: Pull complete 
+417fd4c91734: Pull complete 
+3c7453788306: Pull complete 
+ce01c7644913: Pull complete 
+ebe12d15cfb9: Pull complete 
+35fe3b70b606: Pull complete 
+Digest: sha256:6770503486ce245d1c2231b200e1d135024cb6ee97d2d436c1b289b03a621ffc
+Status: Downloaded newer image for mediawiki:latest
+docker.io/library/mediawiki:latest
+
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+adminer      latest    b2589814f453   8 hours ago    121MB
+photon       latest    360bf2b0192b   3 days ago     40.3MB
+mediawiki    latest    346df660949e   5 weeks ago    1.01GB
+ubuntu       latest    a04dc4851cbc   6 weeks ago    78.1MB
+ubuntu       20.04     6013ae1a63c2   5 months ago   72.8MB
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ doker run -it 6013ae1a63c2
+bash: doker: command not found
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker run -it 6013ae1a63c2
+root@34378ef56a7a:/# pwd
+/
+root@34378ef56a7a:/# exit
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker run -it 6013ae1a63c2
+root@d8ffc32ffbf3:/# apt update
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]              
+Get:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]             
+Get:4 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]       
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]      
+Get:7 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]          
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [4638 kB]   
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1593 kB]    
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [4748 kB]        
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [45.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [42.0 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [4266 kB]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [4432 kB]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1301 kB]
+Fetched 34.6 MB in 2s (16.6 MB/s)                            
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@d8ffc32ffbf3:/# apt install ingnix
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package ingnix
+root@d8ffc32ffbf3:/# apt install inginx
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package inginx
+root@d8ffc32ffbf3:/# apt install nginx
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core iproute2 libatm1 libbsd0 libcap2 libcap2-bin libelf1 libexpat1 libfontconfig1 libfreetype6 libgd3 libicu66 libjbig0 libjpeg-turbo8 libjpeg8 libmnl0
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libpam-cap libpng16-16 libssl1.1 libtiff5 libwebp6 libx11-6 libx11-data libxau6 libxcb1
+  libxdmcp6 libxml2 libxpm4 libxslt1.1 libxtables12 nginx-common nginx-core tzdata ucf
+Suggested packages:
+  iproute2-doc libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core iproute2 libatm1 libbsd0 libcap2 libcap2-bin libelf1 libexpat1 libfontconfig1 libfreetype6 libgd3 libicu66 libjbig0 libjpeg-turbo8 libjpeg8 libmnl0
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libpam-cap libpng16-16 libssl1.1 libtiff5 libwebp6 libx11-6 libx11-data libxau6 libxcb1
+  libxdmcp6 libxml2 libxpm4 libxslt1.1 libxtables12 nginx nginx-common nginx-core tzdata ucf
+0 upgraded, 40 newly installed, 0 to remove and 4 not upgraded.
+Need to get 15.8 MB of archives.
+After this operation, 60.9 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libbsd0 amd64 0.10.0-1 [45.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2 amd64 1:2.32-1ubuntu0.2 [15.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libelf1 amd64 0.176-1.1ubuntu0.1 [44.2 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libmnl0 amd64 1.0.4-2 [12.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxtables12 amd64 1.8.4-3ubuntu2.1 [28.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcap2-bin amd64 1:2.32-1ubuntu0.2 [26.2 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 iproute2 amd64 5.5.0-1ubuntu1 [858 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 libatm1 amd64 1:2.5.1-4 [21.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1 amd64 2.2.9-1ubuntu0.8 [75.6 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2024b-0ubuntu0.20.04.1 [299 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libicu66 amd64 66.1-2ubuntu2.1 [8515 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpam-cap amd64 1:2.32-1ubuntu0.2 [8376 B]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.24 [1323 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.9 [641 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 ucf all 3.0038+nmu1 [51.6 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 libpng16-16 amd64 1.6.37-2 [179 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libxau6 amd64 1:1.0.9-0ubuntu1 [7488 B]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu1 [10.6 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb1 amd64 1.14-2 [44.7 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-data all 2:1.6.9-2ubuntu1.6 [114 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-6 amd64 2:1.6.9-2ubuntu1.6 [577 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype6 amd64 2.10.1-2ubuntu0.3 [341 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.3 [118 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.20.04.1 [27.3 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libwebp6 amd64 0.6.1-2ubuntu0.20.04.3 [185 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff5 amd64 4.1.0+git191117-2ubuntu0.20.04.14 [164 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.20.04.2 [34.9 kB]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2.4 [118 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1.7 [37.8 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1.7 [14.8 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxslt1.1 amd64 1.1.34-4ubuntu0.20.04.1 [151 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1.7 [13.1 kB]
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1.7 [43.0 kB]
+Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1.7 [67.3 kB]
+Get:39 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1.7 [425 kB]
+Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1.7 [3620 B]
+Fetched 15.8 MB in 1s (11.4 MB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... 4124 files and directories currently installed.)
+Preparing to unpack .../00-libbsd0_0.10.0-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.10.0-1) ...
+Selecting previously unselected package libcap2:amd64.
+Preparing to unpack .../01-libcap2_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1ubuntu0.2) ...
+Selecting previously unselected package libelf1:amd64.
+Preparing to unpack .../02-libelf1_0.176-1.1ubuntu0.1_amd64.deb ...
+Unpacking libelf1:amd64 (0.176-1.1ubuntu0.1) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../03-libmnl0_1.0.4-2_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.4-2) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../04-libxtables12_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../05-libcap2-bin_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1ubuntu0.2) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../06-iproute2_5.5.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (5.5.0-1ubuntu1) ...
+Selecting previously unselected package libatm1:amd64.
+Preparing to unpack .../07-libatm1_1%3a2.5.1-4_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-4) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../08-libexpat1_2.2.9-1ubuntu0.8_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.9-1ubuntu0.8) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../09-tzdata_2024b-0ubuntu0.20.04.1_all.deb ...
+Unpacking tzdata (2024b-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libicu66:amd64.
+Preparing to unpack .../10-libicu66_66.1-2ubuntu2.1_amd64.deb ...
+Unpacking libicu66:amd64 (66.1-2ubuntu2.1) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../11-libpam-cap_1%3a2.32-1ubuntu0.2_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.32-1ubuntu0.2) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../12-libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.24) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../13-libxml2_2.9.10+dfsg-5ubuntu0.20.04.9_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.9) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../14-ucf_3.0038+nmu1_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0038+nmu1) ...
+Selecting previously unselected package libpng16-16:amd64.
+Preparing to unpack .../15-libpng16-16_1.6.37-2_amd64.deb ...
+Unpacking libpng16-16:amd64 (1.6.37-2) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../16-libxau6_1%3a1.0.9-0ubuntu1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-0ubuntu1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../17-libxdmcp6_1%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu1) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../18-libxcb1_1.14-2_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-2) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../19-libx11-data_2%3a1.6.9-2ubuntu1.6_all.deb ...
+Unpacking libx11-data (2:1.6.9-2ubuntu1.6) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../20-libx11-6_2%3a1.6.9-2ubuntu1.6_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.6.9-2ubuntu1.6) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../21-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../22-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../23-libfreetype6_2.10.1-2ubuntu0.3_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.10.1-2ubuntu0.3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../24-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../25-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.3_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../26-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../27-libjbig0_2.1-3.1ubuntu0.20.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../28-libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../29-libtiff5_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../30-libxpm4_1%3a3.5.12-1ubuntu0.20.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../31-libgd3_2.2.5-5.2ubuntu2.4_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2.4) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../32-nginx-common_1.18.0-0ubuntu1.7_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../33-libnginx-mod-http-image-filter_1.18.0-0ubuntu1.7_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../34-libxslt1.1_1.1.34-4ubuntu0.20.04.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../35-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1.7_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../36-libnginx-mod-mail_1.18.0-0ubuntu1.7_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../37-libnginx-mod-stream_1.18.0-0ubuntu1.7_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../38-nginx-core_1.18.0-0ubuntu1.7_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1.7) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../39-nginx_1.18.0-0ubuntu1.7_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1.7) ...
+Setting up libexpat1:amd64 (2.2.9-1ubuntu0.8) ...
+Setting up libxau6:amd64 (1:1.0.9-0ubuntu1) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.24) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up nginx-common (1.18.0-0ubuntu1.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libatm1:amd64 (1:2.5.1-4) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Setting up libcap2:amd64 (1:2.32-1ubuntu0.2) ...
+Setting up tzdata (2024b-0ubuntu0.20.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Configuring tzdata
+
+
+
+
+root@8eb8d735624d:/# uname -a
+Linux 8eb8d735624d 6.8.0-1021-azure #25~22.04.1-Ubuntu SMP Thu Jan 16 21:37:09 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+root@8eb8d735624d:/# cat /etc/*-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+root@8eb8d735624d:/# ps -A
+    PID TTY          TIME CMD
+      1 pts/0    00:00:00 bash
+   1027 pts/0    00:00:00 ps
+root@8eb8d735624d:/# ls -1 /usr/bin
+'['
+addpart
+apt
+apt-cache
+apt-cdrom
+apt-config
+apt-get
+apt-key
+apt-mark
+arch
+awk
+b2sum
