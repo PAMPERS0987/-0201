@@ -1,0 +1,41 @@
+1 заходим в vim @PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ vim docker-compose.yml
+2 прописываем docker-compose build и после этого прописываем  docker-compose up
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker-compose build
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker-compose up
+[+] Running 30/30
+ ✔ db Pulled                                                                                                                                                                              14.7s 
+   ✔ 9cb31e2e37ea Already exists                                                                                                                                                           0.0s 
+   ✔ b5d0c07e1b39 Pull complete                                                                                                                                                            5.6s 
+   ✔ 146766f55375 Pull complete                                                                                                                                                            7.8s 
+   ✔ 7e9e7bda14da Pull complete                                                                                                                                                            7.8s 
+   ✔ 4e0d8410ccaa Pull complete                                                                                                                                                            7.9s 
+   ✔ e54392e56360 Pull complete                                                                                                                                                           13.2s 
+   ✔ c1f62eab2318 Pull complete                                                                                                                                                           13.2s 
+   ✔ d645c8b36c27 Pull complete                                                                                                                                                           13.2s 
+ ✔ phpmyadmin Pulled                                                                                                                                                                      20.1s 
+   ✔ 6e909acdb790 Already exists                                                                                                                                                           0.0s 
+   ✔ 5db2c4b6137b Pull complete                                                                                                                                                            0.3s 
+   ✔ dacb60b59038 Pull complete                                                                                                                                                            7.8s 
+   ✔ 64450047668b Pull complete                                                                                                                                                            7.8s 
+   ✔ 4d6386e035f7 Pull complete                                                                                                                                                           13.2s 
+   ✔ e4ca7ebe0914 Pull complete                                                                                                                                                           13.2s 
+   ✔ 3dc5d9089396 Pull complete                                                                                                                                                           13.2s 
+   ✔ 1778f52baa09 Pull complete                                                                                                                                                           13.2s 
+   ✔ a5d9cb1c80ec Pull complete                                                                                                                                                           13.2s 
+   ✔ b116c8459f57 Pull complete                                                                                                                                                           13.2s 
+   ✔ 8f8ddda3587a Pull complete                                                                                                                                                           13.2s 
+   ✔ f432ea27fc70 Pull complete                                                                                                                                                           13.2s 
+   ✔ 6a5a37a900f3 Pull complete                                                                                                                                                           13.2s 
+   ✔ 4f4fb700ef54 Pull complete                                                                                                                                                           13.2s 
+   ✔ 2356864ac4b9 Pull complete                                                                                                                                                           13.2s 
+   ✔ 28fa232eddfc Pull complete                                                                                                                                                           13.2s 
+   ✔ a084403b2fe2 Pull complete                                                                                                                                                           18.7s 
+   ✔ 69286ddc9ea5 Pull complete                                                                                                                                                           18.7s 
+   ✔ 21d6bc6af9fd Pull complete                                                                                                                                                           18.7s 
+   ✔ 5fb8db322bbb Pull complete                                                                                                                                                           18.7s 
+[+] Running 3/1
+ ✔ Network prg2_default         Created                                                                                                                                                    0.1s 
+ ✔ Container prg2-phpmyadmin-1  Created                                                                                                                                                    0.1s 
+ ✔ Container prg2-db-1          Created                                                                                                                                                    0.1s 
+Attaching to db-1, phpmyadmin-1
+38969dae210e0cc731ea882130d2bc09476d1831e3b9e30e7473ad6b91a961c5): Bind for 0.0.0.0:8080 failed: port 
