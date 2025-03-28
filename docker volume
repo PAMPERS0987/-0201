@@ -1,0 +1,86 @@
+1
+PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker volume  create vol1
+vol1
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker volume  create vol2
+vol2
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker volume ls 
+DRIVER    VOLUME NAME
+local     73ef38ba75ca92a39dcad6c2ea5c48ddec022ffae545d6f31b8b130463181bc9
+local     vol1
+local     vol2
+2@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker run --mount type=volume,source=vol1,target=/home/vol1 --name myub -t ubuntu:22.04
+root@fd48ff1fb349:/# cd /home/vol1/
+
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker run --mount type=volume,source=vol1,target=/home/vol1 --name myub -it ubuntu:22.04
+root@039f07bd647c:/# cd/home/vol1
+bash: cd/home/vol1: No such file or directory
+root@039f07bd647c:/# cd /home/vol1
+root@039f07bd647c:/home/vol1# ls -1
+root@039f07bd647c:/home/vol1# cat > test_vol.txt
+проверкафункций тома vol1 
+1224436
+root@039f07bd647c:/home/vol1# exit
+exit
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker volume inspect vol1
+[
+    {
+        "CreatedAt": "2025-03-28T06:06:00Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/vol1/_data",
+        "Name": "vol1",
+        "Options": null,
+        "Scope": "local"
+    }
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker run --mount type=volume,source=vol1,target=/home/vol1 --mount type=volume,source=vol2,target=/home/vol2 --name myub1 -it --rm ubuntu:22.04
+root@f8b376d8c582:/# cd /home/vol1
+root@f8b376d8c582:/home/vol1# ls -l
+total 4
+-rw-r--r-- 1 root root 53 Mar 28 06:11 test_vol.txt
+root@f8b376d8c582:/home/vol1# cat > test_vol2_myub1.txt
+усердно пишим и проверяем работу с vol1 из этого лучшего контейнера myub1
+root@f8b376d8c582:/home/vol1# cd ../vol2
+root@f8b376d8c582:/home/vol2# ls -l
+total 0
+root@f8b376d8c582:/home/vol2# cp ../vol1/* ./
+root@f8b376d8c582:/home/vol2# ls -l
+total 8
+-rw-r--r-- 1 root root  53 Mar 28 06:22 test_vol.txt
+-rw-r--r-- 1 root root 138 Mar 28 06:22 test_vol2_myub1.txt
+root@f8b376d8c582:/home/vol2# exit 
+exit
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS                 NAMES
+039f07bd647c   ubuntu:22.04   "/bin/bash"              20 minutes ago   Exited (0) 16 minutes ago                         myub
+7ea31cfb0a24   fa262c3a6564   "docker-entrypoint.s…"   13 days ago      Exited (255) 8 days ago     3306/tcp, 33060/tcp   awesome_payne
+c819dd8d6447   fa262c3a6564   "docker-entrypoint.s…"   13 days ago      Exited (1) 13 days ago                            lucid_turing
+90daa63b5a85   fa262c3a6564   "docker-entrypoint.s…"   2 weeks ago      Exited (255) 13 days ago    3306/tcp, 33060/tcp   charming_snyder
+f1e1c59d160c   fa262c3a6564   "docker-entrypoint.s…"   2 weeks ago      Exited (1) 2 weeks ago                            frosty_cerf
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ mkdir vol3
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ cd vol3
+@PAMPERS0987 ➜ /workspaces/-0201/vol3 (main) $ cat >message_to_container
+Большой привет от хостовой системы контейнеру 
+235089273589
+213798273@PAMPERS0987 ➜ /workspaces/-0201/vol3 (main) $ 
+
+@PAMPERS0987 ➜ /workspaces/-0201/vol3 (main) $ docker run --mount type=bind,source=.,target=/home/vol3 --mount type=volume,source=vol2,target=/home/vol2 --name myub1 -it --rm ubuntu:22.04
+root@223931c9442c:/# cd /home /vol3
+bash: cd: too many arguments
+root@223931c9442c:/# cd /home/vol3
+root@223931c9442c:/home/vol3# ls -l
+total 4
+-rw-rw-rw- 1 1000 1000 109 Mar 28 06:30 message_to_container
+root@223931c9442c:/home/vol3# cat message_to_container 
+Большой привет от хостовой системы контейнеру 
+235089273589
+213798273root@223931c9442c:/home/vol3# cd ..
+root@223931c9442c:/home# cd vol2
+root@223931c9442c:/home/vol2# ls -l
+total 8
+-rw-r--r-- 1 root root  53 Mar 28 06:22 test_vol.txt
+-rw-r--r-- 1 root root 138 Mar 28 06:22 test_vol2_myub1.txt
+root@223931c9442c:/home/vol2# cd ..
+root@223931c9442c:/home# ls -1
+vol2
+vol3
+root@223931c9442c:/home# 
