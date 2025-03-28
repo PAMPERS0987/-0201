@@ -1,0 +1,97 @@
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ docker ps 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ mkdir  prg2
+@PAMPERS0987 ➜ /workspaces/-0201 (main) $ cd prg2/
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ vim Dockerfile 
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker build -t testphp:0.1 .
+[+] Building 10.4s (9/9) FINISHED                                                                                                                                                docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                       0.0s
+ => => transferring dockerfile: 111B                                                                                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/php:7.2-apache                                                                                                                          1.2s
+ => [auth] library/php:pull token for registry-1.docker.io                                                                                                                                 0.0s
+ => [internal] load .dockerignore                                                                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                                                            0.0s
+ => [1/3] FROM docker.io/library/php:7.2-apache@sha256:4dc0f0115acf8c2f0df69295ae822e49f5ad5fe849725847f15aa0e5802b55f8                                                                    8.6s
+ => => resolve docker.io/library/php:7.2-apache@sha256:4dc0f0115acf8c2f0df69295ae822e49f5ad5fe849725847f15aa0e5802b55f8                                                                    0.0s
+ => => sha256:6ec7b7d162b24bd6df88abde89ceb6d7bbc2be927f025c9dd061af2b0c328cfe 27.10MB / 27.10MB                                                                                           0.4s
+ => => sha256:afb30f0cd8e0ff78b5eecdc2d9365a50441ad83c5db5f1e87942d6426237fa56 76.65MB / 76.65MB                                                                                           1.1s
+ => => sha256:4dc0f0115acf8c2f0df69295ae822e49f5ad5fe849725847f15aa0e5802b55f8 1.65kB / 1.65kB                                                                                             0.0s
+ => => sha256:25417b6c9c2e1a52b551ba89087f4d07c216f58784773c9e7a1710a1f6e2b4a1 3.24kB / 3.24kB                                                                                             0.0s
+ => => sha256:c61d277263e19d2ce30a6bae41115c811eb0f9274a601a5e3ee621e54c8a74f7 13.18kB / 13.18kB                                                                                           0.0s
+ => => sha256:db606474d60ce31604505c7d6dad9a66cb42f3818fca738832db2f2091cf89c9 225B / 225B                                                                                                 0.4s
+ => => extracting sha256:6ec7b7d162b24bd6df88abde89ceb6d7bbc2be927f025c9dd061af2b0c328cfe                                                                                                  1.5s
+ => => sha256:4c761b44e2ccbff3f10b254b21bb00a52dfd26919ad9e3f7efcd569196e6c26b 18.68MB / 18.68MB                                                                                           1.3s
+ => => sha256:3bb2e805159413e5278b859f7fbb86ddfc99e667cb705d5d5aec0a7c8ffcf1b5 225B / 225B                                                                                                 0.6s
+ => => sha256:c2199db96575122fd559c29b619a2773fe9069e0266312a6369ac95f4464b1dd 434B / 434B                                                                                                 1.3s
+ => => sha256:1b9a9381eea8f93068e8043f18ea59b709c07256e2f90962931a1433fbdf5e79 487B / 487B                                                                                                 1.3s
+ => => sha256:72b73ab27698b55aa309173abd0cdd758291b9feaac31342c48ff12f3be14876 494B / 494B                                                                                                 1.4s
+ => => sha256:983308f4f0d6304dc6cecde8fd66ba5a94a08873a3b8205eb5ff1ea98b419dbc 13.82MB / 13.82MB                                                                                           1.7s
+ => => sha256:fd07bbc59d347c16686f107676436a2281e4128033f105ca7a602aa195bcbe04 12.65MB / 12.65MB                                                                                           1.8s
+ => => sha256:6c13f026e6da09e10ca2edb704b335a62bac29e549a2d0b35e535c9aa8dbeeba 2.27kB / 2.27kB                                                                                             1.7s
+ => => sha256:5c5516e56582a30bd2e69c32d17a169ed7227900318e9d7b5949c8fb447308f5 210B / 210B                                                                                                 1.8s
+ => => sha256:e5e6cd16368920e691da5b8791184d7a8d579dd5cd5e8c533ad2bf0b82c2d0fc 248B / 248B                                                                                                 1.8s
+ => => sha256:154729f6ba8609ef7d5af1bfad81efe814cbbca18509834908735c9aced174d3 897B / 897B                                                                                                 1.9s
+ => => extracting sha256:db606474d60ce31604505c7d6dad9a66cb42f3818fca738832db2f2091cf89c9                                                                                                  0.0s
+ => => extracting sha256:afb30f0cd8e0ff78b5eecdc2d9365a50441ad83c5db5f1e87942d6426237fa56                                                                                                  2.0s
+ => => extracting sha256:3bb2e805159413e5278b859f7fbb86ddfc99e667cb705d5d5aec0a7c8ffcf1b5                                                                                                  0.0s
+ => => extracting sha256:4c761b44e2ccbff3f10b254b21bb00a52dfd26919ad9e3f7efcd569196e6c26b                                                                                                  0.4s
+ => => extracting sha256:c2199db96575122fd559c29b619a2773fe9069e0266312a6369ac95f4464b1dd                                                                                                  0.0s
+ => => extracting sha256:1b9a9381eea8f93068e8043f18ea59b709c07256e2f90962931a1433fbdf5e79                                                                                                  0.0s
+ => => extracting sha256:fd07bbc59d347c16686f107676436a2281e4128033f105ca7a602aa195bcbe04                                                                                                  0.0s
+ => => extracting sha256:72b73ab27698b55aa309173abd0cdd758291b9feaac31342c48ff12f3be14876                                                                                                  0.0s
+ => => extracting sha256:983308f4f0d6304dc6cecde8fd66ba5a94a08873a3b8205eb5ff1ea98b419dbc                                                                                                  0.3s
+ => => extracting sha256:6c13f026e6da09e10ca2edb704b335a62bac29e549a2d0b35e535c9aa8dbeeba                                                                                                  0.0s
+ => => extracting sha256:e5e6cd16368920e691da5b8791184d7a8d579dd5cd5e8c533ad2bf0b82c2d0fc                                                                                                  0.0s
+ => => extracting sha256:5c5516e56582a30bd2e69c32d17a169ed7227900318e9d7b5949c8fb447308f5                                                                                                  0.0s
+ => => extracting sha256:154729f6ba8609ef7d5af1bfad81efe814cbbca18509834908735c9aced174d3                                                                                                  0.0s
+ => [internal] load build context                                                                                                                                                          0.0s
+ => => transferring context: 232B       
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+testphp      0.1       fb80668bb540   54 seconds ago   410MB
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker run -d -p 8080:80 --name phpapp --rm testphp:0.1
+5ed20fec4a398ebff9a4792f04cec71b822aa3d36d92aa60bc305ff1c3a73e67
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker stop phpapp
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker build -t testphp:0.2 .
+[+] Building 0.7s (9/9) FINISHED                                                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                       0.0s
+ => => transferring dockerfile: 111B                                                                                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/php:7.2-apache                                                                                                                          0.7s
+ => [auth] library/php:pull token for registry-1.docker.io                                                                                                                                 0.0s
+ => [internal] load .dockerignore                                                                                                                                                          0.0s
+ => => transferring context: 2B
+PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ vim docker-compose.
+PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker-compose build
+@PAMPERS0987 ➜ /workspaces/-0201/prg2 (main) $ docker-compose up
+[+] Running 30/30
+ ✔ db Pulled                                                                                                                                                                              14.7s 
+   ✔ 9cb31e2e37ea Already exists                                                                                                                                                           0.0s 
+   ✔ b5d0c07e1b39 Pull complete                                                                                                                                                            5.6s 
+   ✔ 146766f55375 Pull complete                                                                                                                                                            7.8s 
+   ✔ 7e9e7bda14da Pull complete                                                                                                                                                            7.8s 
+   ✔ 4e0d8410ccaa Pull complete                                                                                                                                                            7.9s 
+   ✔ e54392e56360 Pull complete                                                                                                                                                           13.2s 
+   ✔ c1f62eab2318 Pull complete                                                                                                                                                           13.2s 
+   ✔ d645c8b36c27 Pull complete                                                                                                                                                           13.2s 
+ ✔ phpmyadmin Pulled                                                                                                                                                                      20.1s 
+   ✔ 6e909acdb790 Already exists                                                                                                                                                           0.0s 
+   ✔ 5db2c4b6137b Pull complete                                                                                                                                                            0.3s 
+   ✔ dacb60b59038 Pull complete                                                                                                                                                            7.8s 
+   ✔ 64450047668b Pull complete                                                                                                                                                            7.8s 
+   ✔ 4d6386e035f7 Pull complete                                                                                                                                                           13.2s 
+   ✔ e4ca7ebe0914 Pull complete                                                                                                                                                           13.2s 
+   ✔ 3dc5d9089396 Pull complete                                                                                                                                                           13.2s 
+   ✔ 1778f52baa09 Pull complete                                                                                                                                                           13.2s 
+   ✔ a5d9cb1c80ec Pull complete                                                                                                                                                           13.2s 
+   ✔ b116c8459f57 Pull complete                                                                                                                                                           13.2s 
+   ✔ 8f8ddda3587a Pull complete                                                                                                                                                           13.2s 
+   ✔ f432ea27fc70 Pull complete                                                                                                                                                           13.2s 
+   ✔ 6a5a37a900f3 Pull complete                                                                                                                                                           13.2s 
+   ✔ 4f4fb700ef54 Pull complete                                                                                                                                                           13.2s 
+   ✔ 2356864ac4b9 Pull complete                                                                                                                                                           13.2s 
+   ✔ 28fa232eddfc Pull complete                                                                                                                                                           13.2s 
+   ✔ a084403b2fe2 Pull complete                                                                                                                                                           18.7s 
+   ✔ 69286ddc9ea5 Pull complete                                                                                                                                                           18.7s 
+   ✔ 21d6bc6af9fd Pull complete                                                                                                                                                           18.7s 
+   ✔ 5fb8db322bbb Pull complete                     
+
