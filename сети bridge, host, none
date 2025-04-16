@@ -1,0 +1,164 @@
+1 Создал 4 подсети, используя драйвер bridge и варианты из xls-файла (указать диапазон ip, маску, шлюз)
+u06@u06-VirtualBox:~$ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+7d43b1c22b12   bridge    bridge    local
+c020c76d54e9   host      host      local
+421039f18b30   none      null      local
+u06@u06-VirtualBox:~$ cat /etc/resolv.conf
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#u06@u06-VirtualBox:~$ docker network create -d bridge --subnet 192.168.27.0/26 --gateway 192.168.27.1 my192_N1
+7911738ce5218a0635acd87032b0814e89c4740e8811b7c4c865af9f21d54fbe
+u06@u06-VirtualBox:~$ docker network create -d bridge --subnet 192.168.27.64/26 --gateway 192.168.27.65 my192_N2
+6641c1d4072f66a26180ddbe74e4d6d43d3ecf8d797b9ff45e10748ab4904b69
+u06@u06-VirtualBox:~$ docker network create -d bridge --subnet 192.168.27.128/27 --gateway 192.168.27.129 my192_N3
+7392c92bab2768968ece2ed7beb840cf9cdf5fb392010a9a0ba526fd7c0bf07d
+u06@u06-VirtualBox:~$ docker network create -d bridge --subnet 192.168.27.160/28 --gateway 192.168.27.161 my192_N4
+82a4bd4bca0e8a247dc8cd6fb8fbfb6f44eed1ea4d0ba0054390fbd38b4c6712
+u06@u06-VirtualBox:~$ docker run -itd --net my_bridge --name cont1 --rm alpine 
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+f18232174bc9: Pull complete 
+Digest: sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c
+Status: Downloaded newer image for alpine:latest
+c5508bdcb7de59d1aa63d2921ad9848528ad15241e87325bb620e6f2d4f535c0
+u06@u06-VirtualBox:~$ docker network create -d bridge my_bridge
+039ed3bc81324ee4683278ed77e71aa5f5d21bbf004a1b202c75de29bceaca18
+u06@u06-VirtualBox:~$ docker network inspect my_bridge
+[
+    {
+        "Name": "my_bridge",
+        "Id": "039ed3bc81324ee4683278ed77e71aa5f5d21bbf004a1b202c75de29bceaca18",
+        "Created": "2025-04-11T15:25:42.576983044+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "  192.168.27.0/26 "
+                    "Gateway": " 192.168.27.1 "
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "183ec2815d6ad07e964860151ef8ddbb6320d5b30842bcb5b51fd15e5bfe306f": {
+                "Name": "cont3",
+                "EndpointID": "b4a973cead0bff5446f6eb2189ebc035df540ced8c8ef928cf8fcb33817841a4",
+                "MacAddress": "26:34:01:25:24:cf",
+                "IPv4Address": "",192.168.27.0/26
+                "IPv6Address": ""
+            },
+            "7318d775276b71602c139e8bc1d108530c0f4463df87efb68bbadb13752e1589": {
+                "Name": "cont5",
+                "EndpointID": "60592f657ee8e3d55dc34448e03107b281a9ac1502ada1ceef847b11c0e7bae7",
+                "MacAddress": "76:3e:1f:11:a5:f0",
+                "IPv4Address": "192.168.27.160/28",
+                "IPv6Address": ""
+            },
+            "c0edf0f60871529bbdb542c35fda2785a37b2652767dd5812d9eb10dcbf8fdc2": {
+                "Name": "cont4",
+                "EndpointID": "a0b4a29c9d8fd8e5b60ca54f7ff70ba3df893b78a1ed0b19b55d6a34371bbff7",
+                "MacAddress": "c2:92:4c:c0:f9:4d",
+                "IPv4Address": "192.168.27.64/26",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]u06@u06-VirtualBox:~$ cat /etc/resolv.conf
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be
+
+Denis Frizen, [11.04.2025 11:51]
+symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+Проверить доступность ip-адресов из каждой подсети и доступность адресов по именам контейнеров
+u06@u06-VirtualBox:~$ docker exec cont3 ping -c 4 cont4
+PING cont4 (172.18.0.3): 56 data bytes
+64 bytes from 172.18.0.3: seq=0 ttl=64 time=0.097 ms
+64 bytes from 172.18.0.3: seq=1 ttl=64 time=0.105 ms
+64 bytes from 172.18.0.3: seq=2 ttl=64 time=0.136 ms
+64 bytes from 172.18.0.3: seq=3 ttl=64 time=0.121 ms
+
+--- cont4 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.097/0.114/0.136 ms
+Проверить связь между сетями при помощи команды traceroute
+u06@u06-VirtualBox:~$ docker exec cont3 traceroute mail.ru
+traceroute to mail.ru (217.69.139.202), 30 hops max, 46 byte packets
+ 1  u06-VirtualBox.local (172.18.0.1)  0.012 ms  0.010 ms  0.008 ms
+ 2  _gateway (10.0.2.2)  0.228 ms  0.036 ms  0.469 ms
+ 3  *  *  *
+ 4  192.168.88.1 (192.168.88.1)  1.340 ms  1.048 ms  0.891 ms
+ 5  host-89-251-106-133.bb-nsk.sib.mts.ru (89.251.106.133)  1.258 ms  1.100 ms  1.080 ms
+ 6^Ccontext canceled
+u06@u06-VirtualBox:~$ docker exec cont3 traceroute 192.168.27.0
+traceroute to 192.168.27.0 (192.168.27.0), 30 hops max, 46 byte packets
+ 1  u06-VirtualBox.local (172.18.0.1)  0.003 ms  0.003 ms  0.003 ms
+ 2  *  *^Ccontext canceled
+u06@u06-VirtualBox:~$ docker exec cont3 traceroute 192.168.27.64
+traceroute to 192.168.27.64 (192.168.27.64), 30 hops max, 46 byte packets
+ 1  u06-VirtualBox.local (172.18.0.1)  0.002 ms  0.003 ms  0.002 ms
+ 2  *^Ccontext canceled
+u06@u06-VirtualBox:~$ docker exec cont3 traceroute 192.168.27.160
+traceroute to 192.168.27.160 (192.168.27.160), 30 hops max, 46 byte packets
+ 1  u06-VirtualBox.local (172.18.0.1)  0.004 ms  0.002 ms  0.001 ms
+ 2  *  *^Ccontext canceled
+u06@u06-VirtualBox:~$ docker exec cont3 traceroute 192.168.27.128
+traceroute to 192.168.27.128 (192.168.27.128), 30 hops max, 46 byte packets
+ 1  u06-VirtualBox.local (172.18.0.1)  0.006 ms  0.002 ms  0.002 ms
+ 2  *  *  *
+ 3  *  *  *
+ 4  *  *  *
+ 5  *  *  *
+ 6  *^Ccontext canceled
+u06@u06-VirtualBox:~$ docker exec cont3 ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0@if10: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP 
+    link/ether 26:34:01:25:24:cf brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.2/16 brd 172.18.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+u06@u06-VirtualBox:~$ docker network ls
+NETWORK ID     NAME        DRIVER    SCOPE
+7d43b1c22b12   bridge      bridge    local
+c020c76d54e9   host        host      local
+7911738ce521   my192_N1    bridge    local
+6641c1d4072f   my192_N2    bridge    local
+7392c92bab27   my192_N3    bridge    local
+82a4bd4bca0e   my192_N4    bridge    local
+039ed3bc8132   my_bridge   bridge    local
+421039f18b30   none        null      local
