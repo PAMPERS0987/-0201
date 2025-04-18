@@ -1,0 +1,45 @@
+Сеегодня работали на сервере настраивали егог и установили docker 
+Тагже сделал 7) пункт в отчет docker5
+для nginx
+Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+тагже сделали для mysql 
+u06@u06-VirtualBox:~$ mysql -h 192.168.6.10 -u root -p
+
+скачали образы  
+проверели статус
+u06@u06-VirtualBox:~$ sudo systemctl status docker
+\[sudo] пароль для u06: 
+Попробуйте ещё раз.
+[sudo] пароль для u06: 
+Попробуйте ещё раз.
+[sudo] пароль для u06: 
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
+     Active: active (running) since Fri 2025-04-18 14:34:10 +07; 51min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 999 (dockerd)
+      Tasks: 8
+     Memory: 97.9M
+        CPU: 1.460s
+     CGroup: /system.slice/docker.service
+             └─999 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/conta>
+
+апр 18 14:34:02 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:02.57464851>
+апр 18 14:34:04 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:04.16444796>
+апр 18 14:34:04 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:04.39553890>
+апр 18 14:34:08 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:08.27611861>
+апр 18 14:34:09 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:09.86812764>
+апр 18 14:34:09 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:09.88935631>
+апр 18 14:34:10 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:10.20080303>
+апр 18 14:34:10 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:10.26589599>
+апр 18 14:34:10 u06-VirtualBox dockerd[999]: time="2025-04-18T14:34:10.26598801>
+апр 18 14:34:10 u06-VirtualBox systemd[1]: Started Docker Application Container>
+
