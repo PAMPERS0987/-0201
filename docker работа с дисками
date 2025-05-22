@@ -1,0 +1,526 @@
+SDB Disk
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-10485726, default = 34) or {+-}size{KMGTP}: 
+Last sector (34-10485726, default = 10485726) or {+-}size{KMGTP}: +2G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n       
+Partition number (2-128, default 2): 
+First sector (4194338-10485726, default = 4194338) or {+-}size{KMGTP}: 
+Last sector (4194338-10485726, default = 10485726) or {+-}size{KMGTP}: 
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): p     
+Disk /dev/sdb: 10485760 sectors, 5.0 GiB
+Model: VBOX HARDDISK   
+Sector size (logical/physical): 512/512 bytes
+Disk identifier (GUID): 77D18B3B-77E1-478F-897C-30915FC7785D
+Partition table holds up to 128 entries
+Main partition table begins at sector 2 and ends at sector 33
+First usable sector is 34, last usable sector is 10485726
+Partitions will be aligned on 2-sector boundaries
+Total free space is 0 sectors (0 bytes)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1              34         4194337   2.0 GiB     8300  Linux filesystem
+   2         4194338        10485726   3.0 GiB     8300  Linux filesystem
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/sdb.
+The operation has completed successfully.
+06@u06-VirtualBox:~$ sudo apt install xfsprogs 
+[sudo] пароль для u06: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libwpe-1.0-1 libwpebackend-fdo-1.0-1 linux-headers-6.2.0-26-generic linux-hwe-6.2-headers-6.2.0-26 linux-image-6.2.0-26-generic
+  linux-modules-6.2.0-26-generic linux-modules-extra-6.2.0-26-generic
+Для их удаления используйте «sudo apt autoremove».
+Предлагаемые пакеты:
+  xfsdump attr quota
+Следующие НОВЫЕ пакеты будут установлены:
+  xfsprogs
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 58 пакетов не обновлено.
+Необходимо скачать 870 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 851 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xfsprogs amd64 5.13.0-1ubuntu2.1 [870 kB]
+Получено 870 kB за 10с (86,9 kB/s)                                               [....................................................................] 
+Выбор ранее не выбранного пакета xfsprogs.
+(Чтение базы данных … на данный момент установлено 222639 файлов и каталогов.)
+Подготовка к распаковке …/xfsprogs_5.13.0-1ubuntu2.1_amd64.deb …
+
+Распаковывается xfsprogs (5.13.0-1ubuntu2.1) …......................................................................................
+Настраивается пакет xfsprogs (5.13.0-1ubuntu2.1) …
+update-initramfs: deferring update (trigger activated)
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.9) …
+Обрабатываются триггеры для initramfs-tools (0.140ubuntu13.4) …
+update-initramfs: Generating /boot/initrd.img-6.8.0-59-generic
+u06@u06-VirtualBox:~$ sudo mkfs .xfs
+mke2fs 1.46.5 (30-Dec-2021)
+The file .xfs does not exist and no size was specified.
+u06@u06-VirtualBox:~$ sudo mkfs.xfs /dev/sdb2
+meta-data=/dev/sdb2              isize=512    agcount=4, agsize=196543 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=0 inobtcount=0
+data     =                       bsize=4096   blocks=786171, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+u06@u06-VirtualBox:~$ sudo gdisk /dev/sdc
+GPT fdisk (gdisk) version 1.0.8
+
+Partition table scan:
+  MBR: not present
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+Creating new GPT entries in memory.
+
+Command (? for help): o
+This option deletes all partitions and creates a new protective MBR.
+Proceed? (Y/N): y
+
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-10485726, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-10485726, default = 10485726) or {+-}size{KMGTP}: +2G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): N
+Partition number (2-128, default 2): 
+First sector (34-10485726, default = 4196352) or {+-}size{KMGTP}: 
+Last sector (4196352-10485726, default = 10485726) or {+-}size{KMGTP}: 
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): W
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to /dev/sdc.
+The operation has completed successfully.
+u06@u06-VirtualBox:~$ sudo fdisk -l | grep sdc
+Диск /dev/sdc: 5 GiB, 5368709120 байт, 10485760 секторов
+/dev/sdc1     2048  4196351 4194304     2G Файловая система Linux
+/dev/sdc2  4196352 10485726 6289375     3G Файловая
+си
+с
+ис
+тема Linux
+u06@u06-VirtualBox:~$ sudo apt install btrfs-progs
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libwpe-1.0-1 libwpebackend-fdo-1.0-1 linux-headers-6.2.0-26-generic linux-hwe-6.2-headers-6.2.0-26 linux-image-6.2.0-26-generic
+  linux-modules-6.2.0-26-generic linux-modules-extra-6.2.0-26-generic
+Для их удаления используйте «sudo apt autoremove».
+Предлагаемые пакеты:
+  duperemove
+Следующие НОВЫЕ пакеты будут установлены:
+  btrfs-progs
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 58 пакетов не обновлено.
+Необходимо скачать 824 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 4 291 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 btrfs-progs amd64 5.16.2-1 [824 kB]
+Получено 824 kB за 1с (1 515 kB/s)
+Выбор ранее не выбранного пакета btrfs-progs.
+(Чтение базы данных … на данный момент установлено 222705 файлов и каталогов.)
+Подготовка к распаковке …/btrfs-progs_5.16.2-1_amd64.deb …
+Распаковывается btrfs-progs (5.16.2-1) …
+Настраивается пакет btrfs-progs (5.16.2-1) …
+Обрабатываются триггеры для initramfs-tools (0.140ubuntu13.4) …
+update-initramfs: Generating /boot/initrd.img-6.8.0-59-generic
+Обрабатываются триггеры для man-db (2.10.2-1) …
+u06@u06-VirtualBox:~$ sudo mkfs.btrfs /dev/sdc1
+btrfs-progs v5.16.2
+See http://btrfs.wiki.kernel.org for more information.
+
+Performing full device TRIM /dev/sdc1 (2.00GiB) ...
+NOTE: several default settings have changed in version 5.15, please make sure
+      this does not affect your deployments:
+      - DUP for metadata (-m dup)
+      - enabled no-holes (-O no-holes)
+      - enabled free-space-tree (-R free-space-tree)
+
+Label:              (null)
+UUID:               ddc05ea2-5877-4fa1-b24f-0c5a9fdf198b
+Node size:          16384
+Sector size:        4096
+Filesystem size:    2.00GiB
+Block group profiles:
+  Data:             single            8.00MiB
+  Metadata:         DUP             102.38MiB
+  System:           DUP               8.00MiB
+SSD detected:       no
+Zoned device:       no
+Incompat features:  extref, skinny-metadata, no-holes
+Runtime features:   free-space-tree
+Checksum:           crc32c
+Number of devices:  1
+Devices:
+   ID        SIZE  PATH
+    1     2.00GiB  /dev/sdc1
+
+u06@u06-VirtualBox:~$ sudo mkfs.btrfs /dev/sdc2
+btrfs-progs v5.16.2
+See http://btrfs.wiki.kernel.org for more information.
+
+Performing full device TRIM /dev/sdc2 (3.00GiB) ...
+NOTE: several default settings have changed in version 5.15, please make sure
+      this does not affect your deployments:
+      - DUP for metadata (-m dup)
+      - enabled no-holes (-O no-holes)
+      - enabled free-space-tree (-R free-space-tree)
+
+Label:              (null)
+UUID:               0e2a1bc5-8006-4845-9e99-b28b37815d4c
+Node size:          16384
+Sector size:        4096
+Filesystem size:    3.00GiB
+Block group profiles:
+  Data:             single            8.00MiB
+  Metadata:         DUP             256.00MiB
+  System:           DUP               8.00MiB
+SSD detected:       no
+Zoned device:       no
+Incompat features:  extref, skinny-metadata, no-holes
+Runtime features:   free-space-tree
+Checksum:           crc32c
+Number of devices:  1
+Devices:
+   ID        SIZE  PATH
+    1     3.00GiB  /dev/sdc2
+
+u06@u06-VirtualBox:~$ sudo apt install grarted
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+E: Невозможно найти пакет grarted
+u06@u06-VirtualBox:~$ sudo apt install gparted
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libwpe-1.0-1 libwpebackend-fdo-1.0-1 linux-headers-6.2.0-26-generic linux-hwe-6.2-headers-6.2.0-26 linux-image-6.2.0-26-generic
+  linux-modules-6.2.0-26-generic linux-modules-extra-6.2.0-26-generic
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующи
+е дополнительные пакеты:
+  gparted-common
+Предлагаемые пакеты:
+  dmraid gpart jfsutils kpartx mtools reiser4progs reiserfsprogs udftools exfatprogs
+Следующие НОВЫЕ пакеты будут установлены:
+  gparted gparted-common
+Обновлено 0 пакетов, установлено 2 новых пакетов, для удаления отмечено 0 пакетов, и 58 пакетов не обновлено.
+Необходимо скачать 490 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 128 kB.
+Хотите продолжить? [Д/н] д
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 gparted-common all 1.3.1-1ubuntu1 [71,9 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 gparted amd64 1.3.1-1ubuntu1 [418 kB]
+Получено 490 kB за 1с (969 kB/s)   
+Выбор ранее не выбранного пакета gparted-common.
+(Чтение базы данных … на данный момент установлено 222749 файлов и каталогов.)
+Подготовка к распаковке …/gparted-common_1.3.1-1ubuntu1_all.deb …
+Распаковывается gparted-common (1.3.1-1ubuntu1) …
+Выбор ранее не выбранного пакета gparted.
+Подготовка к распаковке …/gparted_1.3.1-1ubuntu1_amd64.deb …
+Распаковывается gparted (1.3.1-1ubuntu1) …
+Настраивается пакет gparted-common (1.3.1-1ubuntu1) …
+Настраивается пакет gparted (1.3.1-1ubuntu1) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+Обрабатываются триггеры для hicolor-icon-theme (0.17-2) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+u06@u06-VirtualBox:~$ sudo gparted 
+GParted 1.3.1
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.4
+u06@u06-VirtualBox:~$ sudo gparted 
+[sudo] пароль для u06: 
+GParted 1.3.1
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.4
+u06@u06-VirtualBox:~$ sudo mkfs.ext2 /dev/sdc2
+mke2fs 1.46.5 (30-Dec-2021)
+/dev/sdc2 contains a btrfs file system
+Proceed anyway? (y,N) y
+Creating filesystem with 786171 4k blocks and 196608 inodes
+Filesystem UUID: 79d65d97-40fc-4363-9278-994bf75acfc4
+Superblock backups stored on blocks: 
+ 32768, 98304, 163840, 229376, 294912
+
+Allocating group tables: done                            
+Сохранение таблицы inod'ов: done                            
+Writing superblocks and filesystem accounting information: готово
+
+u06@u06-VirtualBox:~$ sudo gparted 
+GParted 1.3.1
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.4
+^C
+u06@u06-VirtualBox:~$ sudo fdisk -l | grep sdd
+u06@u06-VirtualBox:~$ sudo fdisk -l | grep sdd
+u06@u06-VirtualBox:~$ sudo lsbik /dev/sdd1
+sudo: lsbik: команда не найдена
+u06@u06-VirtualBox:~$ sudo lsblk /dev/sdd1
+lsblk: /dev/sdd1: не блочное устройство
+u06@u06-VirtualBox:~$ sudo fdisk -l | grep sd
+Диск /dev/sda: 25 GiB, 26843545600 байт, 52428800 секторов
+/dev/sda1     2048     4095     2048     1M BIOS boot
+/dev/sda2     4096  1054719  1050624   513M EFI
+/dev/sda3  1054720 52426751 51372032  24,5G Файловая система Linux
+Диск /dev/sdb: 5 GiB, 5368709120 байт, 10485760 секторов
+/dev/sdb1     2048  4196351 4194304     2G Файловая система Linux
+/dev/sdb2  4196352 10485726 6289375     3G Файловая система Linux
+Диск /dev/sdc: 5 GiB, 5368709120 байт, 10485760 секторов
+/dev/sdc1     2048  4196351 4194304     2G Файловая система Linux
+/dev/sdc2  4196352 10485726 6289375     3G Файловая система Linux
+u06@u06-VirtualBox:~$ sudo lsblk /dev/sd1
+lsblk: /dev/sd1: не блочное устройство
+u06@u06-VirtualBox:~$ sudo lsblk /dev/sdd1
+lsblk: /dev/sdd1: не блочное устройство
+u06@u06-VirtualBox:~$ sudo fdisk -l | grep sd
+Диск /dev/sda: 25 GiB, 26843545600 байт, 52428800 секторов
+/dev/sda1     2048     4095     2048     1M BIOS boot
+/dev/sda2     4096  1054719  1050624   513M EFI
+/dev/sda3  1054720 52426751 51372032  24,5G Файловая система Linux
+Диск /dev/sdb: 5 GiB, 5368709120 байт, 10485760 секторов
+/dev/sdb1     2048  4196351 4194304     2G Файловая система Linux
+/dev/sdb2  4196352 10485726 6289375     3G Файловая система Linux
+Диск /dev/sdc: 5 GiB, 5368709120 байт, 10485760 секторов
+/dev/sdc1     2048  4196351 4194304     2G Файловая система Linux
+/dev/sdc2  4196352 10485726
+628937
+375     3G Файловая система Linux
+u06@u06-VirtualBox:~$ sudo lsblk /dev/sdc1
+NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+sdc1   8:33   0   2G  0 part 
+u06@u06-VirtualBox:~$ sudo lsblk -f /dev/sdc1
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sdc1 btrfs              ddc05ea2-5877-4fa1-b24f-0c5a9fdf198b                
+u06@u06-VirtualBox:~$ sudo lsblk -f /dev/sdc2
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sdc2 ext2   1.0         79d65d97-40fc-4363-9278-994bf75acfc4                
+u06@u06-VirtualBox:~$ sudo -s
+root@u06-VirtualBox:/home/u06# cd /mnt
+root@u06-VirtualBox:/mnt# ls -l
+итого 0
+root@u06-VirtualBox:/mnt# mkdir ext4
+root@u06-VirtualBox:/mnt# mkdir xfs
+root@u06-VirtualBox:/mnt# mkdir btrfs
+root@u06-VirtualBox:/mnt# mkdir xfs2
+root@u06-VirtualBox:/mnt# mkdir ext2
+root@u06-VirtualBox:/mnt# mkdir btrfs2
+root@u06-VirtualBox:/mnt# chown u06:u06 ext4 ext2 xfs btrfs xfs2 btrfs2
+root@u06-VirtualBox:/mnt# ls -l
+итого 24
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:11 btrfs
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 btrfs2
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 ext2
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:11 ext4
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:11 xfs
+drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 xfs2
+root@u06-VirtualBox:/mnt# 
+u06@u06-VirtualBox:/$ cd /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ touch test.txt
+u06@u06-VirtualBox:/mnt/ext4$ ls -l
+итого 4
+-rw-rw-r-- 1 u06 u06 219 мая 16 14:01 test.txt
+u06@u06-VirtualBox:/mnt/ext4$ cat > test.txt 
+1327624
+gfsaj
+
+
+nsafh
+^C
+u06@u06-VirtualBox:/mnt/ext4$ cat >> test.txt
+frizen denis
+^C^C
+u06@u06-VirtualBox:/mnt/ext4$ cat test.txt
+1327624
+gfsaj
+
+
+nsafh
+frizen denis
+u06@u06-VirtualBox:/mnt/ext4$ sudo lsblk -f /dev/sdc1 >>test.txt
+u06@u06-VirtualBox:/mnt/ext4$ cat test.txt
+1327624
+gfsaj
+
+
+nsafh
+frizen denis
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sdc1 btrfs              ddc05ea2-5877-4fa1-b24f-0c5a9fdf198b    1,8G     0% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ sudo lsblk -f /dev/sdc2
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sdc2 ext2   1.0         79d65d97-40fc-4363-9278-994bf75acfc4                
+u06@u06-VirtualBox:/mnt/ext4$ sudo lsblk -f /dev/sdc1
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+sdc1 btrfs              ddc05ea2-5877-4fa1-b24f-0c5a9fdf198b    1,8G     0% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ df
+Файл.система   1K-блоков Использовано Доступно Использовано% Cмонтировано в
+tmpfs             201588         1616   199972            1% /run
+/dev/sda3       25106692     15165984  8640024           64% /
+tmpfs            1007928            0  1007928            0% /dev/shm
+tmpfs               5120            4     5116            1% /run/lock
+/dev/sda2         524252         6228   518024            2% /boot/efi
+tmpfs             201584          104   201480            1% /run/user/1000
+/dev/sdc1        2097152         5920  1870080            1% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ df -h
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            197M         1,6M  196M            1% /run
+/dev/sda3         24G          15G  8,3G           64% /
+tmpfs            985M            0  985M            0% /dev/shm
+tmpfs            5,0M         4,0K  5,0M            1% /run/lock
+/dev/sda2        512M         6,1M  506M            2% /boot/efi
+tmpfs            197M         104K  197M            1% /run/user/1000
+/dev/sdc1        2,0G         5,8M  1,8G            1% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ df -l
+Файл.система   1K-блоков Использовано Доступно Использовано% Cмонтировано в
+tmpfs             201588         1616   199972            1% /run
+/dev/sda3       25106692     15165984  8640024           64% /
+tmpfs            1007928            0  1007928            0% /dev/shm
+tmpfs               5120            4     5116            1% /run/lock
+/dev/sda2         524252         6228   518024            2% /boot/efi
+tmpfs             201584          104
+201480            1% /run/user/1000
+/dev/sdc1        2097152         5920  1870080            1% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ ls -li test.txt
+257 -rw-rw-r-- 1 u06 u06 209 мая 16 14:04 test.txt
+u06@u06-VirtualBox:/mnt/ext4$ touch test2.txt
+u06@u06-VirtualBox:/mnt/ext4$ ls -li test2.txt
+258 -rw-rw-r-- 1 u06 u06 0 мая 16 14:08 test2.txt
+06@u06-VirtualBox:/mnt/ext4$ df -l
+Файл.система   1K-блоков Использовано Доступно Использовано% Cмонтировано в
+tmpfs             201588         1616   199972            1% /run
+/dev/sda3       25106692     15165984  8640024           64% /
+tmpfs            1007928            0  1007928            0% /dev/shm
+tmpfs               5120            4     5116            1% /run/lock
+/dev/sda2         524252         6228   518024            2% /boot/efi
+tmpfs             201584          104   201480            1% /run/user/1000
+/dev/sdc1        2097152         5920  1870080            1% /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ ls -li test.txt
+257 -rw-rw-r-- 1 u06 u06 209 мая 16 14:04 test.txt
+u06@u06-VirtualBox:/mnt/ext4$ touch test2.txt
+u06@u06-VirtualBox:/mnt/ext4$ ls -li test2.txt
+258 -rw-rw-r-- 1 u06 u06 0 мая 16 14:08 test2.txt
+u06@u06-VirtualBox:/mnt/ext4$ cd ..
+u06@u06-VirtualBox:/mnt$ cd btrfs
+u06@u06-VirtualBox:/mnt/btrfs$ touch test.txt
+u06@u06-VirtualBox:/mnt/btrfs$ ls -li test.txt
+711512 -rw-rw-r-- 1 u06 u06 0 мая 16 14:09 test.txt
+u06@u06-VirtualBox:/mnt/btrfs$ cd ..
+u06@u06-VirtualBox:/mnt$ cd xfs
+u06@u06-VirtualBox:/mnt/xfs$ touch test.txt
+u06@u06-VirtualBox:/mnt/xfs$ ls -li test.txt
+711513 -rw-rw-r-- 1 u06 u06 0 мая 16 14:10 test.txt
+u06@u06-VirtualBox:/mnt/xfs$ cd ..
+
+u06@u06-VirtualBox:/mnt$ ls -li
+итого 36
+711508 drwxr-xr-x 2 u06 u06 4096 мая 16 13:36 btrfs
+711511 drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 btrfs2
+711510 drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 ext2
+   256 drwxr-xr-x 1 u06 u06   34 мая 16 14:08 ext4
+711507 drwxr-xr-x 2 u06 u06 4096 мая 16 13:37 xfs
+711509 drwxr-xr-x 2 u06 u06 4096 мая 16 13:12 xfs2
+u06@u06-VirtualBox:/mnt$ df -i .
+Файл.система    Iнодов IИспользовано IСвободно IИспользовано% Cмонтировано в
+/dev/sda3      1605632        246867   1358765            16% /
+u06@u06-VirtualBox:/mnt$ cd ext4
+u06@u06-VirtualBox:/mnt/ext4$ df -i .
+Файл.система   Iнодов IИспользовано IСвободно IИспользовано% Cмонтировано в
+/dev/sdc1           0             0         0              - /mnt/ext4
+u06@u06-VirtualBox:/mnt/ext4$ cd ../ext2
+u06@u06-VirtualBox:/mnt/ext2$ df -i .
+Файл.система    Iнодов IИспользовано IСвободно IИспользовано% Cмонтировано в
+/dev/sda3      1605632        246867   1358765            16% /
+u06@u06-VirtualBox:/mnt/ext2$ ls -li 
+
+u06@u06-VirtualBox:/$ sudo du -h /usr | grep docker
+12K /usr/share/doc/docker-ce
+8,0K /usr/share/doc/docker-ce-rootless-extras
+8,0K /usr/share/doc/docker-buildx-plugin
+12K /usr/share/doc/python3-dockerpty
+32K /usr/share/doc/docker-compose
+8,0K /usr/share/doc/docker-ce-cli
+12K /usr/share/doc/python3-docker
+8,0K /usr/share/doc/docker-compose-plugin
+164M /us
+u06@u06-VirtualBox:/etc$ sudo du -h
+12K ./sane.d/dll.d
+356K ./sane.d
+8,0K ./cracklib
+12K ./cron.monthly
+12K ./alternatives
+8,0K ./firefox/pref
+12K ./firefox
+8,0K ./depmod.d
+4,0K ./vulkan/implicit_layer.d
+4,0K ./vulkan/icd.d
+4,0K ./vulkan/explicit_layer.d
+16K ./vulkan
+8,0K ./pcmcia
+172K ./console-setup
+4,0K ./apparmor.d/force-complain
+16K ./apparmor.d/abi
+12K ./apparmor.d/tunables/home.d
+8,0K ./apparmor.d/tunables/xdg-user-dirs.d
+8,0K ./apparmor.d/tunables/multiarch.d
+u06@u06-VirtualBox:/etc$ sudo du -hs ./systemd
+264K ./systemd
+u06@u06-VirtualBox:/etc$ cd ..
+u06@u06-VirtualBox:/$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+alpine       latest    aded1e1a5b37   3 months ago   7.83MB
+u06@u06-VirtualBox:/$ sudo fsck /dev/sdc1
+fsck из util-linux 2.37.2
+If you wish to check the consistency of a BTRFS filesystem or
+repair a damaged filesystem, see btrfs(8) subcommand 'check'.
+u06@u06-VirtualBox:/$ sudo umount /mnt/ext4
+u06@u06-VirtualBox:/$ sudo fsck /dev/sdc1
+fsck из util-linux 2.37.2
+If you wish to check the consistency of a BTRFS filesystem
+or
+repair a damaged filesystem, see btrfs(8) subcommand 'check'.
+u06@u06-VirtualBox:/$ sudo debugfs /dev/sdc1
+debugfs 1.46.5 (30-Dec-2021)
+debugfs: Bad magic number in super-block while trying to open /dev/sdc1
+/dev/sdc1 contains a btrfs file system
+debugfs:  journal_open
+journal_open: Filesystem not open
+debugfs:  ls
+ls: Filesystem not open
+debugfs:  rm test.txt
+rm: Filesystem not open
+debugfs:  q
+u06@u06-VirtualBox:/$ sudo debugfs -w /dev/sdc1
+debugfs 1.46.5 (30-Dec-2021)
+debugfs: Bad magic number in super-block while trying to open /dev/sdc1
+/dev/sdc1 contains a btrfs file system
+debugfs:  rm test.txt
