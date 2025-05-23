@@ -111,7 +111,6 @@ root@server:/home/frukt0987# echo "Devise partitions" >> /etc/mdadm/mdadr
 
 root@server:/home/frukt0987# echo "Device partitions" >>/etc/mdadm/mdadm_
 root@server:/home/frukt0987# mdadm --detail-scan-verbose /
-mdadm: does not appear to be an md device
 смотрим состояние созданого рейда 
 root@server:/home/frukt0987# mdadm-detail-scan-verbose
 > | awk '/ARRAY/ {print}' >> /etc/mdadm/mdadm.conf
@@ -156,7 +155,6 @@ root@server:/home/frukt0987# mount /dev/md0p1/Public/
 root@server:/home/frukt0987# ls /Public/
 Lest+100
 root@server:/home/frukt0987# chown frukt frukt /Public
-chown: invalid user: 'frukt frukt'
 root@server:/home/frukt0987# chown frukt0987:frukt0987 /Public
 root@server:/home/frukt0987# chmod 775/Public
 root@server:/home/frukt0987# cat /Public/123
@@ -179,9 +177,7 @@ drwx- 2 root
 -rw-r--r-- 1 root
 -rw-r--r-- 1 root
 root@server:/home/frukt0987#
-root
-root
-root
+roo
 root
 23 мая 22 06:44 123
 33 мая 22 06:47 date.txt
@@ -224,6 +220,7 @@ mount: (hint) your fstab has been modified, but systemd still uses
        the old version; use 'systemctl daemon-reload' to reload.
 root@user:~# exit
 user@user:~$ cd /media/RAID
+
 user@user:/media/RAID$ ls
 123  lost+found
 user@user:/media/RAID$ cat 123
@@ -255,7 +252,6 @@ SW
 #brgs part
 /dev/disk/by-uuid/f372587342-3852678-36527-8cb9 -0frthweskgw8kfy   0   2
 /dev/disk  0  2
-
 " /etc/fstab" 1L , 1029B записано
 root@server:/home/frukt0987# mount -a
 root@server:/home/frukt0987#  exit
@@ -384,34 +380,38 @@ frukt0987@:/media/RAID$ ls
 frukt0987@:/media/RAID$ cat 123
 1234568 jdnhvx nbjkgvj
  04:46:48 up 51 min,  2 users,  load average: 0,07, 0,08, 0,03
-user@user:/media/RAID$ cp -r /etc /media/RAID
-cp: cannot open '/etc/cloud/cloud.cfg.d/99-installer.cfg' for reading: Permission denied
-cp: cannot open '/etc/cloud/cloud.cfg.d/90-installer-network.cfg' for reading: Permission denied
-cp: cannot access '/etc/credstore.encrypted': Permission denied
-cp: cannot access '/etc/credstore': Permission denied
-cp: cannot open '/etc/fwupd/fwupd.conf' for reading: Permission denied
-cp: cannot open '/etc/iscsi/initiatorname.iscsi' for reading: Permission denied
-cp: cannot open '/etc/netplan/50-cloud-init.yaml' for reading: Permission denied
-cp: cannot access '/etc/polkit-1/rules.d': Permission denied
-cp: cannot open '/etc/security/opasswd' for reading: Permission denied
-cp: cannot open '/etc/ssh/ssh_host_rsa_key' for reading: Permission denied
-cp: cannot open '/etc/ssh/ssh_host_ecdsa_key' for reading: Permission denied
-cp: cannot open '/etc/ssh/ssh_host_ed25519_key' for reading: Permission denied
-cp: cannot open '/etc/ssh/sshd_config.d/50-cloud-init.conf' for reading: Permission denied
-cp: cannot access '/etc/ssl/private': Permission denied
-cp: cannot open '/etc/sudoers.d/README' for reading: Permission denied
-cp: cannot open '/etc/ufw/after.init' for reading: Permission denied
-cp: cannot open '/etc/ufw/after.rules' for reading: Permission denied
-cp: cannot open '/etc/ufw/after6.rules' for reading: Permission denied
-cp: cannot open '/etc/ufw/before.init' for reading: Permission denied
-cp: cannot open '/etc/ufw/before.rules' for reading: Permission denied
-cp: cannot open '/etc/ufw/before6.rules' for reading: Permission denied
-cp: cannot open '/etc/ufw/user.rules' for reading: Permission denied
-cp: cannot open '/etc/ufw/user6.rules' for reading: Permission denied
-cp: cannot open '/etc/.pwd.lock' for reading: Permission denied
-cp: cannot open '/etc/gshadow-' for reading: Permission denied
-cp: cannot open '/etc/shadow-' for reading: Permission denied
-cp: cannot open '/etc/sudoers' for reading: Permission denied
-cp: cannot open '/etc/gshadow' for reading: Permission denied
-cp: cannot open '/etc/shadow' for reading: Permission denied
-cp: cannot access '/etc/multipath': Permission denied
+frukt0987@server:/media/raid$ ls
+drwxr-xr-x 4 root root
+subuid-
+4573
+мая 23
+05:59
+sudo.conf
+1671
+мая 2305:59
+sudoers4096
+мая23
+мая 230 5:59
+drwxr-xr-x 2 root root
+-rw-r--r-- 1 
+root
+drwxr-xr-x root
+drwxr-xr-x 2root
+root drwxr-xr-x 4
+root
+4096 мая 23 05:59UPoser
+23 мая 23
+05:59vtrgb -> /etc/alternatives/vtrgb
+4942мая 2305:59
+wgetrcмая 23 05:59
+681 мая 23
+05:59xattr.conf
+-rw-r--r-- 1
+root
+drwxr-xr-x 4 rootroot
+-rw-r--r-- 1 rootrooT
+drwxr-xr-x 4 root root
+4096 мая 23 05:59 xdyrw-r--r-- 1 root
+root
+460 мая 23 05:59 zsh_command_not_found
+
