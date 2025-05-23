@@ -150,6 +150,7 @@ mke2fs 1.46.5 (30-Dec-2021)
 Creating filesystem with 1308907 4k blocks and 327680 inodes
 Filesystem UUID: Oea0ecf0-00cd-4c91-bc64-b819c7d2d32f
 Superblock backups stored on blocks:
+работа с public
 root@server:/home/frukt0987# mkdir /Public
 root@server:/home/frukt0987# mount /dev/md0p1/Public/
 root@server:/home/frukt0987# ls /Public/
@@ -198,29 +199,36 @@ mdo: active raid1 sdf1 [1] sde1 [0]
 5236672 blocks super 1.2 [2/2] [UU]
 unused devices: <none>
 root@server:/home/frukt0987#
+
+
+
 frukt0987@server:~$ sudo fdisk -1 |grep md
 [sudo] password for frukt0987:
-Disk /dev/md012: 4,99 GiB, 5362352128 bytes, 10473344 sectors
-/dev/md0p1 2048 10473310 10471263
+Disk /dev/md127: 4,99 GiB, 5362352128 bytes, 10473344 sectors
+/dev/md127p1 2048 10473310 10471263
 5G Linux filesystem
-frukt0987@server:~$ sudo update-initramfs
-You must specify at least one of -c, u, or -d.
-Usage: update-initramfs {-cl-dl-u} [-k version] [-v] [-b directory]
-Options:
--k version
--C
-Specify kernel version or 'all'
-Create a new initramfs
--u
-Update an existing initramfs
--d
-Remove an existing initramfs
--b directory
-Set alternate boot directory
--V
-Be verbose
-See update-initramfs (8) for further details.
+frukt0987@server:~$ sudo reeboot
+система перезагрузится 
+подкюлчаемся и проверяем что у нас снова md0p1 
+frukt0987:~$ sudo fdisk -l | grep md
+[sudo] password for user: 
+Disk /dev/md0: 4,99 GiB, 5361369088 bytes, 10471424 sectors
+/dev/md0p1  2048 10469375 10467328   5G Linux filesystem
 
+заходим под рутом и изменяем fstab для постояной точки монтирования для диска рейда 
+user@user:~$ sudo su -
+root@user:~# blkid /dev/md0p1 >> /etc/fstab
+root@user:~# nano /etc/fstab
+root@user:~# mount -a
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+root@user:~# exit
+user@user:~$ cd /media/RAID
+user@user:/media/RAID$ ls
+123  lost+found
+user@user:/media/RAID$ cat 123
+uywtqreiwtgh
+oytfasjog
 frukt0987@server:~$ sudo update-initramfs -u
 vim /etc/fstab
 # /etc/fstab: static file system information.
@@ -370,3 +378,40 @@ ontainers
 36 мая 22 02:45
 engine-id
 drwx- 3 root root 4096 мая 22 02:45
+cd /media/RAID
+frukt0987@:/media/RAID$ ls
+123  lost+found
+frukt0987@:/media/RAID$ cat 123
+1234568 jdnhvx nbjkgvj
+ 04:46:48 up 51 min,  2 users,  load average: 0,07, 0,08, 0,03
+user@user:/media/RAID$ cp -r /etc /media/RAID
+cp: cannot open '/etc/cloud/cloud.cfg.d/99-installer.cfg' for reading: Permission denied
+cp: cannot open '/etc/cloud/cloud.cfg.d/90-installer-network.cfg' for reading: Permission denied
+cp: cannot access '/etc/credstore.encrypted': Permission denied
+cp: cannot access '/etc/credstore': Permission denied
+cp: cannot open '/etc/fwupd/fwupd.conf' for reading: Permission denied
+cp: cannot open '/etc/iscsi/initiatorname.iscsi' for reading: Permission denied
+cp: cannot open '/etc/netplan/50-cloud-init.yaml' for reading: Permission denied
+cp: cannot access '/etc/polkit-1/rules.d': Permission denied
+cp: cannot open '/etc/security/opasswd' for reading: Permission denied
+cp: cannot open '/etc/ssh/ssh_host_rsa_key' for reading: Permission denied
+cp: cannot open '/etc/ssh/ssh_host_ecdsa_key' for reading: Permission denied
+cp: cannot open '/etc/ssh/ssh_host_ed25519_key' for reading: Permission denied
+cp: cannot open '/etc/ssh/sshd_config.d/50-cloud-init.conf' for reading: Permission denied
+cp: cannot access '/etc/ssl/private': Permission denied
+cp: cannot open '/etc/sudoers.d/README' for reading: Permission denied
+cp: cannot open '/etc/ufw/after.init' for reading: Permission denied
+cp: cannot open '/etc/ufw/after.rules' for reading: Permission denied
+cp: cannot open '/etc/ufw/after6.rules' for reading: Permission denied
+cp: cannot open '/etc/ufw/before.init' for reading: Permission denied
+cp: cannot open '/etc/ufw/before.rules' for reading: Permission denied
+cp: cannot open '/etc/ufw/before6.rules' for reading: Permission denied
+cp: cannot open '/etc/ufw/user.rules' for reading: Permission denied
+cp: cannot open '/etc/ufw/user6.rules' for reading: Permission denied
+cp: cannot open '/etc/.pwd.lock' for reading: Permission denied
+cp: cannot open '/etc/gshadow-' for reading: Permission denied
+cp: cannot open '/etc/shadow-' for reading: Permission denied
+cp: cannot open '/etc/sudoers' for reading: Permission denied
+cp: cannot open '/etc/gshadow' for reading: Permission denied
+cp: cannot open '/etc/shadow' for reading: Permission denied
+cp: cannot access '/etc/multipath': Permission denied
