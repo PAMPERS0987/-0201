@@ -1,0 +1,112 @@
+frukt@server:~$ cd /etc/samba
+frukt@server:/etc/samba$ ls -l
+total 20
+-rw-r--r-- 1 root root    8 янв  5  2024 gdbcommands
+-rw-r--r-- 1 root root 8950 мая 29 06:56 smb.conf
+drwxr-xr-x 2 root root 4096 янв  5  2024 tls
+frukt0987@server:/etc/samba$ sudo chown frukt0987:frukt0987
+chown: missing operand after ‘faksimka:frukt0987’
+Try 'chown --help' for more information.
+frukt0987@server:/etc/samba$ sudo chown frukt0987:frukt0987 .
+frukt0987@server:/etc/samba$ sudo vim /etc/samba/smb.conf
+
+[Shared1]
+comment = SimpleShare
+path = /media/RAID/Shared
+inherit acls = yes
+writable = yes
+valid users = frukt0987
+read list = frukt0987
+write list = frukt0987
+frukt0987@server:/etc/samba$ sudo testparm
+Load smb config files from /etc/samba/smb.conf
+Loaded services file OK.
+Weak crypto is allowed
+
+Server role: ROLE_STANDALONE
+
+Press enter to see a dump of your service definitions
+
+# Global parameters
+[global] вводи переменные и заполняем их 
+	log file = /var/log/samba/log.%m
+	logging = file
+	map to guest = Bad User
+	max log size = 1000
+	obey pam restrictions = Yes
+	pam password change = Yes
+	panic action = /usr/share/samba/panic-action %d
+	passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .
+	passwd program = /usr/bin/passwd %u
+	server role = standalone server
+	server string = %h server (Samba, Ubuntu)
+	unix password sync = Yes
+	usershare allow guests = Yes
+	idmap config * : backend = tdb
+
+
+[printers]
+	browseable = No
+	comment = All Printers
+	create mask = 0700
+	path = /var/spool/samba
+	printable = Yes
+
+
+[print$]
+	comment = Printer Drivers
+	path = /var/lib/samba/printers
+
+
+[Shared1]
+	comment = SimpleShare
+	inherit acls = Yes
+	path = /media/RAID/Shared
+	read list = frukt0987
+	read only = No
+	valid users = frukt0987
+	write list = frukt0987
+frukt0987@server:/etc/samba$ sudo service smbd restart
+frukt0987@server:/media/RAID$ ls -l
+total 32
+-rw-rw-r--  1 frukt0987 frukt0987    13 мая 29 03:31 123
+drwx--x---  3 frukt0987 frukt0987  4096 мая 29 06:23 docker
+drwxr-xr-x 96 frukt0987 frukt0987  4096 мая 29 03:32 etc
+drwx------  2 root     root     16384 мая 29 03:12 lost+found
+drwxrwxr-x  3 frukt0987 frukt0987  4096 мая 29 07:09 shared
+frukt0987@server:/media/RAID$ cd shared
+frukt0987@server:/media/RAID/shared$ ls -l
+total 4
+drwxr-xr-x 2 frukt0987 frukt0987 4096 мая 29 07:11 Papka
+frukt0987@server:/media/RAID/shared$ cd Papka
+
+frukt0987@server:/media/RAID/shared/Papka$ ls -l
+total 4
+-rwxr--r-- 1 frukt0987 frukt0987 23 мая 29 07:10 Desktop.txt
+frukt0987@server:/media/RAID/shared/Papka$ cat Desktop.txt
+From desktop to server
+frukt0987@server:/media/RAID$ sudo useradd -m -s /bin/bash fedorin
+frukt0987@server:/media/RAID$ sudo passwd frizen
+New password: 
+Retype new password: 
+passwd: password updated successfully
+frukt0987@server:/media/RAID$ sudo smbpasswd -a frizen
+New SMB password:
+Retype new SMB password:
+Added user frizen.
+frukt0987@server:/media/RAID$ sudo apt update
+frukt0987@server:/media/RAID$ ls -l
+total 32
+-rw-rw-r--  1 frukt0987 frukt0987    13 мая 29 03:31 123
+drwx--x---  3 frukt0987 frukt0987 4096 мая 29 06:23 docker
+drwxr-xr-x 96 frukt0987 frukt0987 4096 мая 29 03:32 etc
+-rw-rw-r--  1 frukt0987 frukt0987     0 мая 29 07:21 from
+drwx------  2 root     root     16384 мая 29 03:12 lost+found
+drwxrwxr-x  3 frukt0987 frukt0987 4096 мая 29 07:09 shared
+frukt0987@server:/media/RAID$ cd shared
+frukt0987@server:/media/RAID/shared$ ls -l
+total 4
+drwxr-xr-x 2 frukt0987 frukt0987 4096 мая 29 07:11 Papka
+frukt0987@server:/media/RAID/shared$ cd Papka
+frukt0987@server:/media/RAID/shared/Papka$ cat > fromserver
+From server to desktop
