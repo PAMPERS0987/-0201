@@ -66,7 +66,7 @@ software-properties-common помечен как установленный вр
 После данной операции объём занятого дискового пространства возрастёт на 625 kB.
 Хотите продолжить? [Д/н] y
 Прервано.
-u05@u05-VirtualBox:~$ sudo apt install curl software-properties-common ca-certificates apt-transport-https -y
+u06@u06-VirtualBox:~$ sudo apt install curl software-properties-common ca-certificates apt-transport-https -y
 Чтение списков пакетов… Готово
 Построение дерева зависимостей… Готово
 Чтение информации о состоянии… Готово         
@@ -286,6 +286,6 @@ TriggeredBy: ● docker.socket
 мар 07 14:17:17 u05-VirtualBox dockerd[9784]: time="2025-03-07T14:17:17.245869882+07:00" level=info msg="API listen on /run>
 мар 07 14:17:17 u05-VirtualBox systemd[1]: Started Docker Application Container Engine.
 8)
-u05@u05-VirtualBox:~$ sudo usermod -aG docker $USER
+u06@u06-VirtualBox:~$ sudo usermod -aG docker $USER
 9)
-u05@u05-VirtualBox:~$ newgrp docker
+u06@u06-VirtualBox:~$ newgrp docker
